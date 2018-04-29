@@ -1,0 +1,4 @@
+# Binary data and paranoia backups, ignore
+machines/backups/*
+*.swp
+*.swo
