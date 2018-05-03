@@ -7,9 +7,14 @@ L2_NAME="nestedvm"
 L1_IP="192.168.122.33"
 L2_IP="192.168.123.30"
 
+L0_PERF_BIN="/usr/bin/perf"
+L1_PERF_BIN="/home/sanidhya/manually-installed/bin/perf-4.16.g0adb32"
+
+
+
 error() {
   echo "ERROR: $@"
-  exit 42
+  return 42
 }
 
 # We expect this same file to be in L1, because it avoids a lot of nasty nested
@@ -67,4 +72,41 @@ run-in-l2() {
   cmd="source ${PATH_TO_SOURCE_IN_L1}"
   cmd="${cmd} ; run-in-lx ${L2_NAME} ${L2_IP} \"$1\""
   run-in-l1 "${cmd}"
+}
+
+get-domain-pid() {
+  ps aux | grep qemu-system | grep "$1" | awk '{print $2}'
+}
+
+perf-l2-from-l0() {
+set -x
+
+  APP="$1"
+  NUM_CORES=80
+  ts=$(date '+%Y%m%d%H%M%S')
+  perf_data="/dev/shm/perf.data.${APP}.${NUM_CORES}.${ts}"
+
+  # We need this because we want L1 running for it's PID
+  ensure-domain-running "${L1_NAME}"
+  dpid=$(get-domain-pid "${L1_NAME}")
+
+  if [[ "$dpid" == "" ]]; then error "Could not find qemu pid"; fi
+
+  # Start perf
+  sudo ${L0_PERF_BIN} record -F 100 -a --call-graph dwarf -o ${perf_data} -p ${dpid} &> /tmp/perf.log &
+  perf_pid=$!
+
+  # run benchmark
+  run-in-l2 "cd ~/vm-scalability/bench/ ; ./config.py -d -c ${NUM_CORES} ${APP} ; sudo poweroff"
+
+  # Kill perf
+  kill $perf_pid
+
+  echo "perf.data written to ${perf_data}"
+
+  set +x
+}
+
+perf-l2-from-l1() {
+:
 }
