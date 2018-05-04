@@ -3,3 +3,4 @@ This config has the following tweaks:
 
 * Exposes the correct NUMA topology to the guest
 * 128GiB and 80 cores evenly distributed across 8 numa nodes
+* Has hugepages enabled

@@ -1,0 +1,178 @@
+<domain type='kvm'>
+  <name>nestedvm</name>
+  <uuid>ed9bb1a4-20f5-4135-95dd-2c591230f8da</uuid>
+  <memory unit='KiB'>67108864</memory>
+  <currentMemory unit='KiB'>67108864</currentMemory>
+  <memoryBacking>
+    <hugepages/>
+  </memoryBacking>
+  <vcpu placement='static'>80</vcpu>
+  <cputune>
+    <vcpupin vcpu='0' cpuset='0'/>
+    <vcpupin vcpu='1' cpuset='1'/>
+    <vcpupin vcpu='2' cpuset='2'/>
+    <vcpupin vcpu='3' cpuset='3'/>
+    <vcpupin vcpu='4' cpuset='4'/>
+    <vcpupin vcpu='5' cpuset='5'/>
+    <vcpupin vcpu='6' cpuset='6'/>
+    <vcpupin vcpu='7' cpuset='7'/>
+    <vcpupin vcpu='8' cpuset='8'/>
+    <vcpupin vcpu='9' cpuset='9'/>
+    <vcpupin vcpu='10' cpuset='10'/>
+    <vcpupin vcpu='11' cpuset='11'/>
+    <vcpupin vcpu='12' cpuset='12'/>
+    <vcpupin vcpu='13' cpuset='13'/>
+    <vcpupin vcpu='14' cpuset='14'/>
+    <vcpupin vcpu='15' cpuset='15'/>
+    <vcpupin vcpu='16' cpuset='16'/>
+    <vcpupin vcpu='17' cpuset='17'/>
+    <vcpupin vcpu='18' cpuset='18'/>
+    <vcpupin vcpu='19' cpuset='19'/>
+    <vcpupin vcpu='20' cpuset='20'/>
+    <vcpupin vcpu='21' cpuset='21'/>
+    <vcpupin vcpu='22' cpuset='22'/>
+    <vcpupin vcpu='23' cpuset='23'/>
+    <vcpupin vcpu='24' cpuset='24'/>
+    <vcpupin vcpu='25' cpuset='25'/>
+    <vcpupin vcpu='26' cpuset='26'/>
+    <vcpupin vcpu='27' cpuset='27'/>
+    <vcpupin vcpu='28' cpuset='28'/>
+    <vcpupin vcpu='29' cpuset='29'/>
+    <vcpupin vcpu='30' cpuset='30'/>
+    <vcpupin vcpu='31' cpuset='31'/>
+    <vcpupin vcpu='32' cpuset='32'/>
+    <vcpupin vcpu='33' cpuset='33'/>
+    <vcpupin vcpu='34' cpuset='34'/>
+    <vcpupin vcpu='35' cpuset='35'/>
+    <vcpupin vcpu='36' cpuset='36'/>
+    <vcpupin vcpu='37' cpuset='37'/>
+    <vcpupin vcpu='38' cpuset='38'/>
+    <vcpupin vcpu='39' cpuset='39'/>
+    <vcpupin vcpu='40' cpuset='40'/>
+    <vcpupin vcpu='41' cpuset='41'/>
+    <vcpupin vcpu='42' cpuset='42'/>
+    <vcpupin vcpu='43' cpuset='43'/>
+    <vcpupin vcpu='44' cpuset='44'/>
+    <vcpupin vcpu='45' cpuset='45'/>
+    <vcpupin vcpu='46' cpuset='46'/>
+    <vcpupin vcpu='47' cpuset='47'/>
+    <vcpupin vcpu='48' cpuset='48'/>
+    <vcpupin vcpu='49' cpuset='49'/>
+    <vcpupin vcpu='50' cpuset='50'/>
+    <vcpupin vcpu='51' cpuset='51'/>
+    <vcpupin vcpu='52' cpuset='52'/>
+    <vcpupin vcpu='53' cpuset='53'/>
+    <vcpupin vcpu='54' cpuset='54'/>
+    <vcpupin vcpu='55' cpuset='55'/>
+    <vcpupin vcpu='56' cpuset='56'/>
+    <vcpupin vcpu='57' cpuset='57'/>
+    <vcpupin vcpu='58' cpuset='58'/>
+    <vcpupin vcpu='59' cpuset='59'/>
+    <vcpupin vcpu='60' cpuset='60'/>
+    <vcpupin vcpu='61' cpuset='61'/>
+    <vcpupin vcpu='62' cpuset='62'/>
+    <vcpupin vcpu='63' cpuset='63'/>
+    <vcpupin vcpu='64' cpuset='64'/>
+    <vcpupin vcpu='65' cpuset='65'/>
+    <vcpupin vcpu='66' cpuset='66'/>
+    <vcpupin vcpu='67' cpuset='67'/>
+    <vcpupin vcpu='68' cpuset='68'/>
+    <vcpupin vcpu='69' cpuset='69'/>
+    <vcpupin vcpu='70' cpuset='70'/>
+    <vcpupin vcpu='71' cpuset='71'/>
+    <vcpupin vcpu='72' cpuset='72'/>
+    <vcpupin vcpu='73' cpuset='73'/>
+    <vcpupin vcpu='74' cpuset='74'/>
+    <vcpupin vcpu='75' cpuset='75'/>
+    <vcpupin vcpu='76' cpuset='76'/>
+    <vcpupin vcpu='77' cpuset='77'/>
+    <vcpupin vcpu='78' cpuset='78'/>
+    <vcpupin vcpu='79' cpuset='79'/>
+  </cputune>
+  <os>
+    <type arch='x86_64' machine='pc-i440fx-xenial'>hvm</type>
+  </os>
+  <features>
+    <acpi/>
+    <apic/>
+  </features>
+  <cpu mode='host-passthrough'>
+    <topology sockets='8' cores='10' threads='1'/>
+    <numa>
+      <cell id='0' cpus='0-9' memory='8388608' unit='KiB'/>
+      <cell id='1' cpus='10-19' memory='8388608' unit='KiB'/>
+      <cell id='2' cpus='20-29' memory='8388608' unit='KiB'/>
+      <cell id='3' cpus='30-39' memory='8388608' unit='KiB'/>
+      <cell id='4' cpus='40-49' memory='8388608' unit='KiB'/>
+      <cell id='5' cpus='50-59' memory='8388608' unit='KiB'/>
+      <cell id='6' cpus='60-69' memory='8388608' unit='KiB'/>
+      <cell id='7' cpus='70-79' memory='8388608' unit='KiB'/>
+    </numa>
+  </cpu>
+  <clock offset='utc'>
+    <timer name='rtc' tickpolicy='catchup'/>
+    <timer name='pit' tickpolicy='delay'/>
+    <timer name='hpet' present='no'/>
+  </clock>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <pm>
+    <suspend-to-mem enabled='no'/>
+    <suspend-to-disk enabled='no'/>
+  </pm>
+  <devices>
+    <emulator>/usr/bin/kvm-spice</emulator>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2'/>
+      <source file='/home/sanidhya/images/nevm-clone.qcow2'/>
+      <target dev='vda' bus='virtio'/>
+      <boot order='1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+    </disk>
+    <controller type='usb' index='0' model='ich9-ehci1'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x7'/>
+    </controller>
+    <controller type='usb' index='0' model='ich9-uhci1'>
+      <master startport='0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x0' multifunction='on'/>
+    </controller>
+    <controller type='usb' index='0' model='ich9-uhci2'>
+      <master startport='2'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x1'/>
+    </controller>
+    <controller type='usb' index='0' model='ich9-uhci3'>
+      <master startport='4'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x2'/>
+    </controller>
+    <controller type='pci' index='0' model='pci-root'/>
+    <controller type='ide' index='0'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x1'/>
+    </controller>
+    <interface type='network'>
+      <mac address='52:54:00:2c:e6:6c'/>
+      <source network='default'/>
+      <model type='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+    </interface>
+    <serial type='pty'>
+      <target port='0'/>
+    </serial>
+    <console type='pty'>
+      <target type='serial' port='0'/>
+    </console>
+    <input type='mouse' bus='ps2'/>
+    <input type='keyboard' bus='ps2'/>
+    <graphics type='vnc' port='-1' autoport='yes'/>
+    <sound model='ich6'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>
+    </sound>
+    <video>
+      <model type='vga' vram='16384' heads='1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
+    </video>
+    <memballoon model='virtio'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
+    </memballoon>
+  </devices>
+</domain>

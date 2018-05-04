@@ -1,1 +1,24 @@
+2018-05-03
+===========
 
+Experiment
+----------
+### 05:08:19 PM
+
+We try to run the gmake benchmark with hugepages enabled on both l1 and l0.
+
+We setup hugepages in both l0 and l1 following this guide:
+https://help.ubuntu.com/community/KVM%20-%20Using%20Hugepages
+
+Each machine has hugepages set to about half it's available memory, and
+slightly more than the memory required by l(N+1) VM.
+
+We make 3 modifications:
+1. Enable hugepages on the host machine (relative host to each level)
+2. edit /etc/sysctl.conf to allow for a sufficent number of pages
+3. edit /etc/default/qemu-kvm to make qemu use the hugepages, by setting `KVM_HUGEPAGES=1`.
+4. reboot
+
+Once these modifications are made on both l0 and l1 (respectively, l1 must be booted and modified *after* l0 has the required hugepages enabled), we can run our experiments.
+
+Warning: It's very easy to screw up /etc/sysctl.conf and lock yourself out of your VM. Fixing the disk is a difficult/non-trivial task. But one can follow the guide here: https://docs.openstack.org/image-guide/modify-images.html ; The qemu-nbd method is the one that worked for me.

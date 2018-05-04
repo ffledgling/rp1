@@ -17,6 +17,12 @@ error() {
   return 42
 }
 
+require-args() {
+  if [[ $2 -lt $1 ]]; then
+    error "Required at $1 arguments, only $2 give"
+  fi
+}
+
 # We expect this same file to be in L1, because it avoids a lot of nasty nested
 # quoting, command passing and we don't have to create bash functions on the
 # fly... just not worth it at the moment.
@@ -79,6 +85,7 @@ get-domain-pid() {
 }
 
 perf-l2-from-l0() {
+  require-args 1 $# || return 42
 set -x
 
   APP="$1"
@@ -98,9 +105,14 @@ set -x
 
   # run benchmark
   run-in-l2 "cd ~/vm-scalability/bench/ ; ./config.py -d -c ${NUM_CORES} ${APP} ; sudo poweroff"
+  run-in-l1 "sudo poweroff"
 
-  # Kill perf
-  kill $perf_pid
+  # Instead of killing perf, we kill the process it's tracing, and then waiting
+  # for it to gracefully finish
+
+  ## Kill perf
+  #kill -s INT $perf_pid
+  wait
 
   echo "perf.data written to ${perf_data}"
 
