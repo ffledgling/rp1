@@ -22,3 +22,18 @@ We make 3 modifications:
 Once these modifications are made on both l0 and l1 (respectively, l1 must be booted and modified *after* l0 has the required hugepages enabled), we can run our experiments.
 
 Warning: It's very easy to screw up /etc/sysctl.conf and lock yourself out of your VM. Fixing the disk is a difficult/non-trivial task. But one can follow the guide here: https://docs.openstack.org/image-guide/modify-images.html ; The qemu-nbd method is the one that worked for me.
+
+Tip: VMs did not have easy access to a text serial console, but an easy way to
+gain access to a remote VNC bound to "localhost" on the host is to use this following:
+```
+# Get access to vnc for l1 vm:
+# Assuming vnc is running on 127.0.0.1:0 on l0 host
+remote$ ssh -L 6999:localhost:5900 <l0-host>
+remote$ vncviewer localhost:6999
+
+# get access to vnc for l2 vm:
+# Assuming vnc is running on 127.0.0.1:0 on l1 host
+remote$ ssh -L 6998:localhost:6998 <l0-host>
+l0-host$ ssh -L 6998:localhost:5900 <l1-host>
+remote$ vncviewer localhost:6998
+```
