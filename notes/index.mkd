@@ -37,3 +37,21 @@ remote$ ssh -L 6998:localhost:6998 <l0-host>
 l0-host$ ssh -L 6998:localhost:5900 <l1-host>
 remote$ vncviewer localhost:6998
 ```
+
+Conclusion:
+There is no notable difference in the perf results with and without hugepages. There is a fractional difference of `<1%`, some of which can probably be attributed to additional automation between the first and second run.
+
+With hugepages:
+```
+-   70.40%    69.85%  qemu-system-x86  [kernel.kallsyms]   [k] native_queued_spin_lock_slowpath
+   + 66.34% entry_SYSCALL_64_fastpath
+   + 3.51% 0xffffffffffffffff
+     0.55% native_queued_spin_lock_slowpath
+```
+
+without hugepages:
+```
+-   70.91%    70.71%  qemu-system-x86  [kernel.kallsyms]        [k] native_queued_spin_lock_slowpath
+    + 66.22% entry_SYSCALL_64_fastpath
+    + 4.49% 0xffffffffffffffff
+```
