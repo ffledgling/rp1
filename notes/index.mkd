@@ -55,3 +55,19 @@ without hugepages:
     + 66.22% entry_SYSCALL_64_fastpath
     + 4.49% 0xffffffffffffffff
 ```
+
+
+2018-05-05
+==========
+
+Experiment
+----------
+
+### 06:33:34 AM
+Compile kernel with CST/CST-MCS lock implementation and run perf again.
+
+
+Outcome: Looks like we see reduced contention down from ~70% to 45%, confirmed with perf.
+
+Should re-run the full benchmarks and compare the throughput as well.
+
