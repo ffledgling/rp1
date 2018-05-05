@@ -1,0 +1,6 @@
+Libvirt domain definition for l2 domain. Taken from libvirt running in l0.
+
+This config has:
+* Hugepages enabled
+* VCPUs pinned to the VCPUs that were pinned on l0. (So that l2 -> l1 -> l0 are
+  all pinned and consistent, belong to the same physical numa socket etc).
