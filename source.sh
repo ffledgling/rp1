@@ -10,6 +10,7 @@ L2_IP="192.168.123.30"
 L0_PERF_BIN="/usr/bin/perf"
 L1_PERF_BIN="/home/sanidhya/manually-installed/bin/perf-4.16.g0adb32"
 
+VBENCH_ROOT="~/vm-scalability/bench"
 
 
 error() {
@@ -120,5 +121,50 @@ set -x
 }
 
 perf-l2-from-l1() {
-:
+  error "This function is not yet implemented"
+}
+
+benchmark-l2() {
+  require-args 1 $# || return $?
+
+  set -x
+
+  APP="${1}"
+  ts=$(date '+%Y%m%d%H%M%S')
+  results_dir="/dev/shm/results.l2.${APP}.${ts}"
+
+  run-in-l2 "cd ~/vm-scalability/bench/ ; rm -rf results ; ./config.py ${APP}"
+  run-in-l1 "rsync -avz sanidhya@${L2_IP}:${VBENCH_ROOT}/results ${results_dir}"
+  rsync -avz sanidhya@${L1_IP}:${results_dir} ${results_dir}
+
+  # We shutdown the domain everytime because a bug in the numa code of the
+  # benchmark fails to restore offline CPUs after the run which results in random
+  # errors.
+  run-in-l2 "sudo poweroff"
+
+  echo "results are available in ${results_dir}"
+
+  set +x
+}
+
+benchmark-l1() {
+  require-args 1 $# || return $?
+
+  set -x
+
+  APP="${1}"
+  ts=$(date '+%Y%m%d%H%M%S')
+  results_dir="/dev/shm/results.l1.${APP}.${ts}"
+
+  run-in-l1 "cd ~/vm-scalability/bench/ ; rm -rf results ; ./config.py ${APP}"
+  rsync -avz sanidhya@${L1_IP}:${VBENCH_ROOT}/results ${results_dir}
+
+  # We shutdown the domain everytime because a bug in the numa code of the
+  # benchmark fails to restore offline CPUs after the run which results in random
+  # errors.
+  run-in-l1 "sudo poweroff"
+
+  echo "results are available in ${results_dir}"
+
+  set +x
 }
