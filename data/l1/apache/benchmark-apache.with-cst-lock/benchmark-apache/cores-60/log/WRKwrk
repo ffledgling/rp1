@@ -1,0 +1,8 @@
+Running 50s test @ http://127.0.0.1:8000/x.txt
+  60 threads and 480 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.01ms    6.08ms 223.14ms   93.00%
+    Req/Sec     3.74k     1.56k   20.98k    67.07%
+  4456860 requests in 20.04s, 2.22GB read
+Requests/sec: 222343.28
+Transfer/sec:    113.29MB

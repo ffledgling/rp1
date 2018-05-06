@@ -18,6 +18,14 @@ error() {
   return 42
 }
 
+audible-alert() {
+  for i in {1..10}
+  do
+    echo -ne "\a"
+    sleep 0.2
+  done
+}
+
 require-args() {
   if [[ $2 -lt $1 ]]; then
     error "Required at $1 arguments, only $2 give"
@@ -56,7 +64,7 @@ ensure-domain-running() {
     virsh start "${dom_name}"
     if [[ $? -ne 0 ]]; then error "Could not start domain"; fi
     # Give the machine time to boot up and ssh to come up
-    sleep 30
+    while ! ssh sanidhya@192.168.122.33 'echo "ssh started"'; do sleep 2; done
   fi
 }
 
@@ -133,14 +141,18 @@ benchmark-l2() {
   ts=$(date '+%Y%m%d%H%M%S')
   results_dir="/dev/shm/results.l2.${APP}.${ts}"
 
-  run-in-l2 "cd ~/vm-scalability/bench/ ; rm -rf results ; ./config.py ${APP}"
-  run-in-l1 "rsync -avz sanidhya@${L2_IP}:${VBENCH_ROOT}/results ${results_dir}"
-  rsync -avz sanidhya@${L1_IP}:${results_dir} ${results_dir}
+  # We add a little "cache warm" in case we have files and stuff we load/dump
+  # The mount is required for psearchy, but doesn't hurt the other benchmarks, soo... *shrug*
+  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate ; rm -rf results ; ./config.py -d -c 80 ${APP} ; ./config.py ${APP}"
+  run-in-l1 "rsync -avz sanidhya@${L2_IP}:${VBENCH_ROOT}/results/ ${results_dir}"
+  rsync -avz sanidhya@${L1_IP}:${results_dir}/ ${results_dir}
+  mv ${results_dir} ~/scratch/
 
   # We shutdown the domain everytime because a bug in the numa code of the
   # benchmark fails to restore offline CPUs after the run which results in random
   # errors.
   run-in-l2 "sudo poweroff"
+  run-in-l1 "sudo poweroff"
 
   echo "results are available in ${results_dir}"
 
@@ -156,8 +168,11 @@ benchmark-l1() {
   ts=$(date '+%Y%m%d%H%M%S')
   results_dir="/dev/shm/results.l1.${APP}.${ts}"
 
-  run-in-l1 "cd ~/vm-scalability/bench/ ; rm -rf results ; ./config.py ${APP}"
-  rsync -avz sanidhya@${L1_IP}:${VBENCH_ROOT}/results ${results_dir}
+  # We add a little "cache warm" in case we have files and stuff we load/dump
+  # The mount is required for psearchy, but doesn't hurt the other benchmarks, soo... *shrug*
+  run-in-l1 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate  ; rm -rf results ; ./config.py -d -c 80 ${APP} ; ./config.py ${APP}"
+  rsync -avz sanidhya@${L1_IP}:${VBENCH_ROOT}/results/ ${results_dir}
+  mv ${results_dir} ~/scratch/
 
   # We shutdown the domain everytime because a bug in the numa code of the
   # benchmark fails to restore offline CPUs after the run which results in random
@@ -167,4 +182,20 @@ benchmark-l1() {
   echo "results are available in ${results_dir}"
 
   set +x
+}
+
+benchmark-both() {
+  require-args 1 $# || return $?
+
+  echo > benchmark-both.log
+  for b in "$@"
+  do
+    echo "STARTING ${b} (L1)" >> benchmark-both.log
+    time benchmark-l2 "${b}" | tee -a benchmark-both.log
+    sleep 5 # wait for poweroff cleanly
+    echo "STARTING ${b} (L2)" >> benchmark-both.log
+    time benchmark-l1 "${b}" | tee -a benchmark-both.log
+    echo "DONE ${b}" >> benchmark-both.log
+  done
+  audible-alert
 }

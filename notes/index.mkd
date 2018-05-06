@@ -70,4 +70,3 @@ Compile kernel with CST/CST-MCS lock implementation and run perf again.
 Outcome: Looks like we see reduced contention down from ~70% to 45%, confirmed with perf.
 
 Should re-run the full benchmarks and compare the throughput as well.
-
