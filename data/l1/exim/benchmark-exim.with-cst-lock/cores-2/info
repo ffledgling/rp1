@@ -1033,7 +1033,7 @@ p352
 S'm'
 sS'fs.inode-nr'
 p353
-S'210149\t582'
+S'11229334\t584'
 p354
 sS'CONFIG_NET_SCH_FIFO'
 p355
@@ -4041,7 +4041,7 @@ p1362
 S'm'
 sS'fs.dentry-state'
 p1363
-S'537574\t519047\t45\t0\t0\t0'
+S'11235204\t19673\t45\t0\t0\t0'
 p1364
 sS'CONFIG_NF_CONNTRACK_SECMARK'
 p1365
@@ -4849,7 +4849,7 @@ p1634
 I0
 sS'kernel.sched_domain.cpu1.domain0.max_newidle_lb_cost'
 p1635
-I17387
+I3820
 sS'fs.epoll.max_user_watches'
 p1636
 I27026984
@@ -5210,7 +5210,7 @@ p1755
 S'm'
 sS'kernel.ns_last_pid'
 p1756
-I60406
+I39647
 sS'CONFIG_SYSTEM_DATA_VERIFICATION'
 p1757
 S'y'
@@ -6844,7 +6844,7 @@ p2303
 S'm'
 sS'kernel.sched_domain.cpu0.domain0.max_newidle_lb_cost'
 p2304
-I18022
+I4819
 sS'CONFIG_USB_EMI62'
 p2305
 S'm'
@@ -10813,7 +10813,7 @@ p3638
 S'y'
 sS'fs.file-nr'
 p3639
-S'1461\t0\t500000'
+S'1011\t0\t500000'
 p3640
 sS'CONFIG_SENSORS_SHT21'
 p3641
@@ -11099,7 +11099,7 @@ p3734
 S'm'
 sS'net.ipv4.udp_mem'
 p3735
-S'3081528\t4108704\t6163056'
+S'3081528\t4108705\t6163056'
 p3736
 sS'CONFIG_SND_YMFPCI'
 p3737
@@ -11612,7 +11612,7 @@ p3907
 S'm'
 sS'net.netfilter.nf_conntrack_count'
 p3908
-I1369
+I10904
 sS'CONFIG_BT_DEBUGFS'
 p3909
 S'y'
@@ -12598,7 +12598,7 @@ p4237
 I0
 sS'kernel.random.uuid'
 p4238
-S'548edc78-f91c-42cb-a554-1d3eceeb13cf'
+S'be83a8ab-2664-47bb-8adc-28084a75f2ac'
 p4239
 sS'CONFIG_IP_NF_TARGET_REJECT'
 p4240
@@ -13515,7 +13515,7 @@ p4546
 S'y'
 sS'fs.inode-state'
 p4547
-S'210149\t582\t0\t0\t0\t0\t0'
+S'11229334\t584\t0\t0\t0\t0\t0'
 p4548
 sS'CONFIG_SENSORS_K10TEMP'
 p4549
@@ -20183,7 +20183,7 @@ p6790
 S'm'
 sS'kernel.random.entropy_avail'
 p6791
-I846
+I142
 sS'CONFIG_USB_HIDDEV'
 p6792
 S'y'
@@ -20207,7 +20207,7 @@ p6798
 S'm'
 sS'kernel.random.boot_id'
 p6799
-S'3468a2fb-d1dc-405b-ac77-cd5a68cf9e1f'
+S'5d5b6b10-e182-43d2-a3b7-a7fb7756936b'
 p6800
 sS'CONFIG_QUOTA'
 p6801
@@ -23622,22 +23622,22 @@ p7953
 sa(dp7954
 S'real'
 p7955
-F15.029500000000001
+F15.0122
 sS'time.iowait'
 p7956
-F11.82
+F0
 sg8
 S'EximLoad.trial-0.host-192.168.122.33'
 p7957
 sS'time.real'
 p7958
-F15.029500000000001
+F15.0122
 sS'time.idle'
 p7959
-F17.758900000000001
+F2.72437
 sS'time.sys'
 p7960
-F9.5
+F20.300000000000001
 sS'clients'
 p7961
 I160
@@ -23660,10 +23660,10 @@ sg10
 g11
 sS'result'
 p7968
-F12112
+F50872
 sS'time.softirq'
 p7969
-F1.1200000000000001
+F2.7000000000000002
 sS'units'
 p7970
 S'messages'
@@ -23673,7 +23673,7 @@ p7972
 I2
 sS'time.steal'
 p7973
-F0.13
+F0.02
 sS'time.irq'
 p7974
 F0
@@ -23687,5 +23687,5 @@ S'message'
 p7976
 sS'time.user'
 p7977
-F2.7999999999999998
+F7
 sa.

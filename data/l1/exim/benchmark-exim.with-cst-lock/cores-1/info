@@ -1030,7 +1030,7 @@ p351
 S'm'
 sS'fs.inode-nr'
 p352
-S'215212\t582'
+S'11192361\t584'
 p353
 sS'CONFIG_NET_SCH_FIFO'
 p354
@@ -4035,7 +4035,7 @@ p1360
 S'm'
 sS'fs.dentry-state'
 p1361
-S'575142\t556717\t45\t0\t0\t0'
+S'11198231\t19677\t45\t0\t0\t0'
 p1362
 sS'CONFIG_NF_CONNTRACK_SECMARK'
 p1363
@@ -5198,7 +5198,7 @@ p1751
 S'm'
 sS'kernel.ns_last_pid'
 p1752
-I64510
+I57047
 sS'CONFIG_SYSTEM_DATA_VERIFICATION'
 p1753
 S'y'
@@ -10786,7 +10786,7 @@ p3629
 S'y'
 sS'fs.file-nr'
 p3630
-S'1196\t0\t500000'
+S'992\t0\t500000'
 p3631
 sS'CONFIG_SENSORS_SHT21'
 p3632
@@ -11072,7 +11072,7 @@ p3725
 S'm'
 sS'net.ipv4.udp_mem'
 p3726
-S'3081528\t4108704\t6163056'
+S'3081528\t4108705\t6163056'
 p3727
 sS'CONFIG_SND_YMFPCI'
 p3728
@@ -11578,7 +11578,7 @@ p3895
 S'm'
 sS'net.netfilter.nf_conntrack_count'
 p3896
-I1273
+I5372
 sS'CONFIG_BT_DEBUGFS'
 p3897
 S'y'
@@ -12557,7 +12557,7 @@ p4222
 I0
 sS'kernel.random.uuid'
 p4223
-S'52f2013a-01f2-4752-a028-f5a8940229ee'
+S'75eccc78-690a-4ade-81c7-dac1f3456ffa'
 p4224
 sS'CONFIG_IP_NF_TARGET_REJECT'
 p4225
@@ -13471,7 +13471,7 @@ p4530
 S'y'
 sS'fs.inode-state'
 p4531
-S'215212\t582\t0\t0\t0\t0\t0'
+S'11192361\t584\t0\t0\t0\t0\t0'
 p4532
 sS'CONFIG_SENSORS_K10TEMP'
 p4533
@@ -20115,7 +20115,7 @@ p6766
 S'm'
 sS'kernel.random.entropy_avail'
 p6767
-I877
+I158
 sS'CONFIG_USB_HIDDEV'
 p6768
 S'y'
@@ -20139,7 +20139,7 @@ p6774
 S'm'
 sS'kernel.random.boot_id'
 p6775
-S'3468a2fb-d1dc-405b-ac77-cd5a68cf9e1f'
+S'5d5b6b10-e182-43d2-a3b7-a7fb7756936b'
 p6776
 sS'CONFIG_QUOTA'
 p6777
@@ -23542,22 +23542,22 @@ p7925
 sa(dp7926
 S'real'
 p7927
-F15.110300000000001
+F15.0177
 sS'time.iowait'
 p7928
-F6.2199999999999998
+F0
 sg8
 S'EximLoad.trial-0.host-192.168.122.33'
 p7929
 sS'time.real'
 p7930
-F15.110300000000001
+F15.0177
 sS'time.idle'
 p7931
-F6.9903500000000003
+F1.2777400000000001
 sS'time.sys'
 p7932
-F6.1500000000000004
+F10.109999999999999
 sS'clients'
 p7933
 I160
@@ -23580,10 +23580,10 @@ sg10
 g11
 sS'result'
 p7940
-F9056
+F26206
 sS'time.softirq'
 p7941
-F0.60999999999999999
+F1.27
 sS'units'
 p7942
 S'messages'
@@ -23593,7 +23593,7 @@ p7944
 I1
 sS'time.steal'
 p7945
-F0.029999999999999999
+F0.01
 sS'time.irq'
 p7946
 F0
@@ -23607,5 +23607,5 @@ S'message'
 p7948
 sS'time.user'
 p7949
-F1.97
+F3.6299999999999999
 sa.

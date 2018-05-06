@@ -65,6 +65,8 @@ ensure-domain-running() {
     if [[ $? -ne 0 ]]; then error "Could not start domain"; fi
     # Give the machine time to boot up and ssh to come up
     while ! ssh sanidhya@192.168.122.33 'echo "ssh started"'; do sleep 2; done
+    # We wait for libvirtd to come up after sshd is started, this can take time... :/
+    sleep 10
   fi
 }
 
@@ -113,7 +115,7 @@ set -x
   perf_pid=$!
 
   # run benchmark
-  run-in-l2 "cd ~/vm-scalability/bench/ ; ./config.py -d -c ${NUM_CORES} ${APP} ; sudo poweroff"
+  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate ; ./config.py -d -c ${NUM_CORES} ${APP} ; sudo poweroff"
   run-in-l1 "sudo poweroff"
 
   # Instead of killing perf, we kill the process it's tracing, and then waiting
@@ -190,10 +192,10 @@ benchmark-both() {
   echo > benchmark-both.log
   for b in "$@"
   do
-    echo "STARTING ${b} (L1)" >> benchmark-both.log
-    time benchmark-l2 "${b}" | tee -a benchmark-both.log
-    sleep 5 # wait for poweroff cleanly
     echo "STARTING ${b} (L2)" >> benchmark-both.log
+    time benchmark-l2 "${b}" | tee -a benchmark-both.log
+    sleep 30 # wait for poweroff cleanly
+    echo "STARTING ${b} (L1)" >> benchmark-both.log
     time benchmark-l1 "${b}" | tee -a benchmark-both.log
     echo "DONE ${b}" >> benchmark-both.log
   done

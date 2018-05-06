@@ -1,0 +1,24 @@
+Building index
+Core 2 shard 0
+Core 0 shard 0
+Core 8 shard 0
+Core 4 shard 0
+Core 1 shard 0
+Core 3 shard 0
+Core 7 shard 0
+Core 9 shard 0
+Core 6 shard 0
+Core 5 shard 0
+Core 1 shard 1
+Core 3 shard 1
+Core 6 shard 1
+Core 5 shard 1
+Core 7 shard 1
+Core 4 shard 1
+Core 0 shard 1
+Core 2 shard 1
+Core 8 shard 1
+Core 9 shard 1
+pedsort 2: nfile 3383, nword 8043695,  hashsize 1048583 (nstrcmp 105408), pass0files 11,nwordlast 1, total: 153.20u 6.33s 16.28r 0i 0o throughput: 22.106518
+10: 156.26u 6.58s 16.92r 0i 0o throughput: 21.272192 jobs/hour/core
+[TimeMonitor] real 16.9306 user 156.2 nice 0 sys 6.64 idle 1191.61 iowait 0.02 irq 0 softirq 0 steal 0.05

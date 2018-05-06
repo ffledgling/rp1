@@ -1,0 +1,28 @@
+Fetching http://127.0.0.1:8000/server-status?auto...
+Total Accesses: 50482
+Total kBytes: 14789
+CPULoad: 78.6
+Uptime: 5
+ReqPerSec: 10096.4
+BytesPerSec: 3028790
+BytesPerReq: 299.987
+BusyWorkers: 9
+IdleWorkers: 15
+Scoreboard: KKKKKKKW_______________K
+
+Starting
+Fetching http://127.0.0.1:8000/server-status?auto...
+Total Accesses: 209651
+Total kBytes: 61421
+CPULoad: 77.2
+Uptime: 20
+ReqPerSec: 10482.5
+BytesPerSec: 3144760
+BytesPerReq: 299.999
+BusyWorkers: 9
+IdleWorkers: 15
+Scoreboard: _______K________KKKKKKKW
+
+Stopped
+159169 requests, 15.014830 seconds, 10600 per second
+[TimeMonitor] real 15.0146 user 5.54 nice 0 sys 7.93 idle 1187.7 iowait 0.02 irq 0 softirq 1.54 steal 0.25

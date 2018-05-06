@@ -7,6 +7,6 @@ Core 0 shard 4
 Core 0 shard 5
 Core 0 shard 6
 Core 0 shard 7
-pedsort 0: nfile 47970, nword 81736556,  hashsize 1048583 (nstrcmp 1002764), pass0files 104,nwordlast 1, total: 125.50u 6.25s 132.57r 0i 0o throughput: 27.156151
-1: 125.50u 6.25s 132.57r 0i 0o throughput: 27.156130 jobs/hour/core
-[TimeMonitor] real 132.599 user 125.54 nice 0 sys 6.31 idle 10476.1 iowait 0.08 irq 0 softirq 0 steal 0.38
+pedsort 0: nfile 47970, nword 81736556,  hashsize 1048583 (nstrcmp 1002764), pass0files 104,nwordlast 1, total: 132.57u 5.18s 137.81r 0i 0o throughput: 26.122646
+1: 132.57u 5.18s 137.81r 0i 0o throughput: 26.122631 jobs/hour/core
+[TimeMonitor] real 137.863 user 132.59 nice 0 sys 5.39 idle 10891.1 iowait 0.78 irq 0 softirq 0 steal 0.43

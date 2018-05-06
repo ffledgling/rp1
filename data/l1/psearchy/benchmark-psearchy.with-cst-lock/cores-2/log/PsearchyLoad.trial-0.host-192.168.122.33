@@ -3,12 +3,12 @@ Core 0 shard 0
 Core 1 shard 0
 Core 0 shard 1
 Core 1 shard 1
-Core 1 shard 2
 Core 0 shard 2
-Core 1 shard 3
+Core 1 shard 2
 Core 0 shard 3
+Core 1 shard 3
 Core 0 shard 4
 Core 1 shard 4
-pedsort 0: nfile 22420, nword 40797327,  hashsize 1048583 (nstrcmp 475423), pass0files 52,nwordlast 1, total: 129.62u 4.70s 67.35r 0i 0o throughput: 26.726089
-2: 130.25u 4.79s 68.08r 0i 0o throughput: 26.441153 jobs/hour/core
-[TimeMonitor] real 68.0809 user 130.21 nice 0 sys 4.82 idle 5311.44 iowait 0.08 irq 0 softirq 0.38 steal 0.96
+pedsort 0: nfile 26787, nword 40671591,  hashsize 1048583 (nstrcmp 473205), pass0files 52,nwordlast 1, total: 129.42u 4.49s 67.13r 0i 0o throughput: 26.815308
+2: 130.12u 4.59s 67.92r 0i 0o throughput: 26.502508 jobs/hour/core
+[TimeMonitor] real 67.9232 user 130.05 nice 0 sys 4.69 idle 5299.12 iowait 0.15 irq 0 softirq 0.02 steal 0.18

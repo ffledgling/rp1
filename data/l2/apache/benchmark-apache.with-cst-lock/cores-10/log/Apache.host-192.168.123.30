@@ -1,0 +1,13 @@
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 0 to cpu 0
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 1 to cpu 1
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 3 to cpu 3
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 2 to cpu 2
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 5 to cpu 5
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 4 to cpu 4
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 6 to cpu 6
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 7 to cpu 7
+[Sun May 06 12:39:31 2018] [notice] Apache/2.2.34 (Unix) configured -- resuming normal operations
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 8 to cpu 8
+[Sun May 06 12:39:31 2018] [warn] sched_setaffinity slot 9 to cpu 9
+[Sun May 06 12:39:32 2018] [error] server is within MinSpareThreads of MaxClients, consider raising the MaxClients setting
+[Sun May 06 12:39:52 2018] [notice] caught SIGTERM, shutting down

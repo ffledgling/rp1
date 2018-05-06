@@ -1,0 +1,14 @@
+Starting mapreduce
+Finished mapreduce
+Runtime in milliseconds [2 cores]
+	Sample:	3928	Map:	76298	Reduce:	2128	Merge:	1	Sum:	82356	Real:	82358	
+Number of Tasks
+	Sample:	2	Map:	30	Reduce:	439	
+
+wordreverseindex: results (TOP 5 from 4394 keys, 536870912 words):
+            ABA - 122171
+            ABC - 122489
+            ABE - 122321
+            ABG - 122292
+            ABI - 122269
+[TimeMonitor] real 82.3576 user 158.85 nice 0 sys 5.68 idle 6424.08 iowait 0.06 irq 0 softirq 0 steal 0.07
