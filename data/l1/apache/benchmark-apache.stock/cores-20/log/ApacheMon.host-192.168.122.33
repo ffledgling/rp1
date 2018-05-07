@@ -1,0 +1,28 @@
+Fetching http://127.0.0.1:8000/server-status?auto...
+Total Accesses: 809474
+Total kBytes: 237150
+CPULoad: 1500
+Uptime: 5
+ReqPerSec: 161895
+BytesPerSec: 48568300
+BytesPerReq: 299.999
+BusyWorkers: 159
+IdleWorkers: 321
+Scoreboard: _K______K___KK_KKK_____KK___KK__KK__K____K___KK_______K___KK____KK_____K__K__K__WK_____K__KK_K_K__K_K___K___KK_K____K___________KK__K_KK_K___K_________WK__K__K__KKK_K_____KW___KKKK_K___K_K_K__K__KK____KK____K_K__K____KK____K_W_KK_KK_K____K_________K_KKK____KK__K____________K_K_W____K_K___K___K_K____K___K___________KK___KK_____K____WK__K____K__KKW_KK_K_KK__K_____KWK_____K__KK_KKK___K_K______K__KKK_____K_KK_K____K___KK__K____KKK___K_K___K___KKK____K_______________KKW_K_K__KK_KK
+
+Starting
+Fetching http://127.0.0.1:8000/server-status?auto...
+Total Accesses: 3270580
+Total kBytes: 958178
+CPULoad: 1492.35
+Uptime: 20
+ReqPerSec: 163529
+BytesPerSec: 49058700
+BytesPerReq: 300
+BusyWorkers: 161
+IdleWorkers: 319
+Scoreboard: _K_KKK__K______WK___KK_____K_KK_______K_KK__KK_W_K_______K____K_K_KK_K_K_K_______________KK__K_K__K_K_KWK__K______K_KK__K______KK___K__KK_K__W__K_K_K______K__K__K______KK_KK_KK_K___K__K____K_KK___K__________K__K_K_KK_K__KK_KK___KK____K__KK___KK_____K_K______K____KK___WK__KK______K___K____KK_K_KKK____KK____K_____K_K__KKK_KK____KK____________K__K_KK_K_K__K__K____K_KK_W____K_K_K____K_K_K___K_K_K__W____K_K____K___KK_____K_K________K__K___KK_____K___KKK_____K_KK_KK_KWK_K_K____K___
+
+Stopped
+2461106 requests, 15.014081 seconds, 163919 per second
+[TimeMonitor] real 15.0139 user 96.24 nice 0 sys 149.09 idle 955.778 iowait 0.02 irq 0 softirq 47.39 steal 0.31

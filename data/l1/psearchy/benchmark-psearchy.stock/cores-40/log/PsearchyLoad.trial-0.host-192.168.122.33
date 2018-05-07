@@ -1,0 +1,44 @@
+Building index
+Core 11 shard 0
+Core 22 shard 0
+Core 28 shard 0
+Core 5 shard 0
+Core 20 shard 0
+Core 39 shard 0
+Core 2 shard 0
+Core 38 shard 0
+Core 23 shard 0
+Core 13 shard 0
+Core 37 shard 0
+Core 7 shard 0
+Core 17 shard 0
+Core 36 shard 0
+Core 32 shard 0
+Core 4 shard 0
+Core 6 shard 0
+Core 25 shard 0
+Core 26 shard 0
+Core 30 shard 0
+Core 31 shard 0
+Core 35 shard 0
+Core 15 shard 0
+Core 8 shard 0
+Core 24 shard 0
+Core 34 shard 0
+Core 12 shard 0
+Core 27 shard 0
+Core 33 shard 0
+Core 10 shard 0
+Core 18 shard 0
+Core 9 shard 0
+Core 16 shard 0
+Core 29 shard 0
+Core 3 shard 0
+Core 1 shard 0
+Core 0 shard 0
+Core 14 shard 0
+Core 19 shard 0
+Core 21 shard 0
+pedsort 11: nfile 1061, nword 1909504,  hashsize 1048583 (nstrcmp 21420), pass0files 3,nwordlast 6, total: 152.05u 9.09s 4.57r 0i 0o throughput: 19.710217
+40: 164.34u 9.67s 5.39r 0i 0o throughput: 16.709007 jobs/hour/core
+[TimeMonitor] real 5.39263 user 164.19 nice 0 sys 9.66 idle 257.56 iowait 0.02 irq 0 softirq 0.02 steal 0.21
