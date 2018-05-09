@@ -58,13 +58,14 @@ gen-flame-from-perf() {
 
 ensure-domain-running() {
   dom_name="$1"
+  dom_ip="$2"
   dom_state="$(virsh domstate "${dom_name}")"
 
   if ! [[ "${dom_state}" == *running* ]]; then
     virsh start "${dom_name}"
     if [[ $? -ne 0 ]]; then error "Could not start domain"; fi
     # Give the machine time to boot up and ssh to come up
-    while ! ssh sanidhya@192.168.122.33 'echo "ssh started"'; do sleep 2; done
+    while ! ssh sanidhya@${dom_ip} 'echo "ssh started"'; do sleep 2; done
     # We wait for libvirtd to come up after sshd is started, this can take time... :/
     sleep 10
   fi
@@ -75,7 +76,7 @@ run-in-lx() {
   dom_ip="$2"
   cmd="$3"
 
-  ensure-domain-running "${dom_name}"
+  ensure-domain-running "${dom_name}" "${dom_ip}"
   ssh sanidhya@${dom_ip} "${cmd}"
 }
 
@@ -100,12 +101,15 @@ perf-l2-from-l0() {
 set -x
 
   APP="$1"
-  NUM_CORES=80
+  NUM_CORES=192
   ts=$(date '+%Y%m%d%H%M%S')
   perf_data="/dev/shm/perf.data.${APP}.${NUM_CORES}.${ts}"
 
-  # We need this because we want L1 running for it's PID
-  ensure-domain-running "${L1_NAME}"
+  # We need to ensure L1 and L2 are running, the run-in command makes sure of
+  # that.
+  # We need to ensure tmpfs mount exists
+  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate"
+
   dpid=$(get-domain-pid "${L1_NAME}")
 
   if [[ "$dpid" == "" ]]; then error "Could not find qemu pid"; fi
@@ -115,14 +119,16 @@ set -x
   perf_pid=$!
 
   # run benchmark
-  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate ; ./config.py -d -c ${NUM_CORES} ${APP} ; sudo poweroff"
-  run-in-l1 "sudo poweroff"
+  #run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate ; ./config.py -d -c ${NUM_CORES} ${APP} ; sudo poweroff"
+  run-in-l2 "cd ~/vm-scalability/bench/ ; ./config.py -d -c ${NUM_CORES} ${APP}"
+  #run-in-l1 "sudo poweroff"
 
   # Instead of killing perf, we kill the process it's tracing, and then waiting
   # for it to gracefully finish
 
   ## Kill perf
-  #kill -s INT $perf_pid
+  sudo kill -INT $perf_pid
+  sleep 10
   wait
 
   echo "perf.data written to ${perf_data}"
@@ -145,7 +151,7 @@ benchmark-l2() {
 
   # We add a little "cache warm" in case we have files and stuff we load/dump
   # The mount is required for psearchy, but doesn't hurt the other benchmarks, soo... *shrug*
-  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate ; rm -rf results ; ./config.py -d -c 80 ${APP} ; ./config.py ${APP}"
+  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate ; rm -rf results ; ./config.py -d -c 192 ${APP} ; ./config.py ${APP}"
   run-in-l1 "rsync -avz sanidhya@${L2_IP}:${VBENCH_ROOT}/results/ ${results_dir}"
   rsync -avz sanidhya@${L1_IP}:${results_dir}/ ${results_dir}
   mv ${results_dir} ~/scratch/
@@ -172,7 +178,7 @@ benchmark-l1() {
 
   # We add a little "cache warm" in case we have files and stuff we load/dump
   # The mount is required for psearchy, but doesn't hurt the other benchmarks, soo... *shrug*
-  run-in-l1 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate  ; rm -rf results ; ./config.py -d -c 80 ${APP} ; ./config.py ${APP}"
+  run-in-l1 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate  ; rm -rf results ; ./config.py -d -c 192 ${APP} ; ./config.py ${APP}"
   rsync -avz sanidhya@${L1_IP}:${VBENCH_ROOT}/results/ ${results_dir}
   mv ${results_dir} ~/scratch/
 
