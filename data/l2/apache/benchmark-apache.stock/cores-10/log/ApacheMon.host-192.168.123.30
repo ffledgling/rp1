@@ -1,0 +1,28 @@
+Fetching http://127.0.0.1:8000/server-status?auto...
+Total Accesses: 314638
+Total kBytes: 92179
+CPULoad: 656.4
+Uptime: 5
+ReqPerSec: 62927.6
+BytesPerSec: 18878300
+BytesPerReq: 300
+BusyWorkers: 80
+IdleWorkers: 160
+Scoreboard: KK_W__K_K_K_____K__KK_____KK____K___K__KKKW__K__K______K____K_KK_____W__K__K____K___K_____K_K_K____KKK__________KKK____KK__KK__K__KK___KKK_________K_KK_KK____KK_____K________K___K_KK__W_K_KK_K______K_K_K_________KK_K__K__K___K_KK__K____WKKK
+
+Starting
+Fetching http://127.0.0.1:8000/server-status?auto...
+Total Accesses: 1272133
+Total kBytes: 372695
+CPULoad: 653.55
+Uptime: 20
+ReqPerSec: 63606.6
+BytesPerSec: 19082000
+BytesPerReq: 300
+BusyWorkers: 81
+IdleWorkers: 159
+Scoreboard: _K_K_KK_K_K_______K__K_____K_K__K_K__K__KKW__K_______K____KKKK___K_KK____KKK__K_K____K_K_________K_KK___K_____K__K____K___K___K_K__K__KK___WK__KKKK___K____K_K_K___K____K____K__K____KK___KK___K__KK__WKK_KK__KK___K______K_____W_K___K_K__K___K
+
+Stopped
+957495 requests, 15.014563 seconds, 63771 per second
+[TimeMonitor] real 15.0142 user 44.03 nice 0 sys 63.49 idle 1093.62 iowait 0.03 irq 0 softirq 41.25 steal 0.07
