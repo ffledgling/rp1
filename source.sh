@@ -51,7 +51,13 @@ gen-flame-from-perf() {
 # Steps from https://github.com/brendangregg/FlameGraph
   _outfile="$1"
   _outfile="${_outfile:=out.svg}"
-  perf script > out.perf
+  _infile="$2"
+  _flags=""
+  if [[ "${_infile}" != "" ]]; then
+    flags="${flags} -i ${_infile}"
+  fi
+  # Intentionally unquoted so that flags expand.
+  perf script ${flags} > out.perf
   stackcollapse-perf.pl out.perf > out.folded
   flamegraph.pl out.folded > "${_outfile}"
 }
