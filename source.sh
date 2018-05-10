@@ -107,7 +107,8 @@ perf-l2-from-l0() {
 set -x
 
   APP="$1"
-  NUM_CORES=192
+  NUM_CORES="$2" # optional
+  NUM_CORES="${NUM_CORES:-192}" # defualt to 192 cores
   ts=$(date '+%Y%m%d%H%M%S')
   perf_data="/dev/shm/perf.data.${APP}.${NUM_CORES}.${ts}"
 
@@ -136,6 +137,9 @@ set -x
   sudo kill -INT $perf_pid
   sleep 10
   wait
+  # Shutdown the vm so that the next run is clean
+  run-in-l2 "sudo poweroff"
+  run-in-l1 "sudo poweroff"
 
   echo "perf.data written to ${perf_data}"
 

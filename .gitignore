@@ -4,6 +4,9 @@ machines/backups/*
 *.swo
 *.log
 
+# misc scripts, kept locally
+tmp-scripts/
+
 # Raw perf data, in the gigabytes, we ignore it
 data/l2/gmake/perf-from-l0/perf.data.*
 data/l2/gmake/perf-from-l1/perf.data.*
