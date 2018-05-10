@@ -150,6 +150,44 @@ perf-l2-from-l1() {
   error "This function is not yet implemented"
 }
 
+perf-l1-from-l0() {
+  require-args 1 $# || return 42
+set -x
+
+  APP="$1"
+  NUM_CORES="$2" # optional
+  NUM_CORES="${NUM_CORES:-192}" # defualt to 192 cores
+  ts=$(date '+%Y%m%d%H%M%S')
+  perf_data="/dev/shm/perf.data.${APP}.${NUM_CORES}.${ts}"
+
+  # We need to ensure L1 and L2 are running, the run-in command makes sure of
+  # that.
+  # We need to ensure tmpfs mount exists
+  run-in-l1 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate"
+
+  dpid=$(get-domain-pid "${L1_NAME}")
+
+  if [[ "$dpid" == "" ]]; then error "Could not find qemu pid"; fi
+
+  # Start perf
+  sudo ${L0_PERF_BIN} record -F 100 -a --call-graph dwarf -o ${perf_data} -p ${dpid} &> /tmp/perf.log &
+  perf_pid=$!
+
+  # run benchmark
+  run-in-l1 "cd ~/vm-scalability/bench/ ; ./config.py -d -c ${NUM_CORES} ${APP}"
+
+  ## Kill perf
+  sudo kill -INT $perf_pid
+  sleep 10
+  wait
+  # Shutdown the vm so that the next run is clean
+  run-in-l1 "sudo poweroff"
+
+  echo "perf.data written to ${perf_data}"
+
+  set +x
+}
+
 benchmark-l2() {
   require-args 1 $# || return $?
 
