@@ -1,0 +1,45 @@
+[sanidhya@ajs-1 kvm-unit-tests]$ sudo ./x86-run x86/vmexit.flat                                                                                   
+/usr/bin/qemu-system-x86_64 -nodefaults -device pc-testdev -device isa-debug-exit,iobase=0xf4,iosize=0x4 -vnc none -serial stdio -device pci-testdev -machine accel=kvm -kernel x86/vmexit.flat # -initrd /tmp/tmp.l353xPkbLb
+enabling apic
+paging enabled
+cr0 = 80010011
+cr3 = 45c000
+cr4 = 20
+PM timer port is 608
+pci-testdev at 0x10 membar febff000 iobar c000
+cpuid 14768
+vmcall 15373
+mov_from_cr8 9
+mov_to_cr8 48
+inl_from_pmtimer 45699
+inl_from_qemu 45274
+inl_from_kernel 19480
+outl_to_kernel 15183
+mov_dr 130
+tscdeadline_immed (skipped)
+tscdeadline (skipped)
+self_ipi_sti_nop 16201
+self_ipi_sti_hlt 31325
+self_ipi_tpr 16279
+self_ipi_tpr_sti_nop 16170
+self_ipi_tpr_sti_hlt 31413
+x2apic_self_ipi_sti_nop 890
+x2apic_self_ipi_sti_hlt 15823
+x2apic_self_ipi_tpr 969
+x2apic_self_ipi_tpr_sti_nop 988
+x2apic_self_ipi_tpr_sti_hlt 16193
+ipi (skipped)
+ipi_halt (skipped)
+ple_round_robin 10
+wr_kernel_gs_base 1629
+wr_ibrs_msr (skipped)
+wr_ibpb_msr (skipped)
+wr_tsc_adjust_msr 14429
+rd_tsc_adjust_msr 14765
+mmio-no-eventfd:pci-mem 46539
+mmio-wildcard-eventfd:pci-mem 20120
+mmio-datamatch-eventfd:pci-mem 20195
+portio-no-eventfd:pci-io 39850
+portio-wildcard-eventfd:pci-io 15266
+portio-datamatch-eventfd:pci-io 15388
+

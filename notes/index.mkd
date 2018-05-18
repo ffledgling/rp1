@@ -63,10 +63,38 @@ without hugepages:
 Experiment
 ----------
 
-### 06:33:34 AM
+### 06:33:34 AM PST
 Compile kernel with CST/CST-MCS lock implementation and run perf again.
 
 
 Outcome: Looks like we see reduced contention down from ~70% to 45%, confirmed with perf.
 
 Should re-run the full benchmarks and compare the throughput as well.
+
+2018-05-11
+==========
+
+Experiment
+----------
+
+### 06:58:43 PM KST
+NOTE: These experiments were performed through 2018-05-07 to 2018-05-10
+
+Run all benchmarks with stock and cst kernel on the 192 core machine. The
+numbers are available in the git repo.
+
+We subsequently ran perf on the l0 hypervisor for all benchmarks at 192 cores
+and at the point where the difference between l1 and l2 performance is the
+maximum. The flamegraphs for these plots are alos available in the git repo.
+
+Experiment
+----------
+
+### 07:22:55 PM KST
+
+Objective: Check if running the VM with memmory `mlock`ed improves the performance at all.
+Hypothesis: mlocking should reduce the number of mmu_load/unloads at the guest level.
+
+Setup: We mlock all memory at l0 and l1 for the l2 guest.
+
+Result: No seeming reduction in memory, but the amount of time taken for the run seems to have gone up considerably. As indicated by the size of the perf.data file in addition to observation (7G vs. 2G)
