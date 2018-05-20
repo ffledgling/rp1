@@ -98,3 +98,18 @@ Hypothesis: mlocking should reduce the number of mmu_load/unloads at the guest l
 Setup: We mlock all memory at l0 and l1 for the l2 guest.
 
 Result: No seeming reduction in memory, but the amount of time taken for the run seems to have gone up considerably. As indicated by the size of the perf.data file in addition to observation (7G vs. 2G)
+
+
+2018-05-19
+==========
+
+### 09:02:48 AM KST
+
+Objective: Check gva_to_gpa() is called to do software address translation for guests in KVM.
+Hypothesis: none really,  just checking to see if the L1 manages to bypass any software translation using hardware, and if there's a difference in the number of calls for translation b/w L1 and L2.
+
+Setup: We fire up L1 (with L2 turned off), and run the gmake benchmark with 192 cores. We then switch on L2, then see how the numbers are impacted when we run the same benchmark in L2.
+
+Result: the `gva_to_gpa` (name "mangled" to `paging64_gva_to_gpa`), is more or less not called (or calls are not dependent on the workload being run) at just L1. However, when workloads are run in L2, the numebr of calls range from ~2k at idling to ~200k-900k when a benchmark is being run. With typical function latency lying in the around ~1-2ms that seems to be a lot of overhead.
+
+The question is what can be done to reduce this overhead (if anything) in software.
