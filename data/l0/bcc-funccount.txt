@@ -1,0 +1,284 @@
+sandhya@mos003:~/anhad/bcc/tools$ sudo ./funccount.py -Ti 5 '*gva_*'
+Tracing 11 functions for "*gva_*"... Hit Ctrl-C to end.
+
+EVENT: L1 vm is running, but no program/l2 is running (idling)
+
+07:35:56
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:36:01
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:36:06
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:36:11
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:36:16
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:36:21
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:36:26
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:36:31
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:36:36
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:36:41
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:36:46
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:36:51
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:36:56
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:37:01
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:37:06
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:37:11
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:37:16
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:37:21
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:37:26
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:37:31
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+EVENT:We run the gmake benchmark in l1 ; [sanidhya@ajs-1 bench]$ ./config.py -d -c 192 gmake
+
+07:37:36
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+07:37:41
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:37:46
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+EVENT: benchmark finishes
+
+07:37:51
+FUNC                                    COUNT
+paging64_gva_to_gpa                        93
+
+07:37:56
+FUNC                                    COUNT
+paging64_gva_to_gpa                        62
+
+EVENT: start l2 VM ; [sanidhya@ajs-1 bench]$ virsh start nestedvm
+
+07:38:01
+FUNC                                    COUNT
+paging64_gva_to_gpa                       892
+
+07:38:06
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    3
+paging64_gva_to_gpa                     27372
+
+07:38:11
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    3
+paging64_gva_to_gpa                    324296
+
+07:38:16
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                  935
+paging64_gva_to_gpa                    706397
+
+07:38:21
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                   32
+paging64_gva_to_gpa                    679198
+
+07:38:26
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                  299
+paging64_gva_to_gpa                    798378
+
+07:38:31
+FUNC                                    COUNT
+paging64_gva_to_gpa                      3398
+
+07:38:36
+FUNC                                    COUNT
+paging64_gva_to_gpa                      3106
+
+07:38:41
+FUNC                                    COUNT
+paging64_gva_to_gpa                      2153
+
+07:38:46
+FUNC                                    COUNT
+paging64_gva_to_gpa                      1797
+
+07:38:51
+FUNC                                    COUNT
+paging64_gva_to_gpa                      1738
+
+EVENT: ssh into l2 vm; [sanidhya@ajs-1 bench]$ ssh 192.168.123.30
+
+07:38:56
+FUNC                                    COUNT
+paging64_gva_to_gpa                     14612
+
+07:39:01
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    1
+paging64_gva_to_gpa                     13189
+
+07:39:06
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    1
+paging64_gva_to_gpa                      9343
+
+07:39:11
+FUNC                                    COUNT
+paging64_gva_to_gpa                      9166
+
+07:39:16
+FUNC                                    COUNT
+paging64_gva_to_gpa                      2862
+
+EVENT: logged in; idling in l2
+
+07:39:21
+FUNC                                    COUNT
+paging64_gva_to_gpa                      2387
+
+07:39:26
+FUNC                                    COUNT
+paging64_gva_to_gpa                      3311
+
+07:39:31
+FUNC                                    COUNT
+paging64_gva_to_gpa                      1727
+
+07:39:36
+FUNC                                    COUNT
+paging64_gva_to_gpa                      2518
+
+07:39:42
+FUNC                                    COUNT
+paging64_gva_to_gpa                      1986
+
+07:39:47
+FUNC                                    COUNT
+paging64_gva_to_gpa                      3054
+
+EVENT: run benchmark in l2;  [sanidhya@nestedvm bench]$ ./config.py -d -c 192 gmake
+
+07:39:52
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    3
+paging64_gva_to_gpa                     80494
+
+07:39:57
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    3
+paging64_gva_to_gpa                    120632
+
+07:40:02
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    5
+paging64_gva_to_gpa                    259742
+
+07:40:07
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    7
+paging64_gva_to_gpa                    136414
+
+07:40:12
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                    6
+paging64_gva_to_gpa                    262526
+
+07:40:17
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                 1283
+paging64_gva_to_gpa                    367311
+
+07:40:22
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                 1141
+paging64_gva_to_gpa                    348633
+
+07:40:27
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                  969
+paging64_gva_to_gpa                    239910
+
+07:40:32
+FUNC                                    COUNT
+kvm_mmu_gva_to_gpa_write                 1619
+paging64_gva_to_gpa                    148890
+
+07:40:37
+FUNC                                    COUNT
+paging64_gva_to_gpa                    220024
+
+07:40:42
+FUNC                                    COUNT
+paging64_gva_to_gpa                      7036
+
+EVENT: benchmark in l2 finishes
+
+07:40:47
+FUNC                                    COUNT
+paging64_gva_to_gpa                      1798
+
+07:40:52
+FUNC                                    COUNT
+paging64_gva_to_gpa                      1632
+
+07:40:57
+FUNC                                    COUNT
+paging64_gva_to_gpa                      2698
+^C
+07:40:58
+FUNC                                    COUNT
+paging64_gva_to_gpa                       395
+Detaching...
+
