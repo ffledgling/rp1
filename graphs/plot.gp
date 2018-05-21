@@ -2,7 +2,7 @@
 
 ######################################################################
 # http://youinfinitesnake.blogspot.com/2011/02/attractive-scientific-plots-with.html
-set terminal pdfcairo size 7in,4.2in font "Gill Sans,9" linewidth 4 rounded fontscale 1.0
+set terminal pdfcairo enhanced dashed size 7in,4.2in font "Gill Sans,9" linewidth 4 rounded fontscale 1.0 
 
 # Line style for axes
 set style line 80 lt rgb "#808080"
@@ -31,13 +31,16 @@ set style line 1 lt rgb "#A00000" lw 2 pt 1
 set style line 2 lt rgb "#00A000" lw 2 pt 6
 set style line 3 lt rgb "#5060D0" lw 2 pt 2
 set style line 4 lt rgb "#F25900" lw 2 pt 9
+
+# Dashed versions of 1 and 2
+set style line 5 lt rgb "#A00000" lw 2 pt 1
+set style line 6 lt rgb "#00A000" lw 2 pt 6
 ######################################################################
 
 # set terminal pdf
 set output 'plot.pdf'
 
 # Add timestamp to the plot, so we have some semblance of sanity
-#set timestamp "%d/%m/%y %H:%M" top offset 80,-2 font "Gill Sans, 6"
 set timestamp "%d/%m/%y %H:%M" top font "Gill Sans, 6"
 show timestamp
 
@@ -46,57 +49,71 @@ set xlabel 'cores'
 set ylabel 'requests/sec'
 set yrange [0:*]
 set ytics nomirror
+set key left top
 plot \
-        'l2/apache/ApacheMon.dat' index 0 title 'nVM' with lp linecolor 1, \
-        'l1/apache/ApacheMon.dat' index 0 title 'VM' with lp linecolor 2
+        'l2/apache.stock/ApacheMon.dat' index 0 title 'nVM' with lp linecolor 1,\
+        'l1/apache.stock/ApacheMon.dat' index 0 title 'VM' with lp linecolor 2,\
+        #'l2/apache.with-cst-lock/ApacheMon.dat' index 0 title 'nVM-cst' with lp linecolor 1 dt 2,\
+        #'l1/apache.with-cst-lock/ApacheMon.dat' index 0 title 'VM-cst' with lp linecolor 2 dt 2
 
 
-set title 'Gmake'
+set title 'Gmake (kernel compile)'
 set xlabel 'cores'
 set ylabel 'builds/hour'
 set yrange [0:*]
 set ytics nomirror
+set key left top
 plot \
-        'l2/gmake/GmakeLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
-        'l1/gmake/GmakeLoad.dat' index 0 title 'VM' with lp linecolor 2
+        'l2/gmake.stock/GmakeLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
+        'l1/gmake.stock/GmakeLoad.dat' index 0 title 'VM' with lp linecolor 2,\
+        #'l2/gmake.with-cst-lock/GmakeLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
+        #'l1/gmake.with-cst-lock/GmakeLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
 
 
-# Commented out until we run these and have this data
+set title 'Exim'
+set xlabel 'cores'
+set ylabel 'messages/sec'
+set yrange [0:*]
+set ytics nomirror
+set key left top
+plot \
+        'l2/exim.stock/EximLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
+        'l1/exim.stock/EximLoad.dat' index 0 title 'VM' with lp linecolor 2,\
+        #'l2/exim.with-cst-lock/EximLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
+        #'l1/exim.with-cst-lock/EximLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
 
-### set title 'Exim'
-### set xlabel 'cores'
-### set ylabel 'messages/sec'
-### set yrange [0:*]
-### set ytics nomirror
-### plot \
-###         'nested/exim/EximLoad.dat' index 0 title 'nVM' with lp linecolor 1, \
-###         'vm/exim/EximLoad.dat' index 0 title 'VM' with lp linecolor 2
+## set title 'Metis'
+## set xlabel 'cores'
+## set ylabel 'jobs/hour'
+## set yrange [0:*]
+## set ytics nomirror
+## set key left top
+## plot \
+##         'l2/metis.stock/MetisLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
+##         'l1/metis.stock/MetisLoad.dat' index 0 title 'VM' with lp linecolor 2,\
+##         'l2/metis.with-cst-lock/MetisLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
+##         'l1/metis.with-cst-lock/MetisLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
 
-### set title 'Metis'
-### set xlabel 'cores'
-### set ylabel 'jobs/hour'
-### set yrange [0:*]
-### set ytics nomirror
-### plot \
-###         'nested/metis/MetisLoad.dat' index 0 title 'nVM' with lp linecolor 1, \
-###         'vm/metis/MetisLoad.dat' index 0 title 'VM' with lp linecolor 2
-### 
-### 
-### set title 'Psearchy'
-### set xlabel 'cores'
-### set ylabel 'jobs/hour'
-### set yrange [0:*]
-### set ytics nomirror
-### plot \
-###         'nested/psearchy/PsearchyLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
-###         'vm/psearchy/PsearchyLoad.dat' index 0 title 'VM' with lp linecolor 2
-### 
-### 
+
+set title 'Psearchy'
+set xlabel 'cores'
+set ylabel 'jobs/hour'
+set yrange [0:*]
+set ytics nomirror
+set key left top
+plot \
+        'l2/psearchy.stock/PsearchyLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
+        'l1/psearchy.stock/PsearchyLoad.dat' index 0 title 'VM' with lp linecolor 2,\
+        #'l2/psearchy.with-cst-lock/PsearchyLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
+        #'l1/psearchy.with-cst-lock/PsearchyLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
+
+
 ### set title 'Pbzip'
 ### set xlabel 'cores'
 ### set ylabel 'jobs/hour'
 ### set yrange [0:*]
 ### set ytics nomirror
+### set key left top
 ### plot \
 ###         'nested/pbzip/pbzip.dat' index 0 title 'nVM' with lp linecolor 1, \
 ###         'vm/pbzip/pbzip.dat' index 0 title 'VM' with lp linecolor 2
