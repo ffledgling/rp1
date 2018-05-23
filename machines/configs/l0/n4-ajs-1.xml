@@ -1,14 +1,8 @@
-<domain type='kvm'>
+<domain type='kvm' id='22'>
   <name>n4-ajs-1</name>
   <uuid>4bf6a749-a25c-4945-a28c-92b1d27c3301</uuid>
   <memory unit='KiB'>268435456</memory>
   <currentMemory unit='KiB'>268435456</currentMemory>
-  <memtune>
-    <hard_limit unit='KiB'>314572800</hard_limit>
-  </memtune>
-  <memoryBacking>
-    <locked/>
-  </memoryBacking>
   <vcpu placement='static'>192</vcpu>
   <cputune>
     <vcpupin vcpu='0' cpuset='0'/>
@@ -245,60 +239,80 @@
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
       <source file='/home/sanidhya/images/n4-ajs-1.qcow2'/>
+      <backingStore/>
       <target dev='vda' bus='virtio'/>
       <boot order='1'/>
+      <alias name='virtio-disk0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
     </disk>
     <disk type='file' device='cdrom'>
       <driver name='qemu' type='raw'/>
+      <backingStore/>
       <target dev='hda' bus='ide'/>
       <readonly/>
+      <alias name='ide0-0-0'/>
       <address type='drive' controller='0' bus='0' target='0' unit='0'/>
     </disk>
     <controller type='usb' index='0' model='ich9-ehci1'>
+      <alias name='usb'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x7'/>
     </controller>
     <controller type='usb' index='0' model='ich9-uhci1'>
+      <alias name='usb'/>
       <master startport='0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x0' multifunction='on'/>
     </controller>
     <controller type='usb' index='0' model='ich9-uhci2'>
+      <alias name='usb'/>
       <master startport='2'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x1'/>
     </controller>
     <controller type='usb' index='0' model='ich9-uhci3'>
+      <alias name='usb'/>
       <master startport='4'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x2'/>
     </controller>
-    <controller type='pci' index='0' model='pci-root'/>
+    <controller type='pci' index='0' model='pci-root'>
+      <alias name='pci.0'/>
+    </controller>
     <controller type='ide' index='0'>
+      <alias name='ide'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x1'/>
     </controller>
     <interface type='network'>
       <mac address='52:54:00:26:27:02'/>
-      <source network='default'/>
+      <source network='default' bridge='virbr0'/>
+      <target dev='vnet0'/>
       <model type='virtio'/>
+      <alias name='net0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
     </interface>
     <serial type='pty'>
+      <source path='/dev/pts/4'/>
       <target port='0'/>
+      <alias name='serial0'/>
     </serial>
-    <console type='pty'>
+    <console type='pty' tty='/dev/pts/4'>
+      <source path='/dev/pts/4'/>
       <target type='serial' port='0'/>
+      <alias name='serial0'/>
     </console>
     <input type='mouse' bus='ps2'/>
     <input type='keyboard' bus='ps2'/>
-    <graphics type='vnc' port='-1' autoport='yes' listen='127.0.0.1'>
+    <graphics type='vnc' port='5900' autoport='yes' listen='127.0.0.1'>
       <listen type='address' address='127.0.0.1'/>
     </graphics>
     <sound model='ich6'>
+      <alias name='sound0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>
     </sound>
     <video>
       <model type='vga' vram='16384' heads='1'/>
+      <alias name='video0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
     </video>
     <memballoon model='virtio'>
+      <alias name='balloon0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
     </memballoon>
   </devices>

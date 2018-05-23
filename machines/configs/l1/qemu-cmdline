@@ -1,0 +1,45 @@
+qemu-system-x86_64
+-enable-kvm
+-name nestedvm
+-S
+-machine pc-i440fx-xenial,accel=kvm,usb=off
+-cpu host
+-m 65536
+-realtime mlock=off
+-smp 192,sockets=8,cores=24,threads=1
+-numa node,nodeid=0,cpus=0-23,mem=8192
+-numa node,nodeid=1,cpus=24-47,mem=8192
+-numa node,nodeid=2,cpus=48-71,mem=8192
+-numa node,nodeid=3,cpus=72-95,mem=8192
+-numa node,nodeid=4,cpus=96-119,mem=8192
+-numa node,nodeid=5,cpus=120-143,mem=8192
+-numa node,nodeid=6,cpus=144-167,mem=8192
+-numa node,nodeid=7,cpus=168-191,mem=8192
+-uuid ed9bb1a4-20f5-4135-95dd-2c591230f8da
+-no-user-config
+-nodefaults
+-chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/domain-nestedvm/monitor.sock,server,nowait
+-mon chardev=charmonitor,id=monitor,mode=control
+-rtc base=utc,driftfix=slew
+-global kvm-pit.lost_tick_policy=discard
+-no-hpet
+-no-shutdown
+-global PIIX4_PM.disable_s3=1
+-global PIIX4_PM.disable_s4=1
+-boot strict=on
+-device ich9-usb-ehci1,id=usb,bus=pci.0,addr=0x6.0x7
+-device ich9-usb-uhci1,masterbus=usb.0,firstport=0,bus=pci.0,multifunction=on,addr=0x6
+-device ich9-usb-uhci2,masterbus=usb.0,firstport=2,bus=pci.0,addr=0x6.0x1
+-device ich9-usb-uhci3,masterbus=usb.0,firstport=4,bus=pci.0,addr=0x6.0x2
+-drive file=/home/sanidhya/images/nevm-clone.qcow2,format=qcow2,if=none,id=drive-virtio-disk0
+-device virtio-blk-pci,scsi=off,bus=pci.0,addr=0x5,drive=drive-virtio-disk0,id=virtio-disk0,bootindex=1
+-netdev tap,fd=26,id=hostnet0,vhost=on,vhostfd=28
+-device virtio-net-pci,netdev=hostnet0,id=net0,mac=52:54:00:2c:e6:6c,bus=pci.0,addr=0x3
+-chardev pty,id=charserial0
+-device isa-serial,chardev=charserial0,id=serial0
+-vnc 127.0.0.1:0
+-device VGA,id=video0,vgamem_mb=16,bus=pci.0,addr=0x2
+-device intel-hda,id=sound0,bus=pci.0,addr=0x4
+-device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0
+-device virtio-balloon-pci,id=balloon0,bus=pci.0,addr=0x7
+-msg timestamp=on

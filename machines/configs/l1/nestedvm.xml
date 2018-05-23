@@ -1,14 +1,11 @@
+Domain n4-ajs-1 started
+
+ssh started
 <domain type='kvm'>
   <name>nestedvm</name>
   <uuid>ed9bb1a4-20f5-4135-95dd-2c591230f8da</uuid>
   <memory unit='KiB'>67108864</memory>
   <currentMemory unit='KiB'>67108864</currentMemory>
-  <memtune>
-    <hard_limit unit='KiB'>100663296</hard_limit>
-  </memtune>
-  <memoryBacking>
-    <locked/>
-  </memoryBacking>
   <vcpu placement='static'>192</vcpu>
   <cputune>
     <vcpupin vcpu='0' cpuset='0'/>
@@ -291,3 +288,4 @@
     </memballoon>
   </devices>
 </domain>
+

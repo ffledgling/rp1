@@ -1,0 +1,10 @@
+/sys/module/kvm/parameters/halt_poll_ns            200000
+/sys/module/kvm/parameters/halt_poll_ns_grow       2
+/sys/module/kvm/parameters/halt_poll_ns_shrink     0
+/sys/module/kvm/parameters/ignore_msrs             N
+/sys/module/kvm/parameters/kvmclock_periodic_sync  Y
+/sys/module/kvm/parameters/lapic_timer_advance_ns  0
+/sys/module/kvm/parameters/min_timer_period_us     500
+/sys/module/kvm/parameters/report_ignored_msrs     Y
+/sys/module/kvm/parameters/tsc_tolerance_ppm       250
+/sys/module/kvm/parameters/vector_hashing          Y

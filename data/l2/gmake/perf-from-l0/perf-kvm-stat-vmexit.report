@@ -1,0 +1,35 @@
+Warning:
+Processed 77828166 events and lost 18 chunks!
+ 
+Check IO/CPU overload!
+
+
+
+Analyze events for all VMs, all VCPUs:
+
+             VM-EXIT    Samples  Samples%     Time%    Min Time    Max Time         Avg time 
+
+       EPT_VIOLATION   11482535    29.58%     6.02%      0.47us 534413.76us    156.23us ( +-   0.10% )
+           MSR_WRITE    5886271    15.17%     2.37%      0.37us 7798642.86us    119.84us ( +-   1.11% )
+            VMRESUME    5442762    14.02%     7.15%      2.09us 7076812.08us    391.80us ( +-   0.34% )
+              VMREAD    3649791     9.40%     0.01%      0.35us   2673.95us      0.82us ( +-   0.24% )
+             VMWRITE    3617751     9.32%     0.01%      0.35us   1633.21us      0.75us ( +-   0.26% )
+  EXTERNAL_INTERRUPT    3341337     8.61%     0.99%      0.28us  77643.54us     87.94us ( +-   0.15% )
+    PREEMPTION_TIMER    1536878     3.96%     1.74%      0.37us  24604.67us    338.05us ( +-   0.09% )
+                 HLT    1312258     3.38%    81.59%      0.56us 3174264.55us  18534.78us ( +-   0.78% )
+            MSR_READ     562873     1.45%     0.00%      0.33us   6666.69us      1.95us ( +-   1.49% )
+           DR_ACCESS     534775     1.38%     0.00%      0.33us    792.80us      0.77us ( +-   0.61% )
+             LDTR_TR     522489     1.35%     0.01%      1.04us   2631.53us      6.27us ( +-   0.14% )
+           GDTR_IDTR     522488     1.35%     0.03%      1.90us 5070801.60us     18.10us ( +-  53.61% )
+               CPUID     233383     0.60%     0.06%      0.36us 130826.86us     79.88us ( +-   0.88% )
+   PAUSE_INSTRUCTION      79913     0.21%     0.00%      0.70us   1205.42us      3.52us ( +-   0.77% )
+      IO_INSTRUCTION      35510     0.09%     0.00%      0.84us  36154.34us     26.46us ( +-  10.41% )
+              VMCALL      30645     0.08%     0.02%      1.00us  10476.11us    148.93us ( +-   0.93% )
+       EPT_MISCONFIG      19456     0.05%     0.00%      0.66us    547.39us      6.92us ( +-   0.59% )
+              INVEPT       2325     0.01%     0.00%      1.84us    500.21us     25.60us ( +-   3.32% )
+       EXCEPTION_NMI        656     0.00%     0.00%      0.43us    542.53us      4.17us ( +-  28.07% )
+         EOI_INDUCED        103     0.00%     0.00%      1.94us      5.46us      3.61us ( +-   1.94% )
+   PENDING_INTERRUPT          4     0.00%     0.00%    492.02us    712.03us    604.55us ( +-   8.78% )
+
+Total Samples:38814203, Total events handled time:29812160891.31us.
+
