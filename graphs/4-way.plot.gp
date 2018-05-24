@@ -53,8 +53,10 @@ set key left top
 plot \
         'l2/apache.stock/ApacheMon.dat' index 0 title 'nVM' with lp linecolor 1,\
         'l1/apache.stock/ApacheMon.dat' index 0 title 'VM' with lp linecolor 2,\
-        'l2/apache.stock-4.17/ApacheMon.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 1 dt 2,\
-        'l1/apache.stock-4.17/ApacheMon.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 2 dt 2
+        'l2/apache.stock-4.17/ApacheMon.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 1 dt 5,\
+        'l1/apache.stock-4.17/ApacheMon.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 2 dt 6
+	#'l2/apache.stock-4.17/ApacheMon.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 1 dt 2,\
+	#'l1/apache.stock-4.17/ApacheMon.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 2 dt 2
 
 
 set title 'Gmake'
