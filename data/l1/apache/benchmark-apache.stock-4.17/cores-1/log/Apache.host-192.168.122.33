@@ -1,0 +1,4 @@
+[Thu May 24 18:12:39 2018] [notice] Apache/2.2.34 (Unix) configured -- resuming normal operations
+[Thu May 24 18:12:39 2018] [warn] sched_setaffinity slot 0 to cpu 0
+[Thu May 24 18:12:40 2018] [error] server is within MinSpareThreads of MaxClients, consider raising the MaxClients setting
+[Thu May 24 18:12:59 2018] [notice] caught SIGTERM, shutting down

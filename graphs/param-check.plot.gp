@@ -66,8 +66,8 @@ set key left top
 plot \
         'l2/gmake.stock/GmakeLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
         'l1/gmake.stock/GmakeLoad.dat' index 0 title 'VM' with lp linecolor 2,\
-        'l2/gmake.stock-mlocked/GmakeLoad.dat' index 0 title 'nVM-mlocked' with lp linecolor 5,\
-        'l1/gmake.stock-mlocked/GmakeLoad.dat' index 0 title 'VM-mlocked' with lp linecolor 6
+        'l2/gmake.stock-4.17/GmakeLoad.dat' index 0 title 'nVM-4.17-rc6' with lp linecolor 5,\
+        'l1/gmake.stock-4.17/GmakeLoad.dat' index 0 title 'VM-4.17-rc6' with lp linecolor 6
 
 
 ## set title 'Exim'

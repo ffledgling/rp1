@@ -1,0 +1,27 @@
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 0 to cpu 0
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 1 to cpu 1
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 2 to cpu 2
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 3 to cpu 3
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 4 to cpu 4
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 5 to cpu 5
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 6 to cpu 6
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 7 to cpu 7
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 8 to cpu 8
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 9 to cpu 9
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 10 to cpu 10
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 11 to cpu 11
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 12 to cpu 12
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 13 to cpu 13
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 14 to cpu 14
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 15 to cpu 15
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 16 to cpu 16
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 17 to cpu 17
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 18 to cpu 18
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 19 to cpu 19
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 20 to cpu 20
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 21 to cpu 21
+[Thu May 24 18:11:35 2018] [notice] Apache/2.2.34 (Unix) configured -- resuming normal operations
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 23 to cpu 23
+[Thu May 24 18:11:35 2018] [warn] sched_setaffinity slot 22 to cpu 22
+[Thu May 24 18:11:36 2018] [error] server is within MinSpareThreads of MaxClients, consider raising the MaxClients setting
+[Thu May 24 18:11:56 2018] [notice] caught SIGTERM, shutting down

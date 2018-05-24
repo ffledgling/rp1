@@ -1,4 +1,4 @@
 Starting
 Stopped
-270389 messages (166.91 messages/sec/core)
-[TimeMonitor] real 15.1233 user 104.61 nice 0 sys 425.04 idle 1103.66 iowait 0.02 irq 0 softirq 721.94 steal 0.3
+260574 messages (160.85 messages/sec/core)
+[TimeMonitor] real 15.1 user 69.03 nice 0 sys 314.12 idle 1247.65 iowait 0.02 irq 0 softirq 806.68 steal 0.47

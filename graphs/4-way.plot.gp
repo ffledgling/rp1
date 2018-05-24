@@ -53,8 +53,8 @@ set key left top
 plot \
         'l2/apache.stock/ApacheMon.dat' index 0 title 'nVM' with lp linecolor 1,\
         'l1/apache.stock/ApacheMon.dat' index 0 title 'VM' with lp linecolor 2,\
-        'l2/apache.with-cst-lock/ApacheMon.dat' index 0 title 'nVM-cst' with lp linecolor 1 dt 2,\
-        'l1/apache.with-cst-lock/ApacheMon.dat' index 0 title 'VM-cst' with lp linecolor 2 dt 2
+        'l2/apache.stock-4.17/ApacheMon.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 1 dt 2,\
+        'l1/apache.stock-4.17/ApacheMon.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 2 dt 2
 
 
 set title 'Gmake'
@@ -66,8 +66,8 @@ set key left top
 plot \
         'l2/gmake.stock/GmakeLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
         'l1/gmake.stock/GmakeLoad.dat' index 0 title 'VM' with lp linecolor 2,\
-        'l2/gmake.with-cst-lock/GmakeLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
-        'l1/gmake.with-cst-lock/GmakeLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
+        'l2/gmake.stock-4.17/GmakeLoad.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 5,\
+        'l1/gmake.stock-4.17/GmakeLoad.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 6
 
 
 set title 'Exim'
@@ -79,8 +79,8 @@ set key left top
 plot \
         'l2/exim.stock/EximLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
         'l1/exim.stock/EximLoad.dat' index 0 title 'VM' with lp linecolor 2,\
-        'l2/exim.with-cst-lock/EximLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
-        'l1/exim.with-cst-lock/EximLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
+        'l2/exim.stock-4.17/EximLoad.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 5,\
+        'l1/exim.stock-4.17/EximLoad.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 6
 
 ## set title 'Metis'
 ## set xlabel 'cores'
@@ -91,8 +91,8 @@ plot \
 ## plot \
 ##         'l2/metis.stock/MetisLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
 ##         'l1/metis.stock/MetisLoad.dat' index 0 title 'VM' with lp linecolor 2,\
-##         'l2/metis.with-cst-lock/MetisLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
-##         'l1/metis.with-cst-lock/MetisLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
+##         'l2/metis.stock-4.17/MetisLoad.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 5,\
+##         'l1/metis.stock-4.17/MetisLoad.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 6
 
 
 set title 'Psearchy'
@@ -102,10 +102,10 @@ set yrange [0:*]
 set ytics nomirror
 set key left top
 plot \
-        'l2/psearchy.stock/PsearchyLoad.dat' index 0 title 'nVM-cst' with lp linecolor 1,\
-        'l1/psearchy.stock/PsearchyLoad.dat' index 0 title 'VM-cst' with lp linecolor 2,\
-        'l2/psearchy.with-cst-lock/PsearchyLoad.dat' index 0 title 'nVM-cst' with lp linecolor 5,\
-        'l1/psearchy.with-cst-lock/PsearchyLoad.dat' index 0 title 'VM-cst' with lp linecolor 6
+        'l2/psearchy.stock/PsearchyLoad.dat' index 0 title 'nVM' with lp linecolor 1,\
+        'l1/psearchy.stock/PsearchyLoad.dat' index 0 title 'VM' with lp linecolor 2,\
+        'l2/psearchy.stock-4.17/PsearchyLoad.dat' index 0 title 'nVM-v4.17rc6' with lp linecolor 5,\
+        'l1/psearchy.stock-4.17/PsearchyLoad.dat' index 0 title 'VM-v4.17rc6' with lp linecolor 6
 
 
 ### set title 'Pbzip'

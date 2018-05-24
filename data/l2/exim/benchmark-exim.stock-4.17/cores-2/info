@@ -1051,7 +1051,7 @@ p358
 S'm'
 sS'fs.inode-nr'
 p359
-S'7541888\t505'
+S'7361296\t506'
 p360
 sS'CONFIG_NET_SCH_FIFO'
 p361
@@ -4215,7 +4215,7 @@ p1420
 S'm'
 sS'fs.dentry-state'
 p1421
-S'7548756\t27057\t45\t0\t0\t0'
+S'7368164\t27049\t45\t0\t0\t0'
 p1422
 sS'CONFIG_NF_CONNTRACK_SECMARK'
 p1423
@@ -5091,7 +5091,7 @@ p1716
 I0
 sS'kernel.sched_domain.cpu1.domain0.max_newidle_lb_cost'
 p1717
-I4915
+I8615
 sS'fs.epoll.max_user_watches'
 p1718
 I13492203
@@ -5461,7 +5461,7 @@ p1840
 S'm'
 sS'kernel.ns_last_pid'
 p1841
-I5747
+I157206
 sS'CONFIG_SYSTEM_DATA_VERIFICATION'
 p1842
 S'y'
@@ -7137,7 +7137,7 @@ p2402
 S'm'
 sS'kernel.sched_domain.cpu0.domain0.max_newidle_lb_cost'
 p2403
-I4846
+I4606
 sS'CONFIG_USB_EMI62'
 p2404
 S'm'
@@ -11239,7 +11239,7 @@ p3780
 S'y'
 sS'fs.file-nr'
 p3781
-S'759\t0\t6572888'
+S'767\t0\t6572888'
 p3782
 sS'CONFIG_SENSORS_SHT21'
 p3783
@@ -13057,7 +13057,7 @@ p4390
 S'y'
 sS'kernel.random.uuid'
 p4391
-S'9c7aac01-6229-4f08-b940-b42263d36db1'
+S'ea802bf6-6856-46dd-8d2f-69ec4a81d3c5'
 p4392
 sS'CONFIG_IP_NF_TARGET_REJECT'
 p4393
@@ -13991,7 +13991,7 @@ p4704
 S'y'
 sS'fs.inode-state'
 p4705
-S'7541888\t505\t0\t0\t0\t0\t0'
+S'7361296\t506\t0\t0\t0\t0\t0'
 p4706
 sS'CONFIG_SENSORS_K10TEMP'
 p4707
@@ -20946,7 +20946,7 @@ p7045
 S'y'
 sS'kernel.random.entropy_avail'
 p7046
-I94
+I101
 sS'CONFIG_USB_HIDDEV'
 p7047
 S'y'
@@ -20976,7 +20976,7 @@ p7055
 S'm'
 sS'kernel.random.boot_id'
 p7056
-S'3c814675-8a7d-4a0d-9fc2-0665819253b6'
+S'1d7ba171-49b8-4c89-aa7e-d721031f0cbe'
 p7057
 sS'CONFIG_BFQ_GROUP_IOSCHED'
 p7058
@@ -24545,7 +24545,7 @@ p8260
 sa(dp8261
 S'real'
 p8262
-F15.017200000000001
+F15.015499999999999
 sS'time.iowait'
 p8263
 F0
@@ -24554,13 +24554,13 @@ S'EximLoad.trial-0.host-192.168.123.30'
 p8264
 sS'time.real'
 p8265
-F15.017200000000001
+F15.015499999999999
 sS'time.idle'
 p8266
-F3.3443999999999998
+F2.99105
 sS'time.sys'
 p8267
-F18.02
+F18.879999999999999
 sS'clients'
 p8268
 I160
@@ -24583,10 +24583,10 @@ sg10
 g11
 sS'result'
 p8275
-F46467
+F48029
 sS'time.softirq'
 p8276
-F3.3399999999999999
+F2.96
 sS'units'
 p8277
 S'messages'
@@ -24610,5 +24610,5 @@ S'message'
 p8283
 sS'time.user'
 p8284
-F8.6699999999999999
+F8.1600000000000001
 sa.

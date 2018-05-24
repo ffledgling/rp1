@@ -1,0 +1,8 @@
+Running 50s test @ http://127.0.0.1:8000/x.txt
+  96 threads and 768 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.93ms    5.15ms 149.20ms   94.31%
+    Req/Sec     7.55k     3.03k   36.63k    67.92%
+  14371053 requests in 19.97s, 7.15GB read
+Requests/sec: 719519.90
+Transfer/sec:    366.62MB
