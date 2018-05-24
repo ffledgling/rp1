@@ -113,3 +113,13 @@ Setup: We fire up L1 (with L2 turned off), and run the gmake benchmark with 192 
 Result: the `gva_to_gpa` (name "mangled" to `paging64_gva_to_gpa`), is more or less not called (or calls are not dependent on the workload being run) at just L1. However, when workloads are run in L2, the numebr of calls range from ~2k at idling to ~200k-900k when a benchmark is being run. With typical function latency lying in the around ~1-2ms that seems to be a lot of overhead.
 
 The question is what can be done to reduce this overhead (if anything) in software.
+
+2018-05-25
+==========
+
+### 03:54:20 AM KST
+
+After talking to Liran and Jim Matterson, it turns out that Liran put in
+a commit `1a680e355c94 ("KVM: nVMX: Require immediate-exit when event
+reinjected to L2 and L1 event pending")` that possibly fixes some of the issues
+we're facing. So we try re-running the numbers with kernel 4.17-rc6
