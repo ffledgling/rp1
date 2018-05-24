@@ -40,6 +40,12 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   WRAP    arch/x86/include/generated/asm/scatterlist.h
   CHK     include/generated/uapi/linux/version.h
   UPD     include/generated/uapi/linux/version.h
+  SYSHDR  arch/x86/syscalls/../include/generated/asm/unistd_32_ia32.h
+  SYSHDR  arch/x86/syscalls/../include/generated/asm/unistd_64_x32.h
+  SYSTBL  arch/x86/syscalls/../include/generated/asm/syscalls_64.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_32.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_64.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_x32.h
   CHK     include/generated/utsrelease.h
   UPD     include/generated/utsrelease.h
   CC      scripts/mod/empty.o
@@ -48,11 +54,18 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   MKELF   scripts/mod/elfconfig.h
   GEN     scripts/mod/devicetable-offsets.h
   HOSTCC  scripts/mod/sumversion.o
+  HOSTCC  arch/x86/tools/relocs_32.o
   HOSTCC  scripts/mod/modpost.o
+  HOSTCC  arch/x86/tools/relocs_64.o
+  HOSTCC  arch/x86/tools/relocs_common.o
+  HOSTLD  arch/x86/tools/relocs
+  Using /home/sanidhya/vm-scalability/bench/tmp/linux-3.18 as source for kernel
+  CC      kernel/bounds.s
+  GEN     include/generated/bounds.h
+  CC      arch/x86/kernel/asm-offsets.s
   HOSTCC  scripts/mod/file2alias.o
-  SYSHDR  arch/x86/syscalls/../include/generated/asm/unistd_32_ia32.h
-  SYSHDR  arch/x86/syscalls/../include/generated/asm/unistd_64_x32.h
-  SYSTBL  arch/x86/syscalls/../include/generated/asm/syscalls_64.h
+  GEN     include/generated/asm-offsets.h
+  CALL    /home/sanidhya/vm-scalability/bench/tmp/linux-3.18/scripts/checksyscalls.sh
   HOSTLD  scripts/mod/modpost
   HOSTCC  scripts/selinux/genheaders/genheaders
   HOSTCC  scripts/selinux/mdp/mdp
@@ -60,19 +73,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   HOSTCC  scripts/pnmtologo
   HOSTCC  scripts/conmakehash
   HOSTCC  scripts/sortextable
-  HOSTCC  arch/x86/tools/relocs_32.o
-  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_32.h
-  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_64.h
-  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_x32.h
-  HOSTCC  arch/x86/tools/relocs_64.o
-  Using /home/sanidhya/vm-scalability/bench/tmp/linux-3.18 as source for kernel
-  HOSTCC  arch/x86/tools/relocs_common.o
-  HOSTLD  arch/x86/tools/relocs
-  CC      kernel/bounds.s
-  GEN     include/generated/bounds.h
-  CC      arch/x86/kernel/asm-offsets.s
-  GEN     include/generated/asm-offsets.h
-  CALL    /home/sanidhya/vm-scalability/bench/tmp/linux-3.18/scripts/checksyscalls.sh
   CC      init/main.o
 make[1]: Leaving directory '/tmp/mosbench/tmpfs-separate/0'
 make: Leaving directory '/home/sanidhya/vm-scalability/bench/tmp/linux-3.18'
@@ -95,8 +95,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   AS      arch/x86/ia32/ia32entry.o
   CC      arch/x86/ia32/sys_ia32.o
   CC      init/do_mounts_initrd.o
-  CC      arch/x86/ia32/ia32_signal.o
   CC      init/do_mounts_md.o
+  CC      arch/x86/ia32/ia32_signal.o
   CC      init/initramfs.o
   CC      arch/x86/ia32/nosyscall.o
   CC      arch/x86/ia32/syscall_ia32.o
@@ -180,8 +180,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      arch/x86/kernel/ptrace.o
   CC      kernel/notifier.o
   CC      kernel/ksysfs.o
-  CC      kernel/cred.o
   CC      arch/x86/kernel/tls.o
+  CC      kernel/cred.o
   CC      arch/x86/kernel/step.o
   CC      kernel/reboot.o
   CC      arch/x86/kernel/i8237.o
@@ -305,8 +305,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      arch/x86/kernel/cpu/mtrr/main.o
   CC      kernel/sched/rt.o
   CC      arch/x86/kernel/cpu/mtrr/if.o
-  CC      kernel/sched/deadline.o
   CC      arch/x86/kernel/cpu/mtrr/generic.o
+  CC      kernel/sched/deadline.o
   CC      arch/x86/kernel/cpu/mtrr/cleanup.o
   CC      kernel/sched/stop_task.o
   LD      arch/x86/kernel/cpu/mtrr/built-in.o
@@ -319,8 +319,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      arch/x86/kernel/cpu/built-in.o
   CC      arch/x86/kernel/kprobes/core.o
   CC      kernel/sched/cpupri.o
-  CC      kernel/sched/cpudeadline.o
   CC      arch/x86/kernel/kprobes/opt.o
+  CC      kernel/sched/cpudeadline.o
   CC      kernel/sched/stats.o
   LD      arch/x86/kernel/kprobes/built-in.o
   CC      arch/x86/kernel/reboot.o
@@ -402,8 +402,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      kernel/trace/trace_seq.o
   CC      kernel/trace/trace_stat.o
   CC      arch/x86/mm/pgtable.o
-  CC      arch/x86/mm/physaddr.o
   CC      kernel/trace/trace_printk.o
+  CC      arch/x86/mm/physaddr.o
   CC      arch/x86/mm/gup.o
   CC      kernel/trace/trace_sched_switch.o
   CC      arch/x86/mm/setup_nx.o
@@ -461,8 +461,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   OBJCOPY arch/x86/realmode/rm/realmode.bin
   AS      arch/x86/realmode/rmpiggy.o
   LD      arch/x86/realmode/built-in.o
-  CC      arch/x86/vdso/vma.o
   CC      kernel/trace/power-traces.o
+  CC      arch/x86/vdso/vma.o
   CC      arch/x86/vdso/vdso32-setup.o
   LDS     arch/x86/vdso/vdso.lds
   AS      arch/x86/vdso/vdso-note.o
@@ -514,8 +514,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      kernel/kexec.o
   CC      mm/page-writeback.o
   CC      kernel/compat.o
-  CC      kernel/cgroup.o
   CC      mm/readahead.o
+  CC      kernel/cgroup.o
   CC      mm/swap.o
   CC      mm/truncate.o
   CC      mm/vmscan.o
@@ -585,8 +585,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      mm/process_vm_access.o
   CC      fs/ioctl.o
   CC      mm/init-mm.o
-  CC      fs/readdir.o
   CC      mm/nobootmem.o
+  CC      fs/readdir.o
   CC      mm/fadvise.o
   CC      fs/select.o
   CC      mm/madvise.o
@@ -616,15 +616,15 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      mm/migrate.o
   CC      fs/sync.o
   CC      mm/early_ioremap.o
-  CC      fs/utimes.o
   LD      mm/built-in.o
+  CC      fs/utimes.o
   CC      ipc/compat.o
   CC      fs/stack.o
   CC      fs/fs_struct.o
   CC      ipc/util.o
   CC      fs/statfs.o
-  CC      fs/fs_pin.o
   CC      ipc/msgutil.o
+  CC      fs/fs_pin.o
   CC      fs/buffer.o
   CC      ipc/msg.o
   CC      ipc/sem.o
@@ -639,8 +639,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      ipc/compat_mq.o
   CC      fs/proc_namespace.o
   CC      ipc/namespace.o
-  CC      fs/autofs4/init.o
   CC      ipc/mq_sysctl.o
+  CC      fs/autofs4/init.o
   LD      ipc/built-in.o
   CC      fs/autofs4/inode.o
   CC      security/integrity/iint.o
@@ -725,8 +725,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      crypto/compress.o
   CC      fs/ext4/migrate.o
   CC      crypto/memneq.o
-  CC      fs/ext4/mballoc.o
   CC      crypto/crypto_wq.o
+  CC      fs/ext4/mballoc.o
   CC      crypto/algapi.o
   CC      crypto/scatterwalk.o
   CC      crypto/proc.o
@@ -737,8 +737,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      crypto/blkcipher.o
   CC      fs/ext4/mmp.o
   CC      crypto/chainiv.o
-  CC      fs/ext4/indirect.o
   CC      crypto/eseqiv.o
+  CC      fs/ext4/indirect.o
   CC      crypto/seqiv.o
   CC      crypto/ahash.o
   CC      fs/ext4/extents_status.o
@@ -775,10 +775,10 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      crypto/rng.o
   CC      fs/fat/nfs.o
   CC      crypto/krng.o
-  CC      fs/fat/namei_vfat.o
   LD      crypto/crypto.o
   LD      crypto/crypto_algapi.o
   LD      crypto/crypto_blkcipher.o
+  CC      fs/fat/namei_vfat.o
   LD      crypto/crypto_hash.o
   LD      crypto/cryptomgr.o
   LD      crypto/built-in.o
@@ -787,13 +787,13 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      fs/fat/fat.o
   LD      fs/fat/vfat.o
   LD      fs/fat/msdos.o
-  LD      fs/fat/built-in.o
   CC      block/elevator.o
+  LD      fs/fat/built-in.o
   CC      fs/hugetlbfs/inode.o
   LD      fs/hugetlbfs/hugetlbfs.o
   LD      fs/hugetlbfs/built-in.o
-  CC      fs/isofs/namei.o
   CC      block/blk-core.o
+  CC      fs/isofs/namei.o
   CC      fs/isofs/inode.o
   CC      fs/isofs/dir.o
   CC      fs/isofs/util.o
@@ -879,8 +879,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/blacklist.o
   CC      fs/nfs/file.o
   CC      drivers/acpi/osl.o
-  CC      fs/nfs/getroot.o
   CC      drivers/acpi/utils.o
+  CC      fs/nfs/getroot.o
   CC      drivers/acpi/reboot.o
   CC      fs/nfs/inode.o
   CC      drivers/acpi/nvs.o
@@ -897,13 +897,13 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/resource.o
   CC      fs/nfs/read.o
   CC      drivers/acpi/acpi_processor.o
-  CC      fs/nfs/symlink.o
   CC      drivers/acpi/processor_core.o
+  CC      fs/nfs/symlink.o
   CC      drivers/acpi/processor_pdc.o
   CC      fs/nfs/unlink.o
   CC      drivers/acpi/ec.o
-  CC      fs/nfs/write.o
   CC      drivers/acpi/dock.o
+  CC      fs/nfs/write.o
   CC      drivers/acpi/pci_root.o
   CC      drivers/acpi/pci_link.o
   CC      fs/nfs/namespace.o
@@ -911,18 +911,18 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/acpi_lpss.o
   CC      fs/nfs/mount_clnt.o
   CC      drivers/acpi/acpi_platform.o
-  CC      fs/nfs/nfstrace.o
   CC      drivers/acpi/acpi_pnp.o
+  CC      fs/nfs/nfstrace.o
   CC      drivers/acpi/int340x_thermal.o
   CC      drivers/acpi/power.o
   CC      drivers/acpi/event.o
-  CC      fs/nfs/nfsroot.o
   CC      drivers/acpi/sysfs.o
-  CC      fs/nfs/sysctl.o
+  CC      fs/nfs/nfsroot.o
   CC      drivers/acpi/acpi_cmos_rtc.o
+  CC      fs/nfs/sysctl.o
   CC      drivers/acpi/debugfs.o
-  CC      fs/nfs/nfs2super.o
   CC      drivers/acpi/numa.o
+  CC      fs/nfs/nfs2super.o
   CC      drivers/acpi/video_detect.o
   CC      fs/nfs/proc.o
   CC      fs/nfs/nfs2xdr.o
@@ -934,16 +934,16 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/acpica/dsmethod.o
   CC      fs/nfs/nfs3client.o
   CC      drivers/acpi/acpica/dsmthdat.o
-  CC      fs/nfs/nfs3proc.o
   CC      drivers/acpi/acpica/dsobject.o
+  CC      fs/nfs/nfs3proc.o
   CC      drivers/acpi/acpica/dsopcode.o
   CC      drivers/acpi/acpica/dsutils.o
   CC      fs/nfs/nfs3xdr.o
   CC      drivers/acpi/acpica/dswexec.o
   CC      drivers/acpi/acpica/dswload.o
   CC      drivers/acpi/acpica/dswload2.o
-  CC      fs/nfs/nfs3acl.o
   CC      drivers/acpi/acpica/dswscope.o
+  CC      fs/nfs/nfs3acl.o
   CC      drivers/acpi/acpica/dswstate.o
   CC      drivers/acpi/acpica/evevent.o
   CC      fs/nfs/nfs4proc.o
@@ -963,30 +963,30 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/acpica/evxfgpe.o
   CC      drivers/acpi/acpica/evxfregn.o
   CC      drivers/acpi/acpica/exconfig.o
-  CC      fs/nfs/nfs4state.o
   CC      drivers/acpi/acpica/exconvrt.o
+  CC      fs/nfs/nfs4state.o
   CC      drivers/acpi/acpica/excreate.o
   CC      drivers/acpi/acpica/exdebug.o
   CC      drivers/acpi/acpica/exdump.o
   CC      drivers/acpi/acpica/exfield.o
   CC      fs/nfs/nfs4renewd.o
   CC      drivers/acpi/acpica/exfldio.o
-  CC      fs/nfs/nfs4super.o
   CC      drivers/acpi/acpica/exmutex.o
+  CC      fs/nfs/nfs4super.o
   CC      drivers/acpi/acpica/exnames.o
   CC      drivers/acpi/acpica/exoparg1.o
   CC      fs/nfs/nfs4file.o
   CC      drivers/acpi/acpica/exoparg2.o
-  CC      fs/nfs/delegation.o
   CC      drivers/acpi/acpica/exoparg3.o
+  CC      fs/nfs/delegation.o
   CC      drivers/acpi/acpica/exoparg6.o
   CC      drivers/acpi/acpica/exprep.o
-  CC      fs/nfs/idmap.o
   CC      drivers/acpi/acpica/exmisc.o
+  CC      fs/nfs/idmap.o
   CC      drivers/acpi/acpica/exregion.o
   CC      drivers/acpi/acpica/exresnte.o
-  CC      fs/nfs/callback.o
   CC      drivers/acpi/acpica/exresolv.o
+  CC      fs/nfs/callback.o
   CC      drivers/acpi/acpica/exresop.o
   CC      drivers/acpi/acpica/exstore.o
   CC      fs/nfs/callback_xdr.o
@@ -995,8 +995,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      fs/nfs/callback_proc.o
   CC      drivers/acpi/acpica/exsystem.o
   CC      drivers/acpi/acpica/exutils.o
-  CC      fs/nfs/nfs4namespace.o
   CC      drivers/acpi/acpica/hwacpi.o
+  CC      fs/nfs/nfs4namespace.o
   CC      drivers/acpi/acpica/hwesleep.o
   CC      drivers/acpi/acpica/hwgpe.o
   CC      fs/nfs/nfs4getroot.o
@@ -1005,63 +1005,63 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      fs/nfs/nfs4client.o
   CC      drivers/acpi/acpica/hwsleep.o
   CC      drivers/acpi/acpica/hwvalid.o
-  CC      fs/nfs/nfs4session.o
   CC      drivers/acpi/acpica/hwxface.o
+  CC      fs/nfs/nfs4session.o
   CC      drivers/acpi/acpica/hwxfsleep.o
   CC      drivers/acpi/acpica/nsaccess.o
   CC      fs/nfs/dns_resolve.o
   CC      drivers/acpi/acpica/nsalloc.o
-  CC      fs/nfs/nfs4trace.o
   CC      drivers/acpi/acpica/nsarguments.o
+  CC      fs/nfs/nfs4trace.o
   CC      drivers/acpi/acpica/nsconvert.o
   CC      drivers/acpi/acpica/nsdump.o
   CC      drivers/acpi/acpica/nseval.o
   CC      drivers/acpi/acpica/nsinit.o
-  CC      fs/nfs/nfs4sysctl.o
   CC      drivers/acpi/acpica/nsload.o
+  CC      fs/nfs/nfs4sysctl.o
   CC      drivers/acpi/acpica/nsnames.o
+  CC      drivers/acpi/acpica/nsobject.o
   LD      fs/nfs/nfs.o
   LD      fs/nfs/nfsv2.o
   LD      fs/nfs/nfsv3.o
   LD      fs/nfs/nfsv4.o
   LD      fs/nfs/built-in.o
   CC      fs/nfs_common/nfsacl.o
-  CC      drivers/acpi/acpica/nsobject.o
   CC      drivers/acpi/acpica/nsparse.o
   CC      fs/nfs_common/grace.o
   CC      drivers/acpi/acpica/nspredef.o
+  CC      drivers/acpi/acpica/nsprepkg.o
   LD      fs/nfs_common/nfs_acl.o
   LD      fs/nfs_common/built-in.o
   CC      fs/nls/nls_base.o
-  CC      drivers/acpi/acpica/nsprepkg.o
-  CC      fs/nls/nls_cp437.o
   CC      drivers/acpi/acpica/nsrepair.o
-  CC      fs/nls/nls_ascii.o
+  CC      fs/nls/nls_cp437.o
   CC      drivers/acpi/acpica/nsrepair2.o
+  CC      fs/nls/nls_ascii.o
   CC      fs/nls/nls_iso8859-1.o
-  CC      fs/nls/nls_utf8.o
   CC      drivers/acpi/acpica/nssearch.o
+  CC      fs/nls/nls_utf8.o
   LD      fs/nls/built-in.o
-  CC      fs/notify/fsnotify.o
   CC      drivers/acpi/acpica/nsutils.o
-  CC      fs/notify/notification.o
+  CC      fs/notify/fsnotify.o
   CC      drivers/acpi/acpica/nswalk.o
+  CC      fs/notify/notification.o
   CC      drivers/acpi/acpica/nsxfeval.o
   CC      fs/notify/group.o
-  CC      fs/notify/inode_mark.o
   CC      drivers/acpi/acpica/nsxfname.o
+  CC      fs/notify/inode_mark.o
   CC      drivers/acpi/acpica/nsxfobj.o
   CC      fs/notify/mark.o
   CC      drivers/acpi/acpica/psargs.o
   CC      fs/notify/vfsmount_mark.o
   CC      drivers/acpi/acpica/psloop.o
-  CC      fs/notify/fdinfo.o
   CC      drivers/acpi/acpica/psobject.o
+  CC      fs/notify/fdinfo.o
   CC      fs/notify/dnotify/dnotify.o
   CC      drivers/acpi/acpica/psopcode.o
+  CC      drivers/acpi/acpica/psopinfo.o
   LD      fs/notify/dnotify/built-in.o
   LD      fs/notify/fanotify/built-in.o
-  CC      drivers/acpi/acpica/psopinfo.o
   CC      fs/notify/inotify/inotify_fsnotify.o
   CC      drivers/acpi/acpica/psparse.o
   CC      fs/notify/inotify/inotify_user.o
@@ -1069,8 +1069,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/acpica/pstree.o
   LD      fs/notify/inotify/built-in.o
   LD      fs/notify/built-in.o
-  CC      fs/proc/task_mmu.o
   CC      drivers/acpi/acpica/psutils.o
+  CC      fs/proc/task_mmu.o
   CC      drivers/acpi/acpica/pswalk.o
   CC      drivers/acpi/acpica/psxface.o
   CC      drivers/acpi/acpica/rsaddr.o
@@ -1091,56 +1091,56 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      fs/proc/array.o
   CC      drivers/acpi/acpica/rsserial.o
   CC      drivers/acpi/acpica/rsutils.o
-  CC      fs/proc/fd.o
   CC      drivers/acpi/acpica/rsxface.o
-  CC      fs/proc/proc_tty.o
+  CC      fs/proc/fd.o
   CC      drivers/acpi/acpica/tbdata.o
+  CC      fs/proc/proc_tty.o
   CC      fs/proc/cmdline.o
   CC      drivers/acpi/acpica/tbfadt.o
   CC      fs/proc/consoles.o
   CC      drivers/acpi/acpica/tbfind.o
   CC      fs/proc/cpuinfo.o
-  CC      fs/proc/devices.o
   CC      drivers/acpi/acpica/tbinstal.o
-  CC      fs/proc/interrupts.o
+  CC      fs/proc/devices.o
   CC      drivers/acpi/acpica/tbprint.o
+  CC      fs/proc/interrupts.o
   CC      fs/proc/loadavg.o
   CC      drivers/acpi/acpica/tbutils.o
   CC      fs/proc/meminfo.o
   CC      drivers/acpi/acpica/tbxface.o
-  CC      fs/proc/stat.o
   CC      drivers/acpi/acpica/tbxfload.o
-  CC      fs/proc/uptime.o
+  CC      fs/proc/stat.o
   CC      drivers/acpi/acpica/tbxfroot.o
+  CC      fs/proc/uptime.o
   CC      drivers/acpi/acpica/utaddress.o
   CC      fs/proc/version.o
-  CC      fs/proc/softirqs.o
   CC      drivers/acpi/acpica/utalloc.o
-  CC      fs/proc/namespaces.o
+  CC      fs/proc/softirqs.o
   CC      drivers/acpi/acpica/utbuffer.o
+  CC      fs/proc/namespaces.o
   CC      drivers/acpi/acpica/utcopy.o
   CC      fs/proc/self.o
   CC      drivers/acpi/acpica/utexcep.o
   CC      fs/proc/thread_self.o
   CC      drivers/acpi/acpica/utdebug.o
-  CC      fs/proc/proc_sysctl.o
   CC      drivers/acpi/acpica/utdecode.o
+  CC      fs/proc/proc_sysctl.o
   CC      drivers/acpi/acpica/utdelete.o
   CC      drivers/acpi/acpica/uterror.o
   CC      drivers/acpi/acpica/uteval.o
   CC      fs/proc/proc_net.o
   CC      drivers/acpi/acpica/utglobal.o
-  CC      fs/proc/kcore.o
   CC      drivers/acpi/acpica/uthex.o
+  CC      fs/proc/kcore.o
   CC      drivers/acpi/acpica/utids.o
-  CC      fs/proc/vmcore.o
   CC      drivers/acpi/acpica/utinit.o
+  CC      fs/proc/vmcore.o
   CC      drivers/acpi/acpica/utlock.o
   CC      drivers/acpi/acpica/utmath.o
-  CC      fs/proc/kmsg.o
   CC      drivers/acpi/acpica/utmisc.o
-  CC      fs/proc/page.o
+  CC      fs/proc/kmsg.o
   CC      drivers/acpi/acpica/utmutex.o
+  CC      fs/proc/page.o
   CC      drivers/acpi/acpica/utobject.o
   LD      fs/proc/proc.o
   LD      fs/proc/built-in.o
@@ -1149,27 +1149,27 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/acpica/utownerid.o
   CC      drivers/acpi/acpica/utpredef.o
   CC      drivers/acpi/acpica/utresrc.o
-  CC      fs/quota/quota_v2.o
   CC      drivers/acpi/acpica/utstate.o
+  CC      fs/quota/quota_v2.o
   CC      drivers/acpi/acpica/utstring.o
   CC      fs/quota/quota_tree.o
   CC      drivers/acpi/acpica/utxface.o
-  CC      fs/quota/quota.o
   CC      drivers/acpi/acpica/utxfinit.o
+  CC      fs/quota/quota.o
   CC      drivers/acpi/acpica/utxferror.o
-  CC      fs/quota/kqid.o
   CC      drivers/acpi/acpica/utxfmutex.o
-  CC      fs/quota/compat.o
+  CC      fs/quota/kqid.o
   LD      drivers/acpi/acpica/acpi.o
+  CC      fs/quota/compat.o
   LD      drivers/acpi/acpica/built-in.o
   CC      drivers/acpi/ac.o
   CC      fs/quota/netlink.o
   CC      drivers/acpi/button.o
   LD      fs/quota/built-in.o
-  CC      fs/ramfs/inode.o
   CC      drivers/acpi/fan.o
-  CC      fs/ramfs/file-mmu.o
+  CC      fs/ramfs/inode.o
   CC      drivers/acpi/video.o
+  CC      fs/ramfs/file-mmu.o
   LD      fs/ramfs/ramfs.o
   LD      fs/ramfs/built-in.o
   CC      fs/sysfs/file.o
@@ -1184,15 +1184,15 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/acpi/processor_idle.o
   CC      drivers/acpi/processor_thermal.o
   CC      fs/anon_inodes.o
-  CC      fs/signalfd.o
   CC      drivers/acpi/processor_perflib.o
+  CC      fs/signalfd.o
   CC      drivers/acpi/container.o
   CC      fs/timerfd.o
   CC      drivers/acpi/thermal.o
   CC      fs/eventfd.o
   CC      drivers/acpi/acpi_memhotplug.o
-  CC      fs/aio.o
   CC      drivers/acpi/battery.o
+  CC      fs/aio.o
   LD      drivers/acpi/acpi.o
   LD      drivers/acpi/processor.o
   LD      drivers/acpi/built-in.o
@@ -1235,10 +1235,10 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      drivers/ata/libata.o
   LD      drivers/ata/built-in.o
   LD      drivers/auxdisplay/built-in.o
-  CC      sound/core/device.o
   CC      drivers/base/component.o
-  CC      sound/core/isadma.o
+  CC      sound/core/device.o
   CC      drivers/base/core.o
+  CC      sound/core/isadma.o
   CC      sound/core/sound_oss.o
   CC      sound/core/info_oss.o
   CC      sound/core/vmaster.o
@@ -1246,12 +1246,12 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      sound/core/ctljack.o
   CC      sound/core/hwdep.o
   CC      drivers/base/dd.o
-  CC      sound/core/timer.o
   CC      drivers/base/syscore.o
+  CC      sound/core/timer.o
   CC      drivers/base/driver.o
   CC      drivers/base/class.o
-  CC      sound/core/hrtimer.o
   CC      drivers/base/platform.o
+  CC      sound/core/hrtimer.o
   CC      sound/core/pcm.o
   CC      drivers/base/cpu.o
   CC      sound/core/pcm_native.o
@@ -1261,13 +1261,13 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/base/devres.o
   CC      drivers/base/attribute_container.o
   CC      drivers/base/transport_class.o
-  CC      sound/core/pcm_lib.o
   CC      drivers/base/topology.o
+  CC      sound/core/pcm_lib.o
   CC      drivers/base/container.o
   CC      drivers/base/devtmpfs.o
   CC      drivers/base/power/sysfs.o
-  CC      sound/core/pcm_timer.o
   CC      drivers/base/power/generic_ops.o
+  CC      sound/core/pcm_timer.o
   CC      drivers/base/power/common.o
   CC      sound/core/pcm_misc.o
   CC      drivers/base/power/qos.o
@@ -1285,25 +1285,25 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/base/firmware_class.o
   CC      sound/core/oss/pcm_plugin.o
   CC      drivers/base/node.o
-  CC      sound/core/oss/io.o
   CC      drivers/base/module.o
+  CC      sound/core/oss/io.o
   LD      drivers/base/built-in.o
   CC      drivers/block/loop.o
   CC      sound/core/oss/copy.o
   CC      sound/core/oss/linear.o
   CC      sound/core/oss/mulaw.o
   LD      drivers/block/built-in.o
-  CC      sound/core/oss/route.o
   LD      drivers/bus/built-in.o
   CC      drivers/cdrom/cdrom.o
+  CC      sound/core/oss/route.o
   CC      sound/core/oss/rate.o
   LD      sound/core/oss/snd-mixer-oss.o
   LD      sound/core/oss/snd-pcm-oss.o
   LD      sound/core/oss/built-in.o
   CC      sound/core/seq/seq.o
   CC      sound/core/seq/seq_lock.o
-  CC      sound/core/seq/seq_clientmgr.o
   LD      drivers/cdrom/built-in.o
+  CC      sound/core/seq/seq_clientmgr.o
   CC      drivers/char/mem.o
   CC      drivers/char/random.o
   CC      sound/core/seq/seq_memory.o
@@ -1312,20 +1312,20 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      sound/core/seq/seq_fifo.o
   CC      drivers/char/hpet.o
   CC      sound/core/seq/seq_prioq.o
-  CC      sound/core/seq/seq_timer.o
   CC      drivers/char/nvram.o
-  CC      sound/core/seq/seq_system.o
+  CC      sound/core/seq/seq_timer.o
   CC      drivers/char/agp/backend.o
+  CC      sound/core/seq/seq_system.o
   CC      sound/core/seq/seq_ports.o
   CC      drivers/char/agp/frontend.o
   CC      sound/core/seq/seq_info.o
-  CC      sound/core/seq/seq_device.o
   CC      drivers/char/agp/generic.o
+  CC      sound/core/seq/seq_device.o
   CC      sound/core/seq/seq_midi_event.o
   CC      drivers/char/agp/isoch.o
   CC      sound/core/seq/oss/seq_oss.o
-  CC      sound/core/seq/oss/seq_oss_init.o
   CC      drivers/char/agp/compat_ioctl.o
+  CC      sound/core/seq/oss/seq_oss_init.o
   CC      drivers/char/agp/amd64-agp.o
   CC      sound/core/seq/oss/seq_oss_timer.o
   CC      sound/core/seq/oss/seq_oss_ioctl.o
@@ -1339,22 +1339,23 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/char/hw_random/core.o
   CC      sound/core/seq/oss/seq_oss_midi.o
   CC      drivers/char/hw_random/via-rng.o
-  CC      sound/core/seq/oss/seq_oss_readq.o
   LD      drivers/char/hw_random/rng-core.o
   LD      drivers/char/hw_random/built-in.o
   LD      drivers/char/pcmcia/built-in.o
   LD      drivers/char/built-in.o
   LD      drivers/clk/x86/built-in.o
   LD      drivers/clk/built-in.o
+  CC      sound/core/seq/oss/seq_oss_readq.o
   CC      drivers/clocksource/acpi_pm.o
-  CC      sound/core/seq/oss/seq_oss_writeq.o
   CC      drivers/clocksource/i8253.o
+  CC      sound/core/seq/oss/seq_oss_writeq.o
   LD      drivers/clocksource/built-in.o
   CC      drivers/connector/cn_queue.o
   LD      sound/core/seq/oss/snd-seq-oss.o
   LD      sound/core/seq/oss/built-in.o
   CC      sound/core/seq/seq_dummy.o
   LD      sound/core/seq/snd-seq.o
+  CC      drivers/connector/connector.o
   LD      sound/core/seq/snd-seq-device.o
   LD      sound/core/seq/snd-seq-midi-event.o
   LD      sound/core/seq/snd-seq-dummy.o
@@ -1365,7 +1366,6 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      sound/core/snd-hrtimer.o
   LD      sound/core/snd-pcm.o
   LD      sound/core/built-in.o
-  CC      drivers/connector/connector.o
   LD      sound/drivers/mpu401/built-in.o
   LD      sound/drivers/opl3/built-in.o
   LD      sound/drivers/opl4/built-in.o
@@ -1381,13 +1381,13 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      sound/isa/es1688/built-in.o
   LD      sound/isa/galaxy/built-in.o
   LD      sound/isa/gus/built-in.o
+  CC      drivers/connector/cn_proc.o
   LD      sound/isa/msnd/built-in.o
   LD      sound/isa/opti9xx/built-in.o
   LD      sound/isa/sb/built-in.o
   LD      sound/isa/wavefront/built-in.o
   LD      sound/isa/wss/built-in.o
   LD      sound/isa/built-in.o
-  CC      drivers/connector/cn_proc.o
   LD      sound/mips/built-in.o
   LD      sound/parisc/built-in.o
   LD      sound/pci/ac97/built-in.o
@@ -1401,9 +1401,9 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      sound/pci/ctxfi/built-in.o
   LD      sound/pci/echoaudio/built-in.o
   LD      sound/pci/emu10k1/built-in.o
-  CC      sound/pci/hda/hda_codec.o
   LD      drivers/connector/cn.o
   LD      drivers/connector/built-in.o
+  CC      sound/pci/hda/hda_codec.o
   CC      drivers/cpufreq/cpufreq.o
   CC      drivers/cpufreq/freq_table.o
   CC      drivers/cpufreq/cpufreq_performance.o
@@ -1420,8 +1420,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      sound/pci/hda/hda_proc.o
   CC      drivers/cpuidle/governor.o
   CC      drivers/cpuidle/sysfs.o
-  CC      sound/pci/hda/hda_hwdep.o
   CC      drivers/cpuidle/governors/ladder.o
+  CC      sound/pci/hda/hda_hwdep.o
   CC      drivers/cpuidle/governors/menu.o
   CC      sound/pci/hda/hda_controller.o
   LD      drivers/cpuidle/governors/built-in.o
@@ -1442,11 +1442,11 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      sound/pci/ice1712/built-in.o
   LD      sound/pci/korg1212/built-in.o
   LD      sound/pci/lola/built-in.o
+  CC      drivers/dma-buf/seqno-fence.o
   LD      sound/pci/lx6464es/built-in.o
   LD      sound/pci/mixart/built-in.o
   LD      sound/pci/nm256/built-in.o
   LD      sound/pci/oxygen/built-in.o
-  CC      drivers/dma-buf/seqno-fence.o
   LD      sound/pci/pcxhr/built-in.o
   LD      sound/pci/riptide/built-in.o
   LD      sound/pci/rme9652/built-in.o
@@ -1457,51 +1457,51 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      sound/pcmcia/pdaudiocf/built-in.o
   LD      sound/pcmcia/vx/built-in.o
   LD      sound/pcmcia/built-in.o
+  LD      drivers/dma-buf/built-in.o
   LD      sound/ppc/built-in.o
   LD      sound/sh/built-in.o
+  CC      drivers/edac/edac_stub.o
   LD      sound/soc/built-in.o
   LD      sound/sparc/built-in.o
-  LD      drivers/dma-buf/built-in.o
   LD      sound/spi/built-in.o
-  CC      drivers/edac/edac_stub.o
   LD      sound/synth/emux/built-in.o
   LD      sound/synth/built-in.o
   LD      sound/usb/6fire/built-in.o
   LD      sound/usb/bcd2000/built-in.o
   LD      sound/usb/caiaq/built-in.o
   LD      sound/usb/hiface/built-in.o
+  CC      drivers/edac/mce_amd.o
   LD      sound/usb/misc/built-in.o
   LD      sound/usb/usx2y/built-in.o
   LD      sound/usb/built-in.o
   CC      sound/last.o
-  CC      drivers/edac/mce_amd.o
   LD      sound/soundcore.o
   LD      sound/built-in.o
   MK_FW   firmware/e100/d101m_ucode.bin.gen.S
   IHEX    firmware/e100/d101m_ucode.bin
   MK_FW   firmware/e100/d101s_ucode.bin.gen.S
+  LD      drivers/edac/edac_mce_amd.o
   IHEX    firmware/e100/d101s_ucode.bin
+  LD      drivers/edac/built-in.o
   MK_FW   firmware/e100/d102e_ucode.bin.gen.S
   IHEX    firmware/e100/d102e_ucode.bin
   MK_FW   firmware/tigon/tg3.bin.gen.S
   IHEX    firmware/tigon/tg3.bin
+  CC      drivers/firewire/init_ohci1394_dma.o
   MK_FW   firmware/tigon/tg3_tso.bin.gen.S
   IHEX    firmware/tigon/tg3_tso.bin
   MK_FW   firmware/tigon/tg3_tso5.bin.gen.S
   IHEX    firmware/tigon/tg3_tso5.bin
   AS      firmware/e100/d101m_ucode.bin.gen.o
-  LD      drivers/edac/edac_mce_amd.o
-  LD      drivers/edac/built-in.o
   AS      firmware/e100/d101s_ucode.bin.gen.o
-  CC      drivers/firewire/init_ohci1394_dma.o
   AS      firmware/e100/d102e_ucode.bin.gen.o
   AS      firmware/tigon/tg3.bin.gen.o
   AS      firmware/tigon/tg3_tso.bin.gen.o
   AS      firmware/tigon/tg3_tso5.bin.gen.o
   LD      firmware/built-in.o
   LD      drivers/firewire/built-in.o
-  CC      arch/x86/pci/i386.o
   CC      drivers/firmware/dmi_scan.o
+  CC      arch/x86/pci/i386.o
   CC      arch/x86/pci/init.o
   CC      drivers/firmware/dmi-id.o
   CC      arch/x86/pci/mmconfig_64.o
@@ -1521,11 +1521,11 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      drivers/firmware/efi/built-in.o
   LD      drivers/firmware/built-in.o
   LD      drivers/gpio/built-in.o
-  CC      arch/x86/pci/common.o
   CC      drivers/gpu/drm/drm_crtc_helper.o
+  CC      arch/x86/pci/common.o
   CC      arch/x86/pci/early.o
-  CC      arch/x86/pci/bus_numa.o
   CC      drivers/gpu/drm/drm_dp_helper.o
+  CC      arch/x86/pci/bus_numa.o
   CC      arch/x86/pci/amd_bus.o
   CC      drivers/gpu/drm/drm_probe_helper.o
   LD      arch/x86/pci/built-in.o
@@ -1541,14 +1541,14 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/gpu/drm/drm_fb_helper.o
   CC      net/802/fddi.o
   CC      drivers/gpu/drm/drm_auth.o
-  LD      net/802/built-in.o
   CC      drivers/gpu/drm/drm_bufs.o
+  LD      net/802/built-in.o
   CC      net/core/sock.o
   CC      drivers/gpu/drm/drm_cache.o
   CC      net/core/request_sock.o
   CC      drivers/gpu/drm/drm_context.o
-  CC      net/core/skbuff.o
   CC      drivers/gpu/drm/drm_dma.o
+  CC      net/core/skbuff.o
   CC      drivers/gpu/drm/drm_fops.o
   CC      drivers/gpu/drm/drm_gem.o
   CC      drivers/gpu/drm/drm_ioctl.o
@@ -1573,12 +1573,12 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/gpu/drm/drm_sysfs.o
   CC      net/core/sysctl_net_core.o
   CC      drivers/gpu/drm/drm_hashtab.o
-  CC      net/core/dev.o
   CC      drivers/gpu/drm/drm_mm.o
+  CC      net/core/dev.o
   CC      drivers/gpu/drm/drm_crtc.o
   CC      drivers/gpu/drm/drm_modes.o
-  CC      net/core/ethtool.o
   CC      drivers/gpu/drm/drm_edid.o
+  CC      net/core/ethtool.o
   CC      net/core/dev_addr_lists.o
   CC      drivers/gpu/drm/drm_info.o
   CC      net/core/dst.o
@@ -1626,14 +1626,14 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      net/ethernet/eth.o
   CC      drivers/gpu/drm/i915/i915_cmd_parser.o
   LD      net/ethernet/built-in.o
-  CC      net/ipv4/route.o
   CC      drivers/gpu/drm/i915/i915_gem_context.o
+  CC      net/ipv4/route.o
   CC      drivers/gpu/drm/i915/i915_gem_render_state.o
   CC      drivers/gpu/drm/i915/i915_gem_debug.o
   CC      net/ipv4/inetpeer.o
   CC      drivers/gpu/drm/i915/i915_gem_dmabuf.o
-  CC      net/ipv4/protocol.o
   CC      drivers/gpu/drm/i915/i915_gem_evict.o
+  CC      net/ipv4/protocol.o
   CC      net/ipv4/ip_input.o
   CC      drivers/gpu/drm/i915/i915_gem_execbuffer.o
   CC      net/ipv4/ip_fragment.o
@@ -1678,8 +1678,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/gpu/drm/i915/intel_modes.o
   CC      net/ipv4/arp.o
   CC      drivers/gpu/drm/i915/intel_overlay.o
-  CC      drivers/gpu/drm/i915/intel_sideband.o
   CC      net/ipv4/icmp.o
+  CC      drivers/gpu/drm/i915/intel_sideband.o
   CC      drivers/gpu/drm/i915/intel_sprite.o
   CC      net/ipv4/devinet.o
   CC      drivers/gpu/drm/i915/intel_acpi.o
@@ -1711,8 +1711,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/gpu/drm/i915/intel_dsi_pll.o
   CC      net/ipv4/proc.o
   CC      drivers/gpu/drm/i915/intel_dsi_panel_vbt.o
-  CC      drivers/gpu/drm/i915/intel_dvo.o
   CC      net/ipv4/fib_rules.o
+  CC      drivers/gpu/drm/i915/intel_dvo.o
   CC      drivers/gpu/drm/i915/intel_hdmi.o
   CC      net/ipv4/ipmr.o
   CC      drivers/gpu/drm/i915/intel_i2c.o
@@ -1839,8 +1839,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      net/ipv6/reassembly.o
   CC      drivers/input/mouse/logips2pp.o
   CC      drivers/input/mouse/lifebook.o
-  CC      net/ipv6/tcp_ipv6.o
   CC      drivers/input/mouse/trackpoint.o
+  CC      net/ipv6/tcp_ipv6.o
   CC      drivers/input/mouse/cypress_ps2.o
   LD      drivers/input/mouse/psmouse.o
   LD      drivers/input/mouse/built-in.o
@@ -1929,8 +1929,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      net/ipv6/tcpv6_offload.o
   CC      drivers/md/dm-region-hash.o
   CC      net/ipv6/udp_offload.o
-  CC      net/ipv6/exthdrs_offload.o
   CC      drivers/md/dm-zero.o
+  CC      net/ipv6/exthdrs_offload.o
   LD      drivers/md/md-mod.o
   LD      drivers/md/dm-mod.o
   LD      drivers/md/dm-mirror.o
@@ -1962,20 +1962,20 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      drivers/media/rc/keymaps/built-in.o
   LD      drivers/media/rc/built-in.o
   LD      drivers/media/tuners/built-in.o
-  LD      net/ipv6/ipv6.o
-  LD      net/ipv6/built-in.o
   LD      drivers/media/usb/b2c2/built-in.o
+  LD      net/ipv6/ipv6.o
   LD      drivers/media/usb/dvb-usb/built-in.o
+  LD      net/ipv6/built-in.o
   LD      drivers/media/usb/dvb-usb-v2/built-in.o
   LD      drivers/media/usb/s2255/built-in.o
   LD      drivers/media/usb/siano/built-in.o
   LD      drivers/media/usb/stkwebcam/built-in.o
   LD      drivers/media/usb/ttusb-budget/built-in.o
   LD      drivers/media/usb/ttusb-dec/built-in.o
-  CC      net/mac80211/main.o
   LD      drivers/media/usb/zr364xx/built-in.o
   LD      drivers/media/usb/built-in.o
   LD      drivers/media/built-in.o
+  CC      net/mac80211/main.o
   LD      drivers/mfd/built-in.o
   LD      drivers/misc/carma/built-in.o
   LD      drivers/misc/cb710/built-in.o
@@ -2084,8 +2084,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LD      drivers/net/wireless/built-in.o
   LD      drivers/net/built-in.o
   LD      drivers/nfc/built-in.o
-  CC      net/mac80211/trace.o
   CC      drivers/pci/access.o
+  CC      net/mac80211/trace.o
   CC      drivers/pci/bus.o
   CC      drivers/pci/probe.o
   CC      drivers/pci/host-bridge.o
@@ -2125,8 +2125,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      net/netfilter/nfnetlink.o
   CC      drivers/pci/pcie/portdrv_pci.o
   CC      drivers/pci/pcie/portdrv_bus.o
-  CC      net/netfilter/nfnetlink_log.o
   CC      drivers/pci/pcie/portdrv_acpi.o
+  CC      net/netfilter/nfnetlink_log.o
   CC      drivers/pci/pcie/aer/aerdrv_errprint.o
   CC      drivers/pci/pcie/aer/aerdrv_core.o
   CC      net/netfilter/nf_conntrack_core.o
@@ -2191,8 +2191,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/pnp/quirks.o
   CC      net/netfilter/xt_NFLOG.o
   CC      drivers/pnp/system.o
-  CC      net/netfilter/xt_SECMARK.o
   CC      drivers/pnp/pnpacpi/core.o
+  CC      net/netfilter/xt_SECMARK.o
   CC      drivers/pnp/pnpacpi/rsparser.o
   CC      net/netfilter/xt_TCPMSS.o
   LD      drivers/pnp/pnpacpi/pnp.o
@@ -2313,8 +2313,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/tty/tty_ioctl.o
   CC      net/sunrpc/svcauth_unix.o
   CC      drivers/tty/tty_ldisc.o
-  CC      net/sunrpc/addr.o
   CC      drivers/tty/tty_buffer.o
+  CC      net/sunrpc/addr.o
   CC      drivers/tty/tty_port.o
   CC      net/sunrpc/rpcb_clnt.o
   CC      drivers/tty/tty_mutex.o
@@ -2335,8 +2335,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/tty/serial/8250/8250_pnp.o
   CC      net/sunrpc/stats.o
   CC      drivers/tty/serial/8250/8250_dma.o
-  CC      net/sunrpc/sysctl.o
   CC      drivers/tty/serial/8250/8250_pci.o
+  CC      net/sunrpc/sysctl.o
   CC      net/sunrpc/auth_gss/auth_gss.o
   CC      drivers/tty/serial/8250/8250_early.o
   LD      drivers/tty/serial/8250/8250.o
@@ -2489,14 +2489,14 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      lib/scatterlist.o
   CC      drivers/video/fbdev/core/cfbcopyarea.o
   CC      lib/gcd.o
-  CC      lib/lcm.o
   CC      drivers/video/fbdev/core/cfbimgblt.o
+  CC      lib/lcm.o
   CC      lib/list_sort.o
   CC      lib/uuid.o
   LD      drivers/video/fbdev/core/fb.o
   LD      drivers/video/fbdev/core/built-in.o
-  CC      lib/flex_array.o
   LD      drivers/video/fbdev/omap2/displays-new/built-in.o
+  CC      lib/flex_array.o
   LD      drivers/video/fbdev/omap2/dss/built-in.o
   LD      drivers/video/fbdev/omap2/built-in.o
   CC      drivers/video/fbdev/efifb.o
@@ -2515,10 +2515,10 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   LOGO    drivers/video/logo/logo_linux_vga16.c
   LOGO    drivers/video/logo/logo_blackfin_vga16.c
   LOGO    drivers/video/logo/logo_spe_clut224.c
-  CC      lib/llist.o
   LOGO    drivers/video/logo/logo_mac_clut224.c
   LOGO    drivers/video/logo/logo_superh_clut224.c
   LOGO    drivers/video/logo/logo_sun_clut224.c
+  CC      lib/llist.o
   LOGO    drivers/video/logo/logo_parisc_clut224.c
   LOGO    drivers/video/logo/logo_blackfin_clut224.c
   LOGO    drivers/video/logo/logo_dec_clut224.c
@@ -2527,22 +2527,22 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      drivers/video/logo/logo_linux_clut224.o
   LD      drivers/video/logo/built-in.o
   LD      drivers/video/built-in.o
-  CC      lib/memweight.o
   LD      drivers/watchdog/built-in.o
   LD      drivers/built-in.o
+  CC      lib/memweight.o
   CC      lib/kfifo.o
   CC      arch/x86/lib/msr-smp.o
   CC      arch/x86/lib/cache-smp.o
   CC      lib/percpu-refcount.o
   CC      arch/x86/lib/msr.o
-  CC      lib/percpu_ida.o
   AS      arch/x86/lib/msr-reg.o
+  CC      lib/percpu_ida.o
   CC      arch/x86/lib/msr-reg-export.o
   CC      arch/x86/lib/hash.o
   AS      arch/x86/lib/iomap_copy_64.o
   AS      arch/x86/lib/clear_page_64.o
-  CC      lib/hash.o
   CC      arch/x86/lib/cmdline.o
+  CC      lib/hash.o
   AS      arch/x86/lib/cmpxchg16b_emu.o
   CC      lib/rhashtable.o
   AS      arch/x86/lib/copy_page_64.o
@@ -2550,13 +2550,13 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   AS      arch/x86/lib/copy_user_nocache_64.o
   AS      arch/x86/lib/csum-copy_64.o
   CC      arch/x86/lib/csum-partial_64.o
-  CC      lib/reciprocal_div.o
   CC      arch/x86/lib/csum-wrappers_64.o
+  CC      lib/reciprocal_div.o
   CC      lib/string_helpers.o
   CC      arch/x86/lib/delay.o
   CC      lib/kstrtox.o
-  CC      lib/iomap.o
   AS      arch/x86/lib/getuser.o
+  CC      lib/iomap.o
   GEN     arch/x86/lib/inat-tables.c
   CC      arch/x86/lib/insn.o
   AS      arch/x86/lib/memcpy_64.o
@@ -2581,8 +2581,8 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   CC      lib/bitrev.o
   CC      lib/crc16.o
   HOSTCC  lib/gen_crc32table
-  CC      lib/lz4/lz4_decompress.o
   CC      lib/fonts/fonts.o
+  CC      lib/lz4/lz4_decompress.o
   CC      lib/fonts/font_8x8.o
   CC      lib/fonts/font_8x16.o
   LD      lib/lz4/built-in.o
@@ -2676,4 +2676,4 @@ make[1]: Entering directory '/tmp/mosbench/tmpfs-separate/0'
   SYSMAP  System.map
 make[1]: Leaving directory '/tmp/mosbench/tmpfs-separate/0'
 make: Leaving directory '/home/sanidhya/vm-scalability/bench/tmp/linux-3.18'
-[TimeMonitor] real 840.817 user 765.58 nice 0 sys 74.99 idle 0.246558 iowait 0 irq 0 softirq 0.02 steal 0.23
+[TimeMonitor] real 842.351 user 766.37 nice 0 sys 75.68 idle 0.300758 iowait 0 irq 0 softirq 0.04 steal 0.25

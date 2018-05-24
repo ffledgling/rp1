@@ -1048,7 +1048,7 @@ p357
 S'm'
 sS'fs.inode-nr'
 p358
-S'107404\t506'
+S'107316\t506'
 p359
 sS'CONFIG_NET_SCH_FIFO'
 p360
@@ -4206,7 +4206,7 @@ p1417
 S'm'
 sS'fs.dentry-state'
 p1418
-S'140050\t104110\t45\t0\t0\t0'
+S'139961\t104022\t45\t0\t0\t0'
 p1419
 sS'CONFIG_NF_CONNTRACK_SECMARK'
 p1420
@@ -5449,7 +5449,7 @@ p1836
 S'm'
 sS'kernel.ns_last_pid'
 p1837
-I159222
+I159225
 sS'CONFIG_SYSTEM_DATA_VERIFICATION'
 p1838
 S'y'
@@ -11215,7 +11215,7 @@ p3772
 S'y'
 sS'fs.file-nr'
 p3773
-S'721\t0\t6572888'
+S'723\t0\t6572888'
 p3774
 sS'CONFIG_SENSORS_SHT21'
 p3775
@@ -13025,7 +13025,7 @@ p4378
 S'y'
 sS'kernel.random.uuid'
 p4379
-S'460d22e1-b104-4301-baf0-79f4716b5989'
+S'3c893a5f-46c4-4c95-bde1-1b3cb810a8a2'
 p4380
 sS'CONFIG_IP_NF_TARGET_REJECT'
 p4381
@@ -13956,7 +13956,7 @@ p4691
 S'y'
 sS'fs.inode-state'
 p4692
-S'107404\t506\t0\t0\t0\t0\t0'
+S'107316\t506\t0\t0\t0\t0\t0'
 p4693
 sS'CONFIG_SENSORS_K10TEMP'
 p4694
@@ -20878,7 +20878,7 @@ p7021
 S'y'
 sS'kernel.random.entropy_avail'
 p7022
-I647
+I639
 sS'CONFIG_USB_HIDDEV'
 p7023
 S'y'
@@ -20908,7 +20908,7 @@ p7031
 S'm'
 sS'kernel.random.boot_id'
 p7032
-S'd0ae278f-7156-4093-8d08-0cb45ac57af1'
+S'2b16c1bd-a4ec-4bc3-8fa8-0ceaf3dac012'
 p7033
 sS'CONFIG_BFQ_GROUP_IOSCHED'
 p7034
@@ -24445,7 +24445,7 @@ p8223
 sa(dp8224
 S'real'
 p8225
-F840.81700000000001
+F842.351
 sS'time.iowait'
 p8226
 F0
@@ -24454,13 +24454,13 @@ S'GmakeLoad.trial-0.host-192.168.123.30'
 p8227
 sS'time.real'
 p8228
-F840.81700000000001
+F842.351
 sS'time.idle'
 p8229
-F0.246558
+F0.30075800000000003
 sS'time.sys'
 p8230
-F74.989999999999995
+F75.680000000000007
 sg3
 (lp8231
 S'GmakeLoad'
@@ -24492,13 +24492,13 @@ p8241
 I1
 sS'time.steal'
 p8242
-F0.23000000000000001
+F0.25
 sS'time.irq'
 p8243
 F0
 sS'time.softirq'
 p8244
-F0.02
+F0.040000000000000001
 sS'time.nice'
 p8245
 F0
@@ -24508,5 +24508,5 @@ S'build'
 p8247
 sS'time.user'
 p8248
-F765.58000000000004
+F766.37
 sa.

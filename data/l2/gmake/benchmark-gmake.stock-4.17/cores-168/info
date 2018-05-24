@@ -180,7 +180,7 @@ p67
 S'y'
 sS'kernel.sched_domain.cpu121.domain1.max_newidle_lb_cost'
 p68
-I695721
+I520630
 sS'CONFIG_WEXT_PRIV'
 p69
 S'y'
@@ -368,7 +368,7 @@ p131
 S'y'
 sS'kernel.sched_domain.cpu3.domain0.max_newidle_lb_cost'
 p132
-I22802
+I209262
 sS'CONFIG_VIDEO_ZORAN'
 p133
 S'm'
@@ -441,7 +441,7 @@ p156
 S'm'
 sS'kernel.sched_domain.cpu10.domain0.max_newidle_lb_cost'
 p157
-I16671
+I97186
 sS'kernel.sched_domain.cpu62.domain1.flags'
 p158
 I25647
@@ -577,7 +577,7 @@ p202
 I125
 sS'kernel.sched_domain.cpu74.domain1.max_newidle_lb_cost'
 p203
-I606966
+I204749
 sS'kernel.sched_domain.cpu28.domain1.name'
 p204
 S'NUMA'
@@ -692,7 +692,7 @@ p241
 S'm'
 sS'kernel.sched_domain.cpu67.domain0.max_newidle_lb_cost'
 p242
-I24264
+I171809
 sS'CONFIG_DVB_S5H1411'
 p243
 S'm'
@@ -773,7 +773,7 @@ p268
 S'm'
 sS'kernel.sched_domain.cpu152.domain0.max_newidle_lb_cost'
 p269
-I19498
+I202005
 sS'CONFIG_INPUT_TWL6040_VIBRA'
 p270
 S'm'
@@ -877,7 +877,7 @@ p304
 S'm'
 sS'kernel.sched_domain.cpu20.domain1.max_newidle_lb_cost'
 p305
-I218701
+I571345
 sS'kernel.sched_domain.cpu61.domain1.forkexec_idx'
 p306
 I0
@@ -901,7 +901,7 @@ p312
 I336
 sS'kernel.sched_domain.cpu114.domain1.max_newidle_lb_cost'
 p313
-I56885
+I901152
 sS'CONFIG_PCMCIA'
 p314
 S'm'
@@ -925,7 +925,7 @@ p320
 S'y'
 sS'kernel.sched_domain.cpu161.domain1.max_newidle_lb_cost'
 p321
-I63116
+I1582583
 sS'kernel.sched_domain.cpu160.domain0.wake_idx'
 p322
 I0
@@ -988,7 +988,7 @@ p341
 S'm'
 sS'kernel.sched_domain.cpu115.domain0.max_newidle_lb_cost'
 p342
-I19086
+I1580243
 sS'CONFIG_SND_USB_US122L'
 p343
 S'm'
@@ -1009,13 +1009,13 @@ p348
 S'm'
 sS'kernel.sched_domain.cpu133.domain0.max_newidle_lb_cost'
 p349
-I761809
+I48980
 sS'CONFIG_IMA_NG_TEMPLATE'
 p350
 S'y'
 sS'kernel.sched_domain.cpu76.domain1.max_newidle_lb_cost'
 p351
-I63419
+I771906
 sS'CONFIG_ATM_HORIZON'
 p352
 S'm'
@@ -1096,7 +1096,7 @@ p377
 S'm'
 sS'kernel.sched_domain.cpu54.domain0.max_newidle_lb_cost'
 p378
-I515463
+I376209
 sS'kernel.sched_domain.cpu132.domain1.min_interval'
 p379
 I168
@@ -1349,7 +1349,7 @@ p464
 S'm'
 sS'kernel.sched_domain.cpu105.domain0.max_newidle_lb_cost'
 p465
-I16892
+I104373
 sS'kernel.sched_domain.cpu131.domain0.name'
 p466
 S'DIE'
@@ -1407,7 +1407,7 @@ p484
 I3
 sS'kernel.sched_domain.cpu130.domain0.max_newidle_lb_cost'
 p485
-I20679
+I13439
 sS'kernel.sched_domain.cpu98.domain1.wake_idx'
 p486
 I0
@@ -1438,7 +1438,7 @@ p495
 S'm'
 sS'kernel.sched_domain.cpu77.domain0.max_newidle_lb_cost'
 p496
-I17053
+I200513
 sS'CONFIG_IP_SET_HASH_NETPORT'
 p497
 S'm'
@@ -1591,7 +1591,7 @@ p546
 S'm'
 sS'kernel.sched_domain.cpu63.domain1.max_newidle_lb_cost'
 p547
-I65339
+I1604459
 sS'kernel.sched_domain.cpu157.domain0.wake_idx'
 p548
 I0
@@ -1663,14 +1663,14 @@ p570
 I0
 sS'fs.inode-nr'
 p571
-S'107445\t506'
+S'107368\t506'
 p572
 sS'CONFIG_NET_SCH_FIFO'
 p573
 S'y'
 sS'kernel.sched_domain.cpu18.domain1.max_newidle_lb_cost'
 p574
-I77287
+I122647
 sS'kernel.sched_domain.cpu103.domain0.imbalance_pct'
 p575
 I125
@@ -1691,7 +1691,7 @@ p580
 S'y'
 sS'kernel.sched_domain.cpu152.domain1.max_newidle_lb_cost'
 p581
-I795676
+I1491143
 sS'CONFIG_CRYPTO_USER'
 p582
 S'm'
@@ -1709,7 +1709,7 @@ p586
 I2
 sS'kernel.sched_domain.cpu158.domain0.max_newidle_lb_cost'
 p587
-I591916
+I116871
 sS'kernel.sched_domain.cpu132.domain1.busy_idx'
 p588
 I3
@@ -2145,7 +2145,7 @@ S'NUMA'
 p736
 sS'kernel.sched_domain.cpu103.domain0.max_newidle_lb_cost'
 p737
-I20609
+I125310
 sS'kernel.sched_domain.cpu89.domain1.imbalance_pct'
 p738
 I125
@@ -2193,7 +2193,7 @@ p752
 S'y'
 sS'kernel.sched_domain.cpu85.domain1.max_newidle_lb_cost'
 p753
-I599085
+I244649
 sS'CONFIG_FB_ATY128_BACKLIGHT'
 p754
 S'y'
@@ -2443,16 +2443,16 @@ p836
 S'm'
 sS'kernel.sched_domain.cpu96.domain0.max_newidle_lb_cost'
 p837
-I44689
+I100904
 sS'CONFIG_HAVE_KVM_IRQ_ROUTING'
 p838
 S'y'
 sS'kernel.sched_domain.cpu153.domain1.max_newidle_lb_cost'
 p839
-I81151
+I255386
 sS'kernel.sched_domain.cpu142.domain1.max_newidle_lb_cost'
 p840
-I77654
+I1473121
 sS'CONFIG_HID_SAMSUNG'
 p841
 S'm'
@@ -2558,7 +2558,7 @@ p875
 S'm'
 sS'kernel.sched_domain.cpu12.domain1.max_newidle_lb_cost'
 p876
-I638477
+I97803
 sS'CONFIG_STK3310'
 p877
 S'm'
@@ -2741,7 +2741,7 @@ p938
 S'y'
 sS'kernel.sched_domain.cpu81.domain0.max_newidle_lb_cost'
 p939
-I599789
+I199795
 sS'CONFIG_NEED_SG_DMA_LENGTH'
 p940
 S'y'
@@ -2768,7 +2768,7 @@ p947
 S'm'
 sS'kernel.sched_domain.cpu107.domain0.max_newidle_lb_cost'
 p948
-I146455
+I93816
 sS'kernel.sched_domain.cpu155.domain0.max_interval'
 p949
 I48
@@ -2817,7 +2817,7 @@ p964
 I125
 sS'kernel.sched_domain.cpu28.domain0.max_newidle_lb_cost'
 p965
-I639322
+I1586731
 sS'kernel.sched_domain.cpu19.domain0.cache_nice_tries'
 p966
 I1
@@ -2959,7 +2959,7 @@ p1012
 I0
 sS'kernel.sched_domain.cpu86.domain0.max_newidle_lb_cost'
 p1013
-I51173
+I194982
 sS'CONFIG_VIDEO_GO7007_USB'
 p1014
 S'm'
@@ -2989,7 +2989,7 @@ p1022
 S'y'
 sS'kernel.sched_domain.cpu146.domain0.max_newidle_lb_cost'
 p1023
-I17603
+I174149
 sS'kernel.sched_domain.cpu127.domain1.idle_idx'
 p1024
 I2
@@ -3074,7 +3074,7 @@ p1051
 S'm'
 sS'kernel.sched_domain.cpu22.domain0.max_newidle_lb_cost'
 p1052
-I675928
+I185248
 sS'kernel.sched_domain.cpu2.domain1.flags'
 p1053
 I25647
@@ -3113,7 +3113,7 @@ p1064
 S'm'
 sS'kernel.sched_domain.cpu140.domain1.max_newidle_lb_cost'
 p1065
-I155923
+I437063
 sS'CONFIG_EFI_RUNTIME_WRAPPERS'
 p1066
 S'y'
@@ -3190,7 +3190,7 @@ p1091
 S'm'
 sS'kernel.sched_domain.cpu150.domain0.max_newidle_lb_cost'
 p1092
-I22403
+I270931
 sS'CONFIG_NFC_PN533'
 p1093
 S'm'
@@ -3357,7 +3357,7 @@ p1148
 S'm'
 sS'kernel.sched_domain.cpu125.domain1.max_newidle_lb_cost'
 p1149
-I87973
+I305830
 sS'kernel.sched_domain.cpu18.domain0.newidle_idx'
 p1150
 I0
@@ -3445,7 +3445,7 @@ p1178
 S'm'
 sS'kernel.sched_domain.cpu151.domain0.max_newidle_lb_cost'
 p1179
-I18704
+I344012
 sS'CONFIG_INPUT_UINPUT'
 p1180
 S'y'
@@ -3454,7 +3454,7 @@ p1181
 I3
 sS'kernel.sched_domain.cpu76.domain0.max_newidle_lb_cost'
 p1182
-I22370
+I212196
 sS'CONFIG_MD_FAULTY'
 p1183
 S'm'
@@ -3487,7 +3487,7 @@ p1192
 S'm'
 sS'kernel.sched_domain.cpu35.domain0.max_newidle_lb_cost'
 p1193
-I18855
+I316148
 sS'CONFIG_IP_SET_HASH_NET'
 p1194
 S'm'
@@ -3722,7 +3722,7 @@ p1271
 S'm'
 sS'kernel.sched_domain.cpu81.domain1.max_newidle_lb_cost'
 p1272
-I475494
+I188692
 sS'CONFIG_GPIO_DLN2'
 p1273
 S'm'
@@ -3863,7 +3863,7 @@ p1318
 S'm'
 sS'kernel.sched_domain.cpu5.domain0.max_newidle_lb_cost'
 p1319
-I45363
+I458152
 sS'CONFIG_NETFILTER_XT_MATCH_IPVS'
 p1320
 S'm'
@@ -3894,7 +3894,7 @@ p1329
 S'm'
 sS'kernel.sched_domain.cpu166.domain0.max_newidle_lb_cost'
 p1330
-I21227
+I64304
 sS'CONFIG_COMEDI_DAS08_PCI'
 p1331
 S'm'
@@ -3930,7 +3930,7 @@ p1341
 S'm'
 sS'kernel.sched_domain.cpu10.domain1.max_newidle_lb_cost'
 p1342
-I222723
+I80959
 sS'CONFIG_XEN_PV'
 p1343
 S'y'
@@ -3999,7 +3999,7 @@ p1364
 S'm'
 sS'kernel.sched_domain.cpu33.domain0.max_newidle_lb_cost'
 p1365
-I643689
+I127772
 sS'CONFIG_SERIAL_8250_RSA'
 p1366
 S'y'
@@ -4008,7 +4008,7 @@ p1367
 I2
 sS'kernel.sched_domain.cpu134.domain0.max_newidle_lb_cost'
 p1368
-I532673
+I674328
 sS'kernel.sched_domain.cpu27.domain0.max_interval'
 p1369
 I48
@@ -4390,7 +4390,7 @@ p1499
 I2
 sS'kernel.sched_domain.cpu25.domain1.max_newidle_lb_cost'
 p1500
-I205028
+I296547
 sS'kernel.sched_domain.cpu55.domain0.idle_idx'
 p1501
 I1
@@ -4561,7 +4561,7 @@ p1560
 S'y'
 sS'kernel.sched_domain.cpu70.domain1.max_newidle_lb_cost'
 p1561
-I73027
+I190400
 sS'CONFIG_EXTCON_USB_GPIO'
 p1562
 S'm'
@@ -4790,7 +4790,7 @@ p1637
 S'm'
 sS'kernel.sched_domain.cpu130.domain1.max_newidle_lb_cost'
 p1638
-I64416
+I172417
 sS'CONFIG_DVB_STV6110x'
 p1639
 S'm'
@@ -4805,7 +4805,7 @@ p1642
 S'm'
 sS'kernel.sched_domain.cpu104.domain1.max_newidle_lb_cost'
 p1643
-I578441
+I170630
 sS'CONFIG_PRINTER'
 p1644
 S'm'
@@ -4823,7 +4823,7 @@ p1648
 S'm'
 sS'kernel.sched_domain.cpu147.domain0.max_newidle_lb_cost'
 p1649
-I739059
+I162112
 sS'kernel.sched_domain.cpu41.domain1.wake_idx'
 p1650
 I0
@@ -4922,7 +4922,7 @@ p1681
 S'm'
 sS'kernel.sched_domain.cpu167.domain1.max_newidle_lb_cost'
 p1682
-I59878
+I245278
 sS'CONFIG_SPLIT_PTLOCK_CPUS'
 p1683
 I4
@@ -4962,7 +4962,7 @@ p1695
 I1
 sS'kernel.sched_domain.cpu43.domain1.max_newidle_lb_cost'
 p1696
-I69814
+I226273
 sS'CONFIG_X86_DIRECT_GBPAGES'
 p1697
 S'y'
@@ -5141,7 +5141,7 @@ p1758
 I0
 sS'kernel.sched_domain.cpu167.domain0.max_newidle_lb_cost'
 p1759
-I19806
+I392140
 sS'kernel.sched_domain.cpu63.domain1.idle_idx'
 p1760
 I2
@@ -5205,7 +5205,7 @@ p1780
 I0
 sS'kernel.sched_domain.cpu64.domain0.max_newidle_lb_cost'
 p1781
-I381724
+I708460
 sS'net.ipv6.conf.default.seg6_require_hmac'
 p1782
 I0
@@ -5611,7 +5611,7 @@ p1918
 S'm'
 sS'kernel.sched_domain.cpu57.domain1.max_newidle_lb_cost'
 p1919
-I46266
+I435458
 sS'CONFIG_NETFILTER_CONNCOUNT'
 p1920
 S'm'
@@ -5678,7 +5678,7 @@ p1941
 S'm'
 sS'kernel.sched_domain.cpu69.domain0.max_newidle_lb_cost'
 p1942
-I28897
+I61045
 sS'kernel.sched_rr_timeslice_ms'
 p1943
 I100
@@ -5699,7 +5699,7 @@ p1948
 S'y'
 sS'kernel.sched_domain.cpu49.domain0.max_newidle_lb_cost'
 p1949
-I643333
+I191515
 sS'CONFIG_RTC_DRV_M48T59'
 p1950
 S'm'
@@ -5793,7 +5793,7 @@ p1980
 I0
 sS'kernel.sched_domain.cpu7.domain0.max_newidle_lb_cost'
 p1981
-I16337
+I810430
 sS'kernel.sched_domain.cpu103.domain1.imbalance_pct'
 p1982
 I125
@@ -5844,7 +5844,7 @@ p1997
 I2
 sS'kernel.sched_domain.cpu44.domain1.max_newidle_lb_cost'
 p1998
-I76910
+I137637
 sS'CONFIG_RTC_DRV_HID_SENSOR_TIME'
 p1999
 S'm'
@@ -5940,7 +5940,7 @@ p2029
 S'm'
 sS'kernel.sched_domain.cpu89.domain0.max_newidle_lb_cost'
 p2030
-I673505
+I219860
 sS'kernel.sched_domain.cpu32.domain0.idle_idx'
 p2031
 I1
@@ -6034,7 +6034,7 @@ p2061
 I0
 sS'kernel.sched_domain.cpu26.domain1.max_newidle_lb_cost'
 p2062
-I627026
+I1503063
 sS'CONFIG_SERIAL_8250_SHARE_IRQ'
 p2063
 S'y'
@@ -6071,7 +6071,7 @@ p2074
 I48
 sS'kernel.sched_domain.cpu98.domain1.max_newidle_lb_cost'
 p2075
-I63129
+I1603851
 sS'kernel.sched_domain.cpu114.domain0.imbalance_pct'
 p2076
 I125
@@ -6096,7 +6096,7 @@ p2083
 S'm'
 sS'kernel.sched_domain.cpu60.domain1.max_newidle_lb_cost'
 p2084
-I745773
+I166987
 sS'CONFIG_TOUCHSCREEN_ADS7846'
 p2085
 S'm'
@@ -6150,7 +6150,7 @@ p2101
 S'm'
 sS'kernel.sched_domain.cpu58.domain1.max_newidle_lb_cost'
 p2102
-I63713
+I1409803
 sS'kernel.sched_domain.cpu92.domain1.max_interval'
 p2103
 I336
@@ -6189,7 +6189,7 @@ p2114
 S'm'
 sS'kernel.sched_domain.cpu32.domain1.max_newidle_lb_cost'
 p2115
-I833256
+I1637477
 sS'CONFIG_SCSI_SAS_HOST_SMP'
 p2116
 S'y'
@@ -6265,7 +6265,7 @@ p2140
 S'y'
 sS'kernel.sched_domain.cpu42.domain1.max_newidle_lb_cost'
 p2141
-I411335
+I1515480
 sS'CONFIG_BT_HCIBFUSB'
 p2142
 S'm'
@@ -6410,7 +6410,7 @@ p2189
 I32
 sS'kernel.sched_domain.cpu96.domain1.max_newidle_lb_cost'
 p2190
-I166359
+I366794
 sS'kernel.sched_domain.cpu24.domain0.max_interval'
 p2191
 I48
@@ -6488,7 +6488,7 @@ p2215
 I2
 sS'fs.dentry-state'
 p2216
-S'123136\t87148\t45\t0\t0\t0'
+S'123058\t87071\t45\t0\t0\t0'
 p2217
 sS'CONFIG_NF_CONNTRACK_SECMARK'
 p2218
@@ -6597,7 +6597,7 @@ p2252
 I25647
 sS'kernel.sched_domain.cpu118.domain1.max_newidle_lb_cost'
 p2253
-I89836
+I453057
 sS'CONFIG_NFT_REJECT'
 p2254
 S'm'
@@ -6619,7 +6619,7 @@ p2260
 S'm'
 sS'kernel.sched_domain.cpu110.domain1.max_newidle_lb_cost'
 p2261
-I645839
+I745640
 sS'CONFIG_PSTORE_COMPRESS_DEFAULT'
 p2262
 S'"deflate"'
@@ -6825,7 +6825,7 @@ p2332
 I48
 sS'kernel.sched_domain.cpu124.domain1.max_newidle_lb_cost'
 p2333
-I86843
+I160669
 sS'kernel.sched_domain.cpu101.domain1.imbalance_pct'
 p2334
 I125
@@ -6891,7 +6891,7 @@ p2354
 I0
 sS'kernel.sched_domain.cpu24.domain0.max_newidle_lb_cost'
 p2355
-I739355
+I120437
 sS'CONFIG_CRYPTO_SIMD'
 p2356
 S'm'
@@ -6972,7 +6972,7 @@ p2381
 S'm'
 sS'kernel.sched_domain.cpu98.domain0.max_newidle_lb_cost'
 p2382
-I18206
+I897876
 sS'CONFIG_MODULES_TREE_LOOKUP'
 p2383
 S'y'
@@ -7139,7 +7139,7 @@ p2438
 S'y'
 sS'kernel.sched_domain.cpu93.domain0.max_newidle_lb_cost'
 p2439
-I16721
+I266787
 sS'CONFIG_FB_TFT_ILI9486'
 p2440
 S'm'
@@ -7193,7 +7193,7 @@ p2456
 S'm'
 sS'kernel.sched_domain.cpu30.domain1.max_newidle_lb_cost'
 p2457
-I202889
+I85526
 sS'CONFIG_CROS_EC_PROTO'
 p2458
 S'y'
@@ -7327,7 +7327,7 @@ p2502
 S'y'
 sS'kernel.sched_domain.cpu73.domain1.max_newidle_lb_cost'
 p2503
-I153197
+I472982
 sg3
 (lp2504
 S'HostInfo'
@@ -7427,7 +7427,7 @@ p2536
 S'm'
 sS'kernel.sched_domain.cpu29.domain0.max_newidle_lb_cost'
 p2537
-I21324
+I317535
 sS'CONFIG_VIDEO_CPIA2'
 p2538
 S'm'
@@ -7465,7 +7465,7 @@ p2550
 I125
 sS'kernel.sched_domain.cpu134.domain1.max_newidle_lb_cost'
 p2551
-I201579
+I279268
 sS'kernel.sched_domain.cpu33.domain1.busy_idx'
 p2552
 I3
@@ -7552,7 +7552,7 @@ p2579
 S'm'
 sS'kernel.sched_domain.cpu126.domain0.max_newidle_lb_cost'
 p2580
-I19870
+I135948
 sS'CONFIG_DS1803'
 p2581
 S'm'
@@ -7571,7 +7571,7 @@ S'NUMA'
 p2586
 sS'kernel.sched_domain.cpu65.domain0.max_newidle_lb_cost'
 p2587
-I20466
+I23664
 sS'kernel.sched_domain.cpu93.domain1.max_interval'
 p2588
 I336
@@ -7650,7 +7650,7 @@ p2613
 S'm'
 sS'kernel.sched_domain.cpu14.domain0.max_newidle_lb_cost'
 p2614
-I14678
+I333769
 sS'CONFIG_VMWARE_VMCI'
 p2615
 S'm'
@@ -7696,7 +7696,7 @@ p2629
 I25000000
 sS'kernel.sched_domain.cpu25.domain0.max_newidle_lb_cost'
 p2630
-I642767
+I131734
 sS'kernel.sched_domain.cpu123.domain1.imbalance_pct'
 p2631
 I125
@@ -7812,7 +7812,7 @@ p2669
 S'y'
 sS'kernel.sched_domain.cpu53.domain0.max_newidle_lb_cost'
 p2670
-I574463
+I20609
 sS'kernel.sched_domain.cpu92.domain0.forkexec_idx'
 p2671
 I0
@@ -7869,7 +7869,7 @@ p2688
 S'y'
 sS'kernel.sched_domain.cpu1.domain0.max_newidle_lb_cost'
 p2689
-I19418
+I332459
 sS'CONFIG_RTC_DRV_MT6397'
 p2690
 S'm'
@@ -8409,7 +8409,7 @@ p2870
 S'm'
 sS'kernel.ns_last_pid'
 p2871
-I119131
+I119220
 sS'CONFIG_SYSTEM_DATA_VERIFICATION'
 p2872
 S'y'
@@ -8501,13 +8501,13 @@ p2902
 I48
 sS'kernel.sched_domain.cpu71.domain1.max_newidle_lb_cost'
 p2903
-I118262
+I574303
 sS'kernel.sched_domain.cpu145.domain1.busy_idx'
 p2904
 I3
 sS'kernel.sched_domain.cpu88.domain0.max_newidle_lb_cost'
 p2905
-I17876
+I641888
 sS'kernel.sched_domain.cpu118.domain1.cache_nice_tries'
 p2906
 I2
@@ -8516,7 +8516,7 @@ p2907
 S'm'
 sS'kernel.sched_domain.cpu133.domain1.max_newidle_lb_cost'
 p2908
-I63714
+I154357
 sS'kernel.sched_domain.cpu119.domain0.flags'
 p2909
 I4143
@@ -8578,7 +8578,7 @@ p2929
 S'y'
 sS'kernel.sched_domain.cpu95.domain0.max_newidle_lb_cost'
 p2930
-I18036
+I250640
 sS'kernel.sched_domain.cpu149.domain0.max_interval'
 p2931
 I48
@@ -8741,7 +8741,7 @@ p2986
 S'm'
 sS'kernel.sched_domain.cpu109.domain1.max_newidle_lb_cost'
 p2987
-I118412
+I107162
 sS'CONFIG_NET_SCH_RED'
 p2988
 S'm'
@@ -9011,7 +9011,7 @@ p3080
 I0
 sS'kernel.sched_domain.cpu2.domain1.max_newidle_lb_cost'
 p3081
-I757173
+I201108
 sS'CONFIG_MLXSW_SPECTRUM'
 p3082
 S'm'
@@ -9026,7 +9026,7 @@ p3085
 S'm'
 sS'kernel.sched_domain.cpu31.domain0.max_newidle_lb_cost'
 p3086
-I18934
+I667495
 sS'CONFIG_RTC_DRV_R9701'
 p3087
 S'm'
@@ -9233,7 +9233,7 @@ p3156
 S'm'
 sS'kernel.sched_domain.cpu116.domain1.max_newidle_lb_cost'
 p3157
-I60503
+I288051
 sS'kernel.sched_domain.cpu29.domain0.cache_nice_tries'
 p3158
 I1
@@ -9339,13 +9339,13 @@ p3192
 S'm'
 sS'kernel.sched_domain.cpu117.domain0.max_newidle_lb_cost'
 p3193
-I18099
+I925347
 sS'CONFIG_TRANSPARENT_HUGEPAGE'
 p3194
 S'y'
 sS'kernel.sched_domain.cpu92.domain1.max_newidle_lb_cost'
 p3195
-I570578
+I872244
 sS'kernel.sched_domain.cpu47.domain1.wake_idx'
 p3196
 I0
@@ -9369,7 +9369,7 @@ p3202
 S'm'
 sS'kernel.sched_domain.cpu101.domain1.max_newidle_lb_cost'
 p3203
-I68563
+I547838
 sS'kernel.sched_domain.cpu44.domain1.forkexec_idx'
 p3204
 I0
@@ -9394,7 +9394,7 @@ p3211
 S'y'
 sS'kernel.sched_domain.cpu139.domain0.max_newidle_lb_cost'
 p3212
-I21236
+I100558
 sS'kernel.sched_domain.cpu0.domain1.idle_idx'
 p3213
 I2
@@ -9424,7 +9424,7 @@ p3221
 S'm'
 sS'kernel.sched_domain.cpu162.domain0.max_newidle_lb_cost'
 p3222
-I15378
+I1419510
 sS'CONFIG_DVB_TDA10048'
 p3223
 S'm'
@@ -9563,7 +9563,7 @@ p3268
 S'm'
 sS'kernel.sched_domain.cpu123.domain1.max_newidle_lb_cost'
 p3269
-I591888
+I1497370
 sS'kernel.sched_domain.cpu81.domain0.imbalance_pct'
 p3270
 I125
@@ -9627,7 +9627,7 @@ p3290
 I0
 sS'kernel.sched_domain.cpu162.domain1.max_newidle_lb_cost'
 p3291
-I61148
+I340157
 sS'CONFIG_MDIO_GPIO'
 p3292
 S'm'
@@ -9757,7 +9757,7 @@ p3334
 I64
 sS'kernel.sched_domain.cpu37.domain1.max_newidle_lb_cost'
 p3335
-I61482
+I1652305
 sS'CONFIG_SND_PCM_IEC958'
 p3336
 S'y'
@@ -9907,7 +9907,7 @@ p3384
 S'm'
 sS'kernel.sched_domain.cpu4.domain1.max_newidle_lb_cost'
 p3385
-I173500
+I85624
 sS'CONFIG_SENSORS_ADM1029'
 p3386
 S'm'
@@ -10028,7 +10028,7 @@ p3425
 S'm'
 sS'kernel.sched_domain.cpu106.domain1.max_newidle_lb_cost'
 p3426
-I706205
+I317036
 sS'kernel.sched_domain.cpu23.domain0.name'
 p3427
 S'DIE'
@@ -10038,7 +10038,7 @@ p3429
 I0
 sS'kernel.sched_domain.cpu122.domain1.max_newidle_lb_cost'
 p3430
-I193226
+I262957
 sS'CONFIG_SECURITY_APPARMOR_BOOTPARAM_VALUE'
 p3431
 I1
@@ -10146,10 +10146,10 @@ p3465
 S'm'
 sS'kernel.sched_domain.cpu15.domain1.max_newidle_lb_cost'
 p3466
-I730746
+I667342
 sS'kernel.sched_domain.cpu47.domain1.max_newidle_lb_cost'
 p3467
-I63278
+I226356
 sS'CONFIG_IR_TTUSBIR'
 p3468
 S'm'
@@ -10378,7 +10378,7 @@ p3543
 S'm'
 sS'kernel.sched_domain.cpu34.domain1.max_newidle_lb_cost'
 p3544
-I68299
+I194271
 sS'kernel.sched_domain.cpu115.domain1.name'
 p3545
 S'NUMA'
@@ -10981,7 +10981,7 @@ p3750
 S'm'
 sS'kernel.sched_domain.cpu52.domain1.max_newidle_lb_cost'
 p3751
-I103737
+I1040515
 sS'kernel.sched_domain.cpu108.domain1.imbalance_pct'
 p3752
 I125
@@ -11117,7 +11117,7 @@ p3796
 S'y'
 sS'kernel.sched_domain.cpu23.domain0.max_newidle_lb_cost'
 p3797
-I658433
+I67330
 sS'CONFIG_MAC80211_DEBUGFS'
 p3798
 S'y'
@@ -11263,7 +11263,7 @@ p3846
 I2
 sS'kernel.sched_domain.cpu91.domain1.max_newidle_lb_cost'
 p3847
-I68393
+I169961
 sS'CONFIG_USB_ISP1760_HCD'
 p3848
 S'y'
@@ -11356,7 +11356,7 @@ p3877
 I1
 sS'kernel.sched_domain.cpu147.domain1.max_newidle_lb_cost'
 p3878
-I705444
+I210670
 sS'CONFIG_USB_SERIAL_KEYSPAN'
 p3879
 S'm'
@@ -11474,10 +11474,10 @@ p3917
 S'm'
 sS'kernel.sched_domain.cpu119.domain0.max_newidle_lb_cost'
 p3918
-I35343
+I600562
 sS'kernel.sched_domain.cpu50.domain1.max_newidle_lb_cost'
 p3919
-I63194
+I224281
 sS'CONFIG_COMEDI_AMPLC_PCI224'
 p3920
 S'm'
@@ -11504,7 +11504,7 @@ p3927
 S'm'
 sS'kernel.sched_domain.cpu67.domain1.max_newidle_lb_cost'
 p3928
-I147033
+I916018
 sS'kernel.sched_domain.cpu76.domain0.newidle_idx'
 p3929
 I0
@@ -11525,7 +11525,7 @@ p3934
 S'y'
 sS'kernel.sched_domain.cpu114.domain0.max_newidle_lb_cost'
 p3935
-I23337
+I779694
 sS'CONFIG_LEDS_TRIGGER_HEARTBEAT'
 p3936
 S'm'
@@ -11611,7 +11611,7 @@ p3964
 S'm'
 sS'kernel.sched_domain.cpu93.domain1.max_newidle_lb_cost'
 p3965
-I149260
+I185165
 sS'kernel.sched_domain.cpu109.domain1.name'
 p3966
 S'NUMA'
@@ -11678,7 +11678,7 @@ p3987
 S'y'
 sS'kernel.sched_domain.cpu82.domain0.max_newidle_lb_cost'
 p3988
-I19891
+I412552
 sS'CONFIG_AK8975'
 p3989
 S'm'
@@ -11912,7 +11912,7 @@ p4067
 I32
 sS'kernel.sched_domain.cpu51.domain0.max_newidle_lb_cost'
 p4068
-I22855
+I120464
 sS'CONFIG_TYPEC_TCPM'
 p4069
 S'm'
@@ -12055,7 +12055,7 @@ p4116
 S'y'
 sS'kernel.sched_domain.cpu49.domain1.max_newidle_lb_cost'
 p4117
-I149860
+I463050
 sS'CONFIG_KEYBOARD_TCA6416'
 p4118
 S'm'
@@ -12164,7 +12164,7 @@ p4153
 I0
 sS'kernel.sched_domain.cpu120.domain0.max_newidle_lb_cost'
 p4154
-I21929
+I312740
 sS'CONFIG_REALTEK_AUTOPM'
 p4155
 S'y'
@@ -12251,7 +12251,7 @@ p4182
 I2
 sS'kernel.sched_domain.cpu31.domain1.max_newidle_lb_cost'
 p4183
-I63089
+I937338
 sS'CONFIG_CIFS_DEBUG'
 p4184
 S'y'
@@ -12484,7 +12484,7 @@ p4263
 S'm'
 sS'kernel.sched_domain.cpu8.domain0.max_newidle_lb_cost'
 p4264
-I17132
+I38029
 sS'kernel.sched_domain.cpu75.domain0.newidle_idx'
 p4265
 I0
@@ -12523,7 +12523,7 @@ p4276
 I100
 sS'kernel.sched_domain.cpu13.domain0.max_newidle_lb_cost'
 p4277
-I21065
+I25148
 sS'CONFIG_BLK_DEV_RBD'
 p4278
 S'm'
@@ -12882,7 +12882,7 @@ p4399
 I0
 sS'kernel.sched_domain.cpu163.domain0.max_newidle_lb_cost'
 p4400
-I18726
+I241752
 sS'CONFIG_WLAN_VENDOR_ADMTEK'
 p4401
 S'y'
@@ -12975,7 +12975,7 @@ p4430
 S'y'
 sS'kernel.sched_domain.cpu137.domain0.max_newidle_lb_cost'
 p4431
-I23636
+I340679
 sS'CONFIG_XEN_TMEM'
 p4432
 S'm'
@@ -13005,7 +13005,7 @@ p4440
 I1
 sS'kernel.sched_domain.cpu75.domain1.max_newidle_lb_cost'
 p4441
-I718484
+I346488
 sS'kernel.sched_domain.cpu145.domain1.flags'
 p4442
 I25647
@@ -13020,7 +13020,7 @@ p4445
 S'y'
 sS'kernel.sched_domain.cpu78.domain1.max_newidle_lb_cost'
 p4446
-I596706
+I123172
 sS'kernel.sched_domain.cpu109.domain1.cache_nice_tries'
 p4447
 I2
@@ -13352,7 +13352,7 @@ S'256\t256\t32\t0\t0'
 p4557
 sS'kernel.sched_domain.cpu83.domain1.max_newidle_lb_cost'
 p4558
-I133387
+I298374
 sS'CONFIG_PROC_VMCORE'
 p4559
 S'y'
@@ -13409,7 +13409,7 @@ p4576
 S'y'
 sS'kernel.sched_domain.cpu30.domain0.max_newidle_lb_cost'
 p4577
-I666273
+I28331
 sS'CONFIG_LIBERTAS_SPI'
 p4578
 S'm'
@@ -13493,7 +13493,7 @@ p4604
 I32
 sS'kernel.sched_domain.cpu146.domain1.max_newidle_lb_cost'
 p4605
-I62098
+I184248
 sS'CONFIG_LEDS_DA903X'
 p4606
 S'm'
@@ -13617,7 +13617,7 @@ p4646
 S'm'
 sS'kernel.sched_domain.cpu15.domain0.max_newidle_lb_cost'
 p4647
-I15400
+I500137
 sS'CONFIG_NFS_V3_ACL'
 p4648
 S'y'
@@ -13816,7 +13816,7 @@ p4713
 I4143
 sS'kernel.sched_domain.cpu13.domain1.max_newidle_lb_cost'
 p4714
-I81459
+I60347
 sS'kernel.sched_domain.cpu62.domain0.newidle_idx'
 p4715
 I0
@@ -13840,7 +13840,7 @@ p4721
 I336
 sS'kernel.sched_domain.cpu50.domain0.max_newidle_lb_cost'
 p4722
-I22604
+I1829551
 sS'kernel.sched_domain.cpu57.domain1.forkexec_idx'
 p4723
 I0
@@ -13952,7 +13952,7 @@ p4759
 S'y'
 sS'kernel.sched_domain.cpu9.domain1.max_newidle_lb_cost'
 p4760
-I59468
+I275260
 sS'kernel.sched_domain.cpu22.domain1.busy_idx'
 p4761
 I3
@@ -14151,7 +14151,7 @@ p4826
 S'm'
 sS'kernel.sched_domain.cpu128.domain0.max_newidle_lb_cost'
 p4827
-I22526
+I339295
 sS'CONFIG_MPLS'
 p4828
 S'y'
@@ -14169,7 +14169,7 @@ p4832
 S'y'
 sS'kernel.sched_domain.cpu61.domain0.max_newidle_lb_cost'
 p4833
-I27963
+I319191
 sS'CONFIG_GENERIC_IRQ_RESERVATION_MODE'
 p4834
 S'y'
@@ -14294,13 +14294,13 @@ p4875
 S'y'
 sS'kernel.sched_domain.cpu140.domain0.max_newidle_lb_cost'
 p4876
-I22532
+I326831
 sS'kernel.sched_domain.cpu162.domain1.busy_factor'
 p4877
 I32
 sS'kernel.sched_domain.cpu88.domain1.max_newidle_lb_cost'
 p4878
-I87200
+I857503
 sS'CONFIG_IRQ_FORCED_THREADING'
 p4879
 S'y'
@@ -14370,7 +14370,7 @@ p4901
 I2
 sS'kernel.sched_domain.cpu91.domain0.max_newidle_lb_cost'
 p4902
-I143631
+I603309
 sS'CONFIG_SCSI_SMARTPQI'
 p4903
 S'm'
@@ -14393,7 +14393,7 @@ p4910
 I0
 sS'kernel.sched_domain.cpu156.domain0.max_newidle_lb_cost'
 p4911
-I18537
+I119245
 sS'kernel.sched_domain.cpu153.domain1.cache_nice_tries'
 p4912
 I2
@@ -14453,7 +14453,7 @@ p4930
 I125
 sS'kernel.sched_domain.cpu66.domain1.max_newidle_lb_cost'
 p4931
-I657791
+I212188
 sS'kernel.sched_domain.cpu151.domain0.cache_nice_tries'
 p4932
 I1
@@ -14659,7 +14659,7 @@ p5002
 I0
 sS'kernel.sched_domain.cpu57.domain0.max_newidle_lb_cost'
 p5003
-I638759
+I556464
 sS'CONFIG_DVB_PLL'
 p5004
 S'm'
@@ -14683,7 +14683,7 @@ p5010
 S'm'
 sS'kernel.sched_domain.cpu111.domain0.max_newidle_lb_cost'
 p5011
-I20060
+I132035
 sS'kernel.sched_domain.cpu60.domain0.busy_idx'
 p5012
 I2
@@ -14713,7 +14713,7 @@ p5020
 I32
 sS'kernel.sched_domain.cpu138.domain0.max_newidle_lb_cost'
 p5021
-I341998
+I786187
 sS'CONFIG_X86_SMAP'
 p5022
 S'y'
@@ -14936,7 +14936,7 @@ p5095
 S'm'
 sS'kernel.sched_domain.cpu56.domain1.max_newidle_lb_cost'
 p5096
-I652358
+I315722
 sS'net.ipv6.max_hbh_length'
 p5097
 I2147483647
@@ -15078,7 +15078,7 @@ p5143
 S'y'
 sS'kernel.sched_domain.cpu97.domain0.max_newidle_lb_cost'
 p5144
-I634757
+I262078
 sS'kernel.sched_domain.cpu156.domain1.wake_idx'
 p5145
 I0
@@ -15232,7 +15232,7 @@ p5195
 S'm'
 sS'kernel.sched_domain.cpu141.domain1.max_newidle_lb_cost'
 p5196
-I534579
+I150921
 sS'kernel.sched_domain.cpu62.domain1.forkexec_idx'
 p5197
 I0
@@ -15454,7 +15454,7 @@ p5273
 I0
 sS'kernel.sched_domain.cpu141.domain0.max_newidle_lb_cost'
 p5274
-I25564
+I105859
 sS'CONFIG_IR_SONY_DECODER'
 p5275
 S'm'
@@ -15524,7 +15524,7 @@ p5297
 I0
 sS'kernel.sched_domain.cpu37.domain0.max_newidle_lb_cost'
 p5298
-I639665
+I141963
 sS'CONFIG_HAVE_HARDLOCKUP_DETECTOR_PERF'
 p5299
 S'y'
@@ -15857,7 +15857,7 @@ p5410
 S'm'
 sS'kernel.sched_domain.cpu102.domain1.max_newidle_lb_cost'
 p5411
-I82663
+I1736209
 sS'CONFIG_LEDS_TLC591XX'
 p5412
 S'm'
@@ -15911,7 +15911,7 @@ p5428
 I0
 sS'kernel.sched_domain.cpu155.domain1.max_newidle_lb_cost'
 p5429
-I696470
+I352563
 sS'kernel.sched_domain.cpu149.domain1.newidle_idx'
 p5430
 I0
@@ -15923,7 +15923,7 @@ p5432
 S'm'
 sS'kernel.sched_domain.cpu19.domain0.max_newidle_lb_cost'
 p5433
-I18736
+I115798
 sS'CONFIG_PINCONF'
 p5434
 S'y'
@@ -15983,7 +15983,7 @@ p5452
 S'y'
 sS'kernel.sched_domain.cpu43.domain0.max_newidle_lb_cost'
 p5453
-I18480
+I38260
 sS'kernel.sched_domain.cpu0.domain1.flags'
 p5454
 I25647
@@ -16013,7 +16013,7 @@ p5462
 S'y'
 sS'kernel.sched_domain.cpu20.domain0.max_newidle_lb_cost'
 p5463
-I605152
+I759981
 sS'CONFIG_TOUCHSCREEN_TOUCHRIGHT'
 p5464
 S'm'
@@ -16151,7 +16151,7 @@ p5508
 I24
 sS'kernel.sched_domain.cpu6.domain1.max_newidle_lb_cost'
 p5509
-I103126
+I687722
 sS'CONFIG_I2C_PARPORT'
 p5510
 S'm'
@@ -16295,7 +16295,7 @@ p5558
 S'm'
 sS'kernel.sched_domain.cpu89.domain1.max_newidle_lb_cost'
 p5559
-I83086
+I746161
 sS'CONFIG_CAN_SLCAN'
 p5560
 S'm'
@@ -16686,7 +16686,7 @@ p5689
 I0
 sS'kernel.sched_domain.cpu156.domain1.max_newidle_lb_cost'
 p5690
-I63716
+I150283
 sS'CONFIG_EXT4_FS_POSIX_ACL'
 p5691
 S'y'
@@ -16753,7 +16753,7 @@ p5712
 S'y'
 sS'kernel.sched_domain.cpu136.domain1.max_newidle_lb_cost'
 p5713
-I65161
+I1720864
 sS'CONFIG_USB_GSPCA_DTCS033'
 p5714
 S'm'
@@ -17046,7 +17046,7 @@ p5815
 S'm'
 sS'kernel.sched_domain.cpu116.domain0.max_newidle_lb_cost'
 p5816
-I17982
+I396585
 sS'kernel.sched_domain.cpu5.domain0.wake_idx'
 p5817
 I0
@@ -17144,7 +17144,7 @@ p5849
 S'y'
 sS'kernel.sched_domain.cpu68.domain0.max_newidle_lb_cost'
 p5850
-I25893
+I1692686
 sS'CONFIG_FB_TFT_HX8353D'
 p5851
 S'm'
@@ -17189,7 +17189,7 @@ p5864
 S'm'
 sS'kernel.sched_domain.cpu139.domain1.max_newidle_lb_cost'
 p5865
-I635143
+I858906
 sS'CONFIG_SERIAL_8250_FINTEK'
 p5866
 S'y'
@@ -17393,7 +17393,7 @@ p5932
 I0
 sS'kernel.sched_domain.cpu26.domain0.max_newidle_lb_cost'
 p5933
-I642216
+I399296
 sS'kernel.sched_domain.cpu14.domain1.newidle_idx'
 p5934
 I0
@@ -17442,7 +17442,7 @@ p5949
 I168
 sS'fs.file-nr'
 p5950
-S'7003\t0\t6572888'
+S'6965\t0\t6572888'
 p5951
 sS'CONFIG_SENSORS_SHT21'
 p5952
@@ -17519,7 +17519,7 @@ p5976
 S'm'
 sS'kernel.sched_domain.cpu12.domain0.max_newidle_lb_cost'
 p5977
-I15279
+I275617
 sS'CONFIG_HID_PICOLCD_BACKLIGHT'
 p5978
 S'y'
@@ -17570,7 +17570,7 @@ p5993
 I336
 sS'kernel.sched_domain.cpu164.domain0.max_newidle_lb_cost'
 p5994
-I21113
+I1531437
 sS'CONFIG_TOUCHSCREEN_GOODIX'
 p5995
 S'm'
@@ -17609,7 +17609,7 @@ p6006
 I1
 sS'kernel.sched_domain.cpu55.domain1.max_newidle_lb_cost'
 p6007
-I87752
+I125656
 sS'kernel.sched_domain.cpu167.domain1.cache_nice_tries'
 p6008
 I2
@@ -17741,7 +17741,7 @@ p6050
 S'y'
 sS'kernel.sched_domain.cpu18.domain0.max_newidle_lb_cost'
 p6051
-I18371
+I162171
 sS'CONFIG_MFD_MAX77693'
 p6052
 S'y'
@@ -17828,10 +17828,10 @@ p6079
 S'm'
 sS'kernel.sched_domain.cpu108.domain0.max_newidle_lb_cost'
 p6080
-I17966
+I253813
 sS'kernel.sched_domain.cpu148.domain1.max_newidle_lb_cost'
 p6081
-I76483
+I568415
 sS'kernel.sched_domain.cpu55.domain0.name'
 p6082
 S'DIE'
@@ -17883,7 +17883,7 @@ p6098
 I1
 sS'kernel.sched_domain.cpu40.domain0.max_newidle_lb_cost'
 p6099
-I713843
+I853964
 sS'kernel.sched_domain.cpu48.domain1.imbalance_pct'
 p6100
 I125
@@ -17913,7 +17913,7 @@ p6108
 S'y'
 sS'kernel.sched_domain.cpu160.domain1.max_newidle_lb_cost'
 p6109
-I568579
+I528366
 sS'net.ipv4.neigh.lo.app_solicit'
 p6110
 I0
@@ -17991,13 +17991,13 @@ p6134
 S'y'
 sS'kernel.sched_domain.cpu1.domain1.max_newidle_lb_cost'
 p6135
-I735182
+I524429
 sS'CONFIG_SND_LAYLA20'
 p6136
 S'm'
 sS'kernel.sched_domain.cpu16.domain0.max_newidle_lb_cost'
 p6137
-I20521
+I729330
 sS'kernel.sched_domain.cpu125.domain0.max_interval'
 p6138
 I48
@@ -18009,7 +18009,7 @@ p6140
 S'm'
 sS'kernel.sched_domain.cpu148.domain0.max_newidle_lb_cost'
 p6141
-I19926
+I135367
 sS'CONFIG_PCIE_PTM'
 p6142
 S'y'
@@ -18102,7 +18102,7 @@ p6171
 I15
 sS'kernel.sched_domain.cpu150.domain1.max_newidle_lb_cost'
 p6172
-I777397
+I261387
 sS'CONFIG_QTNFMAC'
 p6173
 S'm'
@@ -18695,7 +18695,7 @@ p6374
 I2
 sS'kernel.sched_domain.cpu165.domain1.max_newidle_lb_cost'
 p6375
-I86779
+I980499
 sS'CONFIG_SERIAL_ALTERA_UART'
 p6376
 S'm'
@@ -18809,7 +18809,7 @@ p6412
 S'y'
 sS'kernel.sched_domain.cpu36.domain0.max_newidle_lb_cost'
 p6413
-I519333
+I387239
 sS'CONFIG_NLS_MAC_GAELIC'
 p6414
 S'm'
@@ -18912,13 +18912,13 @@ p6447
 S'm'
 sS'kernel.sched_domain.cpu60.domain0.max_newidle_lb_cost'
 p6448
-I20058
+I168103
 sS'CONFIG_TOUCHSCREEN_PCAP'
 p6449
 S'm'
 sS'kernel.sched_domain.cpu39.domain1.max_newidle_lb_cost'
 p6450
-I84213
+I860336
 sS'kernel.sched_domain.cpu72.domain1.cache_nice_tries'
 p6451
 I2
@@ -18957,7 +18957,7 @@ p6462
 I5
 sS'kernel.sched_domain.cpu119.domain1.max_newidle_lb_cost'
 p6463
-I60182
+I298374
 sS'CONFIG_TPS65010'
 p6464
 S'm'
@@ -19088,7 +19088,7 @@ p6507
 I0
 sS'kernel.sched_domain.cpu102.domain0.max_newidle_lb_cost'
 p6508
-I26840
+I283604
 sS'CONFIG_IIO_CROS_EC_BARO'
 p6509
 S'm'
@@ -19310,7 +19310,7 @@ p6583
 I168
 sS'kernel.sched_domain.cpu92.domain0.max_newidle_lb_cost'
 p6584
-I515658
+I98840
 sS'CONFIG_PANIC_ON_OOPS_VALUE'
 p6585
 I0
@@ -19456,7 +19456,7 @@ p6633
 S'm'
 sS'kernel.sched_domain.cpu153.domain0.max_newidle_lb_cost'
 p6634
-I25451
+I76716
 sS'CONFIG_SCHED_STACK_END_CHECK'
 p6635
 S'y'
@@ -19789,7 +19789,7 @@ p6746
 S'm'
 sS'kernel.sched_domain.cpu113.domain0.max_newidle_lb_cost'
 p6747
-I354270
+I284836
 sS'kernel.sched_domain.cpu141.domain1.flags'
 p6748
 I25647
@@ -19822,7 +19822,7 @@ p6757
 I1
 sS'kernel.sched_domain.cpu144.domain0.max_newidle_lb_cost'
 p6758
-I20516
+I572830
 sS'CONFIG_SND_SOC_WM8737'
 p6759
 S'm'
@@ -19918,7 +19918,7 @@ p6791
 S'm'
 sS'kernel.sched_domain.cpu66.domain0.max_newidle_lb_cost'
 p6792
-I24867
+I205084
 sS'CONFIG_PHY_PXA_28NM_USB2'
 p6793
 S'm'
@@ -20000,7 +20000,7 @@ p6819
 S'm'
 sS'kernel.sched_domain.cpu61.domain1.max_newidle_lb_cost'
 p6820
-I77471
+I758510
 sS'net.ipv4.conf.lo.bootp_relay'
 p6821
 I0
@@ -20064,7 +20064,7 @@ p6841
 I4143
 sS'kernel.sched_domain.cpu144.domain1.max_newidle_lb_cost'
 p6842
-I73654
+I249571
 sS'kernel.sched_domain.cpu75.domain1.cache_nice_tries'
 p6843
 I2
@@ -20109,7 +20109,7 @@ p6856
 I0
 sS'kernel.sched_domain.cpu158.domain1.max_newidle_lb_cost'
 p6857
-I73896
+I117911
 sS'kernel.sched_domain.cpu94.domain0.newidle_idx'
 p6858
 I0
@@ -20157,7 +20157,7 @@ p6872
 S'm'
 sS'kernel.sched_domain.cpu4.domain0.max_newidle_lb_cost'
 p6873
-I637644
+I164587
 sS'CONFIG_SENSORS_LM75'
 p6874
 S'm'
@@ -20359,7 +20359,7 @@ p6942
 S'y'
 sS'kernel.random.uuid'
 p6943
-S'1c65c49a-d30f-4f6d-82dc-318f4635c704'
+S'aad00750-1fba-4389-8e11-2139394accec'
 p6944
 sS'kernel.sched_domain.cpu95.domain1.forkexec_idx'
 p6945
@@ -20402,7 +20402,7 @@ p6957
 I16
 sS'kernel.sched_domain.cpu65.domain1.max_newidle_lb_cost'
 p6958
-I706980
+I71927
 sS'kernel.sched_domain.cpu129.domain1.min_interval'
 p6959
 I168
@@ -20456,7 +20456,7 @@ p6975
 I0
 sS'kernel.sched_domain.cpu11.domain0.max_newidle_lb_cost'
 p6976
-I19306
+I216993
 sS'kernel.sched_domain.cpu89.domain1.busy_factor'
 p6977
 I32
@@ -20474,7 +20474,7 @@ p6981
 S'm'
 sS'kernel.sched_domain.cpu135.domain0.max_newidle_lb_cost'
 p6982
-I20295
+I574034
 sS'CONFIG_SND_HDA_CODEC_CIRRUS'
 p6983
 S'm'
@@ -20611,7 +20611,7 @@ p7028
 I336
 sS'kernel.sched_domain.cpu11.domain1.max_newidle_lb_cost'
 p7029
-I73738
+I966469
 sS'CONFIG_SND_SOC_AK4554'
 p7030
 S'm'
@@ -20656,7 +20656,7 @@ p7043
 I0
 sS'kernel.sched_domain.cpu132.domain0.max_newidle_lb_cost'
 p7044
-I26041
+I69322
 sS'CONFIG_SENSORS_MAX31790'
 p7045
 S'm'
@@ -20710,7 +20710,7 @@ p7061
 I8192
 sS'kernel.sched_domain.cpu28.domain1.max_newidle_lb_cost'
 p7062
-I110855
+I508519
 sS'CONFIG_COMMON_CLK_PWM'
 p7063
 S'm'
@@ -20873,7 +20873,7 @@ p7116
 I0
 sS'kernel.sched_domain.cpu126.domain1.max_newidle_lb_cost'
 p7117
-I683465
+I307870
 sS'CONFIG_RADIO_WL1273'
 p7118
 S'm'
@@ -20882,7 +20882,7 @@ p7119
 S'm'
 sS'kernel.sched_domain.cpu127.domain0.max_newidle_lb_cost'
 p7120
-I31815
+I49100
 sS'kernel.softlockup_panic'
 p7121
 I0
@@ -20894,7 +20894,7 @@ p7123
 S'm'
 sS'kernel.sched_domain.cpu87.domain1.max_newidle_lb_cost'
 p7124
-I786585
+I298144
 sS'kernel.sched_domain.cpu152.domain0.name'
 p7125
 S'DIE'
@@ -20961,7 +20961,7 @@ p7146
 I1
 sS'kernel.sched_domain.cpu2.domain0.max_newidle_lb_cost'
 p7147
-I47782
+I286849
 sS'kernel.sched_domain.cpu118.domain1.imbalance_pct'
 p7148
 I125
@@ -20970,7 +20970,7 @@ p7149
 S'm'
 sS'kernel.sched_domain.cpu27.domain0.max_newidle_lb_cost'
 p7150
-I24263
+I56005
 sS'CONFIG_ATH5K'
 p7151
 S'm'
@@ -21087,7 +21087,7 @@ p7188
 I125
 sS'kernel.sched_domain.cpu87.domain0.max_newidle_lb_cost'
 p7189
-I657705
+I351661
 sS'CONFIG_USB_F_ACM'
 p7190
 S'm'
@@ -21160,7 +21160,7 @@ p7213
 I120
 sS'kernel.sched_domain.cpu155.domain0.max_newidle_lb_cost'
 p7214
-I503062
+I104823
 sS'kernel.sched_domain.cpu56.domain0.max_interval'
 p7215
 I48
@@ -21295,7 +21295,7 @@ p7260
 I1
 sS'kernel.sched_domain.cpu154.domain1.max_newidle_lb_cost'
 p7261
-I733703
+I236361
 sS'kernel.sched_domain.cpu69.domain1.flags'
 p7262
 I25647
@@ -21304,7 +21304,7 @@ p7263
 I2
 sS'kernel.sched_domain.cpu32.domain0.max_newidle_lb_cost'
 p7264
-I21019
+I696585
 sS'CONFIG_USB_ZD1201'
 p7265
 S'm'
@@ -21376,7 +21376,7 @@ p7287
 S'y'
 sS'kernel.sched_domain.cpu90.domain0.max_newidle_lb_cost'
 p7288
-I504348
+I380725
 sS'net.ipv6.conf.lo.forwarding'
 p7289
 I0
@@ -21486,7 +21486,7 @@ p7325
 I125
 sS'kernel.sched_domain.cpu62.domain0.max_newidle_lb_cost'
 p7326
-I690191
+I131247
 sS'CONFIG_SND_SOC_WM8804'
 p7327
 S'm'
@@ -21614,7 +21614,7 @@ p7369
 I1
 sS'kernel.sched_domain.cpu6.domain0.max_newidle_lb_cost'
 p7370
-I16171
+I155641
 sS'kernel.sched_domain.cpu122.domain1.busy_factor'
 p7371
 I32
@@ -21704,7 +21704,7 @@ p7399
 S'm'
 sS'kernel.sched_domain.cpu84.domain1.max_newidle_lb_cost'
 p7400
-I143409
+I456818
 sS'kernel.sched_domain.cpu97.domain0.imbalance_pct'
 p7401
 I125
@@ -21731,7 +21731,7 @@ p7408
 S'm'
 sS'kernel.sched_domain.cpu21.domain0.max_newidle_lb_cost'
 p7409
-I15988
+I367770
 sS'kernel.sched_domain.cpu117.domain1.idle_idx'
 p7410
 I2
@@ -21779,7 +21779,7 @@ p7424
 S'y'
 sS'fs.inode-state'
 p7425
-S'107445\t506\t0\t0\t0\t0\t0'
+S'107368\t506\t0\t0\t0\t0\t0'
 p7426
 sS'kernel.sched_domain.cpu70.domain0.newidle_idx'
 p7427
@@ -22041,7 +22041,7 @@ p7514
 S'm'
 sS'kernel.sched_domain.cpu137.domain1.max_newidle_lb_cost'
 p7515
-I65404
+I162013
 sS'kernel.sched_domain.cpu29.domain1.flags'
 p7516
 I25647
@@ -22366,7 +22366,7 @@ p7625
 I336
 sS'kernel.sched_domain.cpu7.domain1.max_newidle_lb_cost'
 p7626
-I688298
+I393719
 sS'kernel.sched_domain.cpu135.domain0.flags'
 p7627
 I4143
@@ -22577,7 +22577,7 @@ p7698
 S'm'
 sS'kernel.sched_domain.cpu54.domain1.max_newidle_lb_cost'
 p7699
-I66837
+I480317
 sS'kernel.sched_domain.cpu8.domain1.wake_idx'
 p7700
 I0
@@ -22658,7 +22658,7 @@ p7725
 S'm'
 sS'kernel.sched_domain.cpu104.domain0.max_newidle_lb_cost'
 p7726
-I23974
+I474520
 sS'kernel.sched_domain.cpu28.domain1.busy_idx'
 p7727
 I3
@@ -22754,7 +22754,7 @@ p7757
 I24
 sS'kernel.sched_domain.cpu95.domain1.max_newidle_lb_cost'
 p7758
-I93052
+I298356
 sS'CONFIG_DVB_LG2160'
 p7759
 S'm'
@@ -22882,7 +22882,7 @@ p7801
 I32
 sS'kernel.sched_domain.cpu14.domain1.max_newidle_lb_cost'
 p7802
-I74047
+I804136
 sS'CONFIG_ARCH_HAS_DEVMEM_IS_ALLOWED'
 p7803
 S'y'
@@ -22930,7 +22930,7 @@ p7817
 S'm'
 sS'kernel.sched_domain.cpu70.domain0.max_newidle_lb_cost'
 p7818
-I19958
+I676851
 sS'CONFIG_SCHED_DEBUG'
 p7819
 S'y'
@@ -22969,7 +22969,7 @@ p7830
 I25647
 sS'kernel.sched_domain.cpu79.domain0.max_newidle_lb_cost'
 p7831
-I543366
+I417416
 sS'kernel.sched_domain.cpu100.domain1.newidle_idx'
 p7832
 I0
@@ -23069,7 +23069,7 @@ p7864
 S'm'
 sS'kernel.sched_domain.cpu64.domain1.max_newidle_lb_cost'
 p7865
-I668853
+I178922
 sS'CONFIG_E1000'
 p7866
 S'm'
@@ -23348,7 +23348,7 @@ p7959
 I1
 sS'kernel.sched_domain.cpu23.domain1.max_newidle_lb_cost'
 p7960
-I218220
+I106255
 sS'kernel.sched_domain.cpu14.domain0.wake_idx'
 p7961
 I0
@@ -23488,7 +23488,7 @@ p8011
 I2
 sS'kernel.sched_domain.cpu53.domain1.max_newidle_lb_cost'
 p8012
-I676888
+I97025
 sS'net.netfilter.nf_log.9'
 p8013
 S'NONE'
@@ -23676,7 +23676,7 @@ p8077
 I32
 sS'kernel.sched_domain.cpu5.domain1.max_newidle_lb_cost'
 p8078
-I71022
+I889885
 sS'CONFIG_USB_SERIAL_OPTION'
 p8079
 S'm'
@@ -24129,7 +24129,7 @@ p8228
 S'm'
 sS'kernel.sched_domain.cpu163.domain1.max_newidle_lb_cost'
 p8229
-I592043
+I485112
 sS'CONFIG_MAG3110'
 p8230
 S'm'
@@ -24325,7 +24325,7 @@ p8296
 S'm'
 sS'kernel.sched_domain.cpu79.domain1.max_newidle_lb_cost'
 p8297
-I1566157
+I459256
 sS'CONFIG_DM_UEVENT'
 p8298
 S'y'
@@ -24355,7 +24355,7 @@ p8306
 S'm'
 sS'kernel.sched_domain.cpu44.domain0.max_newidle_lb_cost'
 p8307
-I20573
+I49651
 sS'kernel.sched_domain.cpu91.domain1.name'
 p8308
 S'NUMA'
@@ -24466,7 +24466,7 @@ p8345
 S'm'
 sS'kernel.sched_domain.cpu123.domain0.max_newidle_lb_cost'
 p8346
-I33054
+I117024
 sS'CONFIG_ALTERA_TSE'
 p8347
 S'm'
@@ -24604,7 +24604,7 @@ p8393
 S'm'
 sS'kernel.sched_domain.cpu121.domain0.max_newidle_lb_cost'
 p8394
-I19994
+I401057
 sS'kernel.sched_domain.cpu3.domain1.newidle_idx'
 p8395
 I0
@@ -24728,7 +24728,7 @@ p8435
 S'm'
 sS'kernel.sched_domain.cpu106.domain0.max_newidle_lb_cost'
 p8436
-I749178
+I421421
 sS'CONFIG_SPI_SC18IS602'
 p8437
 S'm'
@@ -24770,7 +24770,7 @@ p8449
 I0
 sS'kernel.sched_domain.cpu129.domain1.max_newidle_lb_cost'
 p8450
-I145454
+I486332
 sS'kernel.sched_domain.cpu136.domain1.wake_idx'
 p8451
 I0
@@ -25214,7 +25214,7 @@ S'DIE'
 p8601
 sS'kernel.sched_domain.cpu17.domain1.max_newidle_lb_cost'
 p8602
-I778677
+I451453
 sS'net.ipv4.tcp_limit_output_bytes'
 p8603
 I262144
@@ -25253,7 +25253,7 @@ p8614
 S'y'
 sS'kernel.sched_domain.cpu45.domain0.max_newidle_lb_cost'
 p8615
-I656564
+I532309
 sS'kernel.sched_domain.cpu88.domain0.busy_idx'
 p8616
 I2
@@ -25341,10 +25341,10 @@ p8644
 S'y'
 sS'kernel.sched_domain.cpu112.domain0.max_newidle_lb_cost'
 p8645
-I718321
+I317954
 sS'kernel.sched_domain.cpu36.domain1.max_newidle_lb_cost'
 p8646
-I774918
+I155346
 sS'kernel.sched_domain.cpu110.domain1.busy_idx'
 p8647
 I3
@@ -25385,7 +25385,7 @@ S'""'
 p8660
 sS'kernel.sched_domain.cpu71.domain0.max_newidle_lb_cost'
 p8661
-I24202
+I204067
 sS'CONFIG_R6040'
 p8662
 S'm'
@@ -25678,7 +25678,7 @@ p8759
 S'm'
 sS'kernel.sched_domain.cpu115.domain1.max_newidle_lb_cost'
 p8760
-I513483
+I650473
 sS'CONFIG_HID_SENSOR_ACCEL_3D'
 p8761
 S'm'
@@ -25996,7 +25996,7 @@ p8865
 I4143
 sS'kernel.sched_domain.cpu151.domain1.max_newidle_lb_cost'
 p8866
-I65811
+I628311
 sS'kernel.sched_domain.cpu7.domain0.name'
 p8867
 S'DIE'
@@ -26024,7 +26024,7 @@ p8875
 S'm'
 sS'kernel.sched_domain.cpu138.domain1.max_newidle_lb_cost'
 p8876
-I70028
+I183197
 sS'CONFIG_COMEDI_ADV_PCI1720'
 p8877
 S'm'
@@ -26265,7 +26265,7 @@ p8956
 I0
 sS'kernel.sched_domain.cpu117.domain1.max_newidle_lb_cost'
 p8957
-I681296
+I328617
 sS'kernel.sched_domain.cpu38.domain1.cache_nice_tries'
 p8958
 I2
@@ -26301,7 +26301,7 @@ p8968
 I1
 sS'kernel.sched_domain.cpu111.domain1.max_newidle_lb_cost'
 p8969
-I258330
+I290630
 sS'kernel.sched_domain.cpu120.domain0.max_interval'
 p8970
 I48
@@ -26410,7 +26410,7 @@ p9005
 S'm'
 sS'kernel.sched_domain.cpu165.domain0.max_newidle_lb_cost'
 p9006
-I17314
+I281978
 sS'kernel.sched_domain.cpu106.domain0.max_interval'
 p9007
 I48
@@ -26456,7 +26456,7 @@ p9021
 S'y'
 sS'kernel.sched_domain.cpu125.domain0.max_newidle_lb_cost'
 p9022
-I23937
+I420476
 sS'kernel.sched_domain.cpu84.domain0.cache_nice_tries'
 p9023
 I1
@@ -26615,13 +26615,13 @@ p9076
 I48
 sS'kernel.sched_domain.cpu73.domain0.max_newidle_lb_cost'
 p9077
-I212120
+I100140
 sS'kernel.sched_domain.cpu137.domain0.forkexec_idx'
 p9078
 I0
 sS'kernel.sched_domain.cpu39.domain0.max_newidle_lb_cost'
 p9079
-I21176
+I54964
 sS'CONFIG_SND_SOC_ADAU1761_I2C'
 p9080
 S'm'
@@ -26693,7 +26693,7 @@ p9102
 S'y'
 sS'kernel.sched_domain.cpu62.domain1.max_newidle_lb_cost'
 p9103
-I95828
+I154484
 sS'CONFIG_SCSI_SYM53C8XX_2'
 p9104
 S'm'
@@ -26771,7 +26771,7 @@ p9128
 S'm'
 sS'kernel.sched_domain.cpu100.domain0.max_newidle_lb_cost'
 p9129
-I20255
+I391301
 sS'CONFIG_RTC_DRV_PCF50633'
 p9130
 S'm'
@@ -26820,7 +26820,7 @@ p9145
 S'm'
 sS'kernel.sched_domain.cpu85.domain0.max_newidle_lb_cost'
 p9146
-I18746
+I457728
 sS'kernel.sched_domain.cpu126.domain0.forkexec_idx'
 p9147
 I0
@@ -26850,7 +26850,7 @@ p9155
 S'y'
 sS'kernel.sched_domain.cpu145.domain0.max_newidle_lb_cost'
 p9156
-I23474
+I101816
 sS'CONFIG_SUNRPC'
 p9157
 S'm'
@@ -26972,7 +26972,7 @@ p9197
 S'm'
 sS'kernel.sched_domain.cpu47.domain0.max_newidle_lb_cost'
 p9198
-I20716
+I687116
 sS'kernel.sched_domain.cpu23.domain1.flags'
 p9199
 I25647
@@ -26984,7 +26984,7 @@ p9201
 S'm'
 sS'kernel.sched_domain.cpu90.domain1.max_newidle_lb_cost'
 p9202
-I630236
+I254032
 sS'CONFIG_CAN_KVASER_PCI'
 p9203
 S'm'
@@ -27057,7 +27057,7 @@ p9226
 S'y'
 sS'kernel.sched_domain.cpu135.domain1.max_newidle_lb_cost'
 p9227
-I64379
+I347020
 sS'CONFIG_HID_NTRIG'
 p9228
 S'm'
@@ -27656,7 +27656,7 @@ p9431
 S'm'
 sS'kernel.sched_domain.cpu8.domain1.max_newidle_lb_cost'
 p9432
-I71168
+I64559
 sS'CONFIG_NET_ACT_TUNNEL_KEY'
 p9433
 S'm'
@@ -27675,7 +27675,7 @@ p9438
 I3
 sS'kernel.sched_domain.cpu94.domain0.max_newidle_lb_cost'
 p9439
-I635749
+I333031
 sS'CONFIG_ISDN_DRV_AVMB1_AVM_CS'
 p9440
 S'm'
@@ -27769,7 +27769,7 @@ p9470
 I0
 sS'kernel.sched_domain.cpu46.domain1.max_newidle_lb_cost'
 p9471
-I80617
+I486173
 sS'CONFIG_VIDEO_OV7640'
 p9472
 S'm'
@@ -27781,7 +27781,7 @@ p9474
 I0
 sS'kernel.sched_domain.cpu42.domain0.max_newidle_lb_cost'
 p9475
-I24163
+I98143
 sS'kernel.sched_domain.cpu45.domain1.name'
 p9476
 S'NUMA'
@@ -27838,7 +27838,7 @@ p9495
 I2
 sS'kernel.sched_domain.cpu94.domain1.max_newidle_lb_cost'
 p9496
-I76873
+I911110
 sS'kernel.sched_domain.cpu124.domain1.cache_nice_tries'
 p9497
 I2
@@ -27847,7 +27847,7 @@ p9498
 I0
 sS'kernel.sched_domain.cpu113.domain1.max_newidle_lb_cost'
 p9499
-I143624
+I669149
 sS'CONFIG_MSI_LAPTOP'
 p9500
 S'm'
@@ -27883,7 +27883,7 @@ p9510
 S'm'
 sS'kernel.sched_domain.cpu99.domain0.max_newidle_lb_cost'
 p9511
-I19166
+I361052
 sS'CONFIG_SATA_SIL'
 p9512
 S'm'
@@ -27953,7 +27953,7 @@ p9534
 I1
 sS'kernel.sched_domain.cpu103.domain1.max_newidle_lb_cost'
 p9535
-I126515
+I302224
 sS'CONFIG_GPIO_IT87'
 p9536
 S'm'
@@ -28040,7 +28040,7 @@ p9563
 S'm'
 sS'kernel.sched_domain.cpu35.domain1.max_newidle_lb_cost'
 p9564
-I71449
+I356179
 sS'kernel.sched_domain.cpu11.domain0.cache_nice_tries'
 p9565
 I1
@@ -28135,7 +28135,7 @@ p9596
 I0
 sS'kernel.sched_domain.cpu40.domain1.max_newidle_lb_cost'
 p9597
-I774632
+I470158
 sS'kernel.sched_domain.cpu133.domain0.cache_nice_tries'
 p9598
 I1
@@ -28186,7 +28186,7 @@ p9613
 S'm'
 sS'kernel.sched_domain.cpu78.domain0.max_newidle_lb_cost'
 p9614
-I227071
+I91034
 sS'kernel.sched_domain.cpu38.domain0.min_interval'
 p9615
 I24
@@ -28258,7 +28258,7 @@ p9637
 I32
 sS'kernel.sched_domain.cpu142.domain0.max_newidle_lb_cost'
 p9638
-I553566
+I229358
 sS'kernel.sched_domain.cpu10.domain1.cache_nice_tries'
 p9639
 I2
@@ -28283,7 +28283,7 @@ p9646
 S'y'
 sS'kernel.sched_domain.cpu0.domain1.max_newidle_lb_cost'
 p9647
-I678376
+I253698
 sS'kernel.watchdog_thresh'
 p9648
 I10
@@ -28427,7 +28427,7 @@ p9694
 S'm'
 sS'kernel.sched_domain.cpu72.domain0.max_newidle_lb_cost'
 p9695
-I20229
+I855546
 sS'kernel.sched_domain.cpu158.domain0.imbalance_pct'
 p9696
 I125
@@ -28592,7 +28592,7 @@ p9751
 S'm'
 sS'kernel.sched_domain.cpu122.domain0.max_newidle_lb_cost'
 p9752
-I27995
+I196691
 sS'kernel.sched_domain.cpu158.domain1.max_interval'
 p9753
 I336
@@ -28619,7 +28619,7 @@ p9760
 S'm'
 sS'kernel.sched_domain.cpu58.domain0.max_newidle_lb_cost'
 p9761
-I17607
+I61600
 sS'CONFIG_CRYPTO_HMAC'
 p9762
 S'y'
@@ -28774,7 +28774,7 @@ p9813
 S'm'
 sS'kernel.sched_domain.cpu51.domain1.max_newidle_lb_cost'
 p9814
-I709023
+I142540
 sS'CONFIG_ACPI_WMI'
 p9815
 S'm'
@@ -28825,7 +28825,7 @@ p9830
 S'y'
 sS'kernel.sched_domain.cpu105.domain1.max_newidle_lb_cost'
 p9831
-I62711
+I788778
 sS'kernel.sched_domain.cpu10.domain0.imbalance_pct'
 p9832
 I125
@@ -28975,7 +28975,7 @@ p9880
 I3
 sS'kernel.sched_domain.cpu0.domain0.max_newidle_lb_cost'
 p9881
-I15582
+I308358
 sS'CONFIG_DVB_TS2020'
 p9882
 S'm'
@@ -28993,7 +28993,7 @@ p9886
 S'y'
 sS'kernel.sched_domain.cpu80.domain1.max_newidle_lb_cost'
 p9887
-I490727
+I1354073
 sS'CONFIG_GPIOLIB_IRQCHIP'
 p9888
 S'y'
@@ -29032,7 +29032,7 @@ p9899
 I8
 sS'kernel.sched_domain.cpu83.domain0.max_newidle_lb_cost'
 p9900
-I19748
+I199343
 sS'CONFIG_SLUB'
 p9901
 S'y'
@@ -29217,10 +29217,10 @@ p9962
 I125
 sS'kernel.sched_domain.cpu29.domain1.max_newidle_lb_cost'
 p9963
-I73026
+I554334
 sS'kernel.sched_domain.cpu110.domain0.max_newidle_lb_cost'
 p9964
-I662691
+I266886
 sS'kernel.sched_domain.cpu3.domain0.cache_nice_tries'
 p9965
 I1
@@ -29281,7 +29281,7 @@ p9984
 S'y'
 sS'kernel.sched_domain.cpu143.domain1.max_newidle_lb_cost'
 p9985
-I321404
+I192010
 sS'kernel.sched_domain.cpu151.domain1.wake_idx'
 p9986
 I0
@@ -29476,7 +29476,7 @@ p10051
 S'm'
 sS'kernel.sched_domain.cpu136.domain0.max_newidle_lb_cost'
 p10052
-I17607
+I202186
 sS'CONFIG_PATA_OLDPIIX'
 p10053
 S'm'
@@ -29548,7 +29548,7 @@ S'DIE'
 p10077
 sS'kernel.sched_domain.cpu38.domain0.max_newidle_lb_cost'
 p10078
-I19211
+I109993
 sS'CONFIG_HAPPYMEAL'
 p10079
 S'm'
@@ -29735,7 +29735,7 @@ p10142
 I4143
 sS'kernel.sched_domain.cpu164.domain1.max_newidle_lb_cost'
 p10143
-I74847
+I422574
 sS'CONFIG_FUSION_SPI'
 p10144
 S'm'
@@ -29986,7 +29986,7 @@ p10229
 I32
 sS'kernel.sched_domain.cpu101.domain0.max_newidle_lb_cost'
 p10230
-I24673
+I358046
 sS'CONFIG_TABLET_USB_GTCO'
 p10231
 S'm'
@@ -30039,7 +30039,7 @@ p10248
 S'y'
 sS'kernel.sched_domain.cpu129.domain0.max_newidle_lb_cost'
 p10249
-I29515
+I567424
 sS'kernel.sched_domain.cpu125.domain0.name'
 p10250
 S'DIE'
@@ -30082,7 +30082,7 @@ p10263
 S'm'
 sS'kernel.sched_domain.cpu33.domain1.max_newidle_lb_cost'
 p10264
-I160607
+I127251
 sS'CONFIG_DCA'
 p10265
 S'm'
@@ -30227,7 +30227,7 @@ p10312
 I25647
 sS'kernel.sched_domain.cpu99.domain1.max_newidle_lb_cost'
 p10313
-I68022
+I412083
 sS'CONFIG_SENSORS_DELL_SMM'
 p10314
 S'm'
@@ -30248,7 +30248,7 @@ p10319
 S'm'
 sS'kernel.sched_domain.cpu160.domain0.max_newidle_lb_cost'
 p10320
-I21676
+I262276
 sS'CONFIG_REGMAP_SPI'
 p10321
 S'y'
@@ -30352,7 +30352,7 @@ p10355
 I2
 sS'kernel.sched_domain.cpu166.domain1.max_newidle_lb_cost'
 p10356
-I56959
+I438389
 sS'kernel.sched_domain.cpu64.domain1.imbalance_pct'
 p10357
 I125
@@ -30388,7 +30388,7 @@ p10367
 S'm'
 sS'kernel.sched_domain.cpu157.domain1.max_newidle_lb_cost'
 p10368
-I698500
+I537176
 sS'kernel.sched_domain.cpu25.domain0.max_interval'
 p10369
 I48
@@ -30523,7 +30523,7 @@ p10412
 S'y'
 sS'kernel.sched_domain.cpu131.domain1.max_newidle_lb_cost'
 p10413
-I126983
+I38965
 sS'kernel.sched_domain.cpu96.domain1.forkexec_idx'
 p10414
 I0
@@ -30646,7 +30646,7 @@ p10453
 S'y'
 sS'kernel.sched_domain.cpu120.domain1.max_newidle_lb_cost'
 p10454
-I714960
+I241137
 sS'CONFIG_VFAT_FS'
 p10455
 S'y'
@@ -30687,7 +30687,7 @@ p10468
 S'm'
 sS'kernel.sched_domain.cpu159.domain1.max_newidle_lb_cost'
 p10469
-I765577
+I216881
 sS'CONFIG_IP_SET_HASH_NETIFACE'
 p10470
 S'm'
@@ -31049,7 +31049,7 @@ p10590
 I17
 sS'kernel.sched_domain.cpu131.domain0.max_newidle_lb_cost'
 p10591
-I45443
+I99275
 sS'CONFIG_BACKLIGHT_DA903X'
 p10592
 S'm'
@@ -31071,7 +31071,7 @@ S'DIE'
 p10598
 sS'kernel.sched_domain.cpu59.domain1.max_newidle_lb_cost'
 p10599
-I688675
+I206878
 sS'CONFIG_LEDS_LM355x'
 p10600
 S'm'
@@ -31194,7 +31194,7 @@ p10639
 S'm'
 sS'kernel.sched_domain.cpu118.domain0.max_newidle_lb_cost'
 p10640
-I19198
+I308429
 sS'CONFIG_FB_MB862XX'
 p10641
 S'm'
@@ -31298,7 +31298,7 @@ p10675
 I0
 sS'kernel.sched_domain.cpu41.domain1.max_newidle_lb_cost'
 p10676
-I58233
+I688895
 sS'kernel.sched_domain.cpu137.domain0.flags'
 p10677
 I4143
@@ -31313,7 +31313,7 @@ p10680
 S'y'
 sS'kernel.sched_domain.cpu16.domain1.max_newidle_lb_cost'
 p10681
-I438596
+I481731
 sS'CONFIG_COMEDI_DT282X'
 p10682
 S'm'
@@ -31356,7 +31356,7 @@ p10695
 S'y'
 sS'kernel.sched_domain.cpu157.domain0.max_newidle_lb_cost'
 p10696
-I612579
+I37850
 sS'kernel.sched_domain.cpu146.domain0.idle_idx'
 p10697
 I1
@@ -31549,7 +31549,7 @@ p10760
 S'm'
 sS'kernel.sched_domain.cpu80.domain0.max_newidle_lb_cost'
 p10761
-I13768
+I229182
 sS'kernel.sched_domain.cpu111.domain1.newidle_idx'
 p10762
 I0
@@ -31947,7 +31947,7 @@ p10896
 S'm'
 sS'kernel.sched_domain.cpu48.domain0.max_newidle_lb_cost'
 p10897
-I22229
+I156297
 sS'CONFIG_USB_SERIAL_DIGI_ACCELEPORT'
 p10898
 S'm'
@@ -32010,7 +32010,7 @@ p10917
 I950000
 sS'kernel.sched_domain.cpu161.domain0.max_newidle_lb_cost'
 p10918
-I22473
+I696247
 sS'kernel.sched_domain.cpu159.domain1.name'
 p10919
 S'NUMA'
@@ -32088,7 +32088,7 @@ p10945
 S'm'
 sS'kernel.sched_domain.cpu38.domain1.max_newidle_lb_cost'
 p10946
-I585951
+I448653
 sS'CONFIG_PWM_CROS_EC'
 p10947
 S'm'
@@ -32112,7 +32112,7 @@ p10953
 S'm'
 sS'kernel.sched_domain.cpu82.domain1.max_newidle_lb_cost'
 p10954
-I81005
+I258830
 sS'CONFIG_BT_HCIUART'
 p10955
 S'm'
@@ -32148,7 +32148,7 @@ p10965
 I1
 sS'kernel.sched_domain.cpu149.domain1.max_newidle_lb_cost'
 p10966
-I621193
+I349514
 sS'kernel.sched_domain.cpu129.domain1.idle_idx'
 p10967
 I2
@@ -32169,7 +32169,7 @@ p10972
 S'm'
 sS'kernel.sched_domain.cpu69.domain1.max_newidle_lb_cost'
 p10973
-I50433
+I211761
 sS'kernel.sched_domain.cpu146.domain1.imbalance_pct'
 p10974
 I125
@@ -32426,7 +32426,7 @@ p11059
 S'y'
 sS'kernel.sched_domain.cpu84.domain0.max_newidle_lb_cost'
 p11060
-I570878
+I75675
 sS'CONFIG_BAYCOM_SER_FDX'
 p11061
 S'm'
@@ -32493,7 +32493,7 @@ p11082
 S'y'
 sS'kernel.random.entropy_avail'
 p11083
-I885
+I912
 sS'CONFIG_USB_HIDDEV'
 p11084
 S'y'
@@ -32529,14 +32529,14 @@ p11094
 S'm'
 sS'kernel.random.boot_id'
 p11095
-S'd0ae278f-7156-4093-8d08-0cb45ac57af1'
+S'2b16c1bd-a4ec-4bc3-8fa8-0ceaf3dac012'
 p11096
 sS'CONFIG_BFQ_GROUP_IOSCHED'
 p11097
 S'y'
 sS'kernel.sched_domain.cpu41.domain0.max_newidle_lb_cost'
 p11098
-I17217
+I25293
 sS'CONFIG_QUOTA'
 p11099
 S'y'
@@ -32753,10 +32753,10 @@ S'"elf64-x86-64"'
 p11172
 sS'kernel.sched_domain.cpu74.domain0.max_newidle_lb_cost'
 p11173
-I20491
+I236976
 sS'kernel.sched_domain.cpu21.domain1.max_newidle_lb_cost'
 p11174
-I51198
+I242925
 sS'CONFIG_RTS5208'
 p11175
 S'm'
@@ -32802,7 +32802,7 @@ p11189
 I0
 sS'kernel.sched_domain.cpu108.domain1.max_newidle_lb_cost'
 p11190
-I138677
+I107543
 sS'CONFIG_CHR_DEV_SG'
 p11191
 S'y'
@@ -32936,7 +32936,7 @@ p11235
 S'y'
 sS'kernel.sched_domain.cpu63.domain0.max_newidle_lb_cost'
 p11236
-I22315
+I128012
 sS'CONFIG_WILC1000_SPI'
 p11237
 S'm'
@@ -32969,7 +32969,7 @@ p11246
 I3
 sS'kernel.sched_domain.cpu52.domain0.max_newidle_lb_cost'
 p11247
-I20882
+I177572
 sS'CONFIG_VIRTIO_MMIO_CMDLINE_DEVICES'
 p11248
 S'y'
@@ -33441,7 +33441,7 @@ p11406
 I1
 sS'kernel.sched_domain.cpu56.domain0.max_newidle_lb_cost'
 p11407
-I16218
+I208936
 sS'kernel.sched_domain.cpu151.domain0.max_interval'
 p11408
 I48
@@ -33507,7 +33507,7 @@ p11428
 S'm'
 sS'kernel.sched_domain.cpu68.domain1.max_newidle_lb_cost'
 p11429
-I714977
+I276706
 sS'CONFIG_DM_LOG_WRITES'
 p11430
 S'm'
@@ -33528,7 +33528,7 @@ p11435
 I25647
 sS'kernel.sched_domain.cpu24.domain1.max_newidle_lb_cost'
 p11436
-I66374
+I426607
 sS'CONFIG_MDIO_CAVIUM'
 p11437
 S'm'
@@ -33598,7 +33598,7 @@ p11459
 I2
 sS'kernel.sched_domain.cpu97.domain1.max_newidle_lb_cost'
 p11460
-I68706
+I621138
 sS'CONFIG_SQUASHFS_XZ'
 p11461
 S'y'
@@ -33841,7 +33841,7 @@ p11542
 I0
 sS'kernel.sched_domain.cpu132.domain1.max_newidle_lb_cost'
 p11543
-I725428
+I171572
 sS'CONFIG_CRYPTO_HASH2'
 p11544
 S'y'
@@ -34071,7 +34071,7 @@ p11620
 S'y'
 sS'kernel.sched_domain.cpu77.domain1.max_newidle_lb_cost'
 p11621
-I67780
+I425963
 sS'CONFIG_CAN_ESD_USB2'
 p11622
 S'm'
@@ -34284,7 +34284,7 @@ p11693
 S'm'
 sS'kernel.sched_domain.cpu46.domain0.max_newidle_lb_cost'
 p11694
-I597727
+I89186
 sS'CONFIG_INFINIBAND_USER_MEM'
 p11695
 S'y'
@@ -34414,7 +34414,7 @@ p11737
 I0
 sS'kernel.sched_domain.cpu22.domain1.max_newidle_lb_cost'
 p11738
-I743641
+I1545333
 sS'kernel.sched_domain.cpu109.domain1.forkexec_idx'
 p11739
 I0
@@ -34441,7 +34441,7 @@ p11746
 I32
 sS'kernel.sched_domain.cpu154.domain0.max_newidle_lb_cost'
 p11747
-I23767
+I1416656
 sS'CONFIG_CRYPTO_DEV_QAT_DH895xCC'
 p11748
 S'm'
@@ -34514,7 +34514,7 @@ p11771
 S'm'
 sS'kernel.sched_domain.cpu59.domain0.max_newidle_lb_cost'
 p11772
-I41163
+I362709
 sS'CONFIG_PM_TRACE'
 p11773
 S'y'
@@ -34550,7 +34550,7 @@ p11783
 S'm'
 sS'kernel.sched_domain.cpu145.domain1.max_newidle_lb_cost'
 p11784
-I74579
+I355260
 sS'vm.admin_reserve_kbytes'
 p11785
 I8192
@@ -34577,7 +34577,7 @@ p11792
 I125
 sS'kernel.sched_domain.cpu19.domain1.max_newidle_lb_cost'
 p11793
-I355392
+I399669
 sS'kernel.sched_domain.cpu110.domain0.busy_factor'
 p11794
 I32
@@ -34788,7 +34788,7 @@ S'NUMA'
 p11865
 sS'kernel.sched_domain.cpu27.domain1.max_newidle_lb_cost'
 p11866
-I806231
+I205784
 sS'CONFIG_SATA_MOBILE_LPM_POLICY'
 p11867
 I0
@@ -34833,7 +34833,7 @@ p11880
 S'm'
 sS'kernel.sched_domain.cpu3.domain1.max_newidle_lb_cost'
 p11881
-I619261
+I218584
 sS'CONFIG_NET_DSA_TAG_MTK'
 p11882
 S'y'
@@ -34918,7 +34918,7 @@ p11909
 S'y'
 sS'kernel.sched_domain.cpu72.domain1.max_newidle_lb_cost'
 p11910
-I144563
+I525704
 sS'CONFIG_CONFIGFS_FS'
 p11911
 S'y'
@@ -35047,7 +35047,7 @@ p11954
 I125
 sS'kernel.sched_domain.cpu75.domain0.max_newidle_lb_cost'
 p11955
-I21934
+I276199
 sS'CONFIG_TMP006'
 p11956
 S'm'
@@ -35071,7 +35071,7 @@ p11962
 S'm'
 sS'kernel.sched_domain.cpu86.domain1.max_newidle_lb_cost'
 p11963
-I88898
+I315195
 sS'kernel.sched_domain.cpu15.domain0.newidle_idx'
 p11964
 I0
@@ -35106,7 +35106,7 @@ p11975
 I168
 sS'kernel.sched_domain.cpu107.domain1.max_newidle_lb_cost'
 p11976
-I822320
+I610281
 sS'CONFIG_PCIE_PME'
 p11977
 S'y'
@@ -35533,7 +35533,7 @@ S'NUMA'
 p12122
 sS'kernel.sched_domain.cpu124.domain0.max_newidle_lb_cost'
 p12123
-I19627
+I147694
 sS'CONFIG_MAXSMP'
 p12124
 S'y'
@@ -35571,7 +35571,7 @@ p12136
 S'm'
 sS'kernel.sched_domain.cpu17.domain0.max_newidle_lb_cost'
 p12137
-I606451
+I286765
 sS'CONFIG_USB_GSPCA_SQ905C'
 p12138
 S'm'
@@ -35810,7 +35810,7 @@ p12217
 I0
 sS'kernel.sched_domain.cpu45.domain1.max_newidle_lb_cost'
 p12218
-I691491
+I500694
 sS'CONFIG_ATA'
 p12219
 S'y'
@@ -36043,7 +36043,7 @@ p12296
 I0
 sS'kernel.sched_domain.cpu127.domain1.max_newidle_lb_cost'
 p12297
-I713360
+I324280
 sS'CONFIG_NLATTR'
 p12298
 S'y'
@@ -36419,7 +36419,7 @@ p12424
 I1
 sS'kernel.sched_domain.cpu112.domain1.max_newidle_lb_cost'
 p12425
-I683905
+I1668889
 sS'CONFIG_NET_SCH_GRED'
 p12426
 S'm'
@@ -36812,7 +36812,7 @@ p12557
 S'm'
 sS'kernel.sched_domain.cpu143.domain0.max_newidle_lb_cost'
 p12558
-I1821830
+I246616
 sS'kernel.sched_domain.cpu95.domain0.newidle_idx'
 p12559
 I0
@@ -36864,7 +36864,7 @@ p12575
 S'm'
 sS'kernel.sched_domain.cpu9.domain0.max_newidle_lb_cost'
 p12576
-I15608
+I207275
 sS'net.core.fb_tunnels_only_for_init_net'
 p12577
 I0
@@ -37012,7 +37012,7 @@ p12625
 I24
 sS'kernel.sched_domain.cpu55.domain0.max_newidle_lb_cost'
 p12626
-I21369
+I200103
 sS'kernel.sched_domain.cpu30.domain1.name'
 p12627
 S'NUMA'
@@ -37028,7 +37028,7 @@ p12631
 I10
 sS'kernel.sched_domain.cpu100.domain1.max_newidle_lb_cost'
 p12632
-I55897
+I647828
 sS'CONFIG_YENTA_TOSHIBA'
 p12633
 S'y'
@@ -37094,7 +37094,7 @@ p12653
 S'm'
 sS'kernel.sched_domain.cpu48.domain1.max_newidle_lb_cost'
 p12654
-I82833
+I289006
 sS'CONFIG_I2C_VIAPRO'
 p12655
 S'm'
@@ -37297,7 +37297,7 @@ p12722
 S'm'
 sS'kernel.sched_domain.cpu128.domain1.max_newidle_lb_cost'
 p12723
-I659057
+I208924
 sS'CONFIG_MTD_L440GX'
 p12724
 S'm'
@@ -37312,7 +37312,7 @@ p12727
 I2
 sS'kernel.sched_domain.cpu159.domain0.max_newidle_lb_cost'
 p12728
-I22250
+I166092
 sS'net.core.tstamp_allow_data'
 p12729
 I1
@@ -37396,7 +37396,7 @@ p12755
 S'm'
 sS'kernel.sched_domain.cpu109.domain0.max_newidle_lb_cost'
 p12756
-I678306
+I290970
 sS'kernel.sched_domain.cpu57.domain1.wake_idx'
 p12757
 I0
@@ -37463,7 +37463,7 @@ p12778
 I0
 sS'kernel.sched_domain.cpu34.domain0.max_newidle_lb_cost'
 p12779
-I18420
+I843048
 sS'kernel.sched_domain.cpu128.domain1.idle_idx'
 p12780
 I2
@@ -37800,7 +37800,7 @@ p12895
 S'm'
 sS'kernel.sched_domain.cpu149.domain0.max_newidle_lb_cost'
 p12896
-I21378
+I319749
 sS'kernel.sched_domain.cpu76.domain0.min_interval'
 p12897
 I24
@@ -37885,7 +37885,7 @@ p12927
 sa(dp12928
 S'real'
 p12929
-F19.046099999999999
+F19.810700000000001
 sS'time.iowait'
 p12930
 F0.059999999999999998
@@ -37894,13 +37894,13 @@ S'GmakeLoad.trial-0.host-192.168.123.30'
 p12931
 sS'time.real'
 p12932
-F19.046099999999999
+F19.810700000000001
 sS'time.idle'
 p12933
-F1662.45
+F1644.6500000000001
 sS'time.sys'
 p12934
-F214.27000000000001
+F233
 sg3
 (lp12935
 S'GmakeLoad'
@@ -37932,13 +37932,13 @@ p12945
 I168
 sS'time.steal'
 p12946
-F0.39000000000000001
+F0.26000000000000001
 sS'time.irq'
 p12947
 F0
 sS'time.softirq'
 p12948
-F0.93000000000000005
+F0.34000000000000002
 sS'time.nice'
 p12949
 F0
@@ -37948,5 +37948,5 @@ S'build'
 p12951
 sS'time.user'
 p12952
-F1323.02
+F1450.54
 sa.

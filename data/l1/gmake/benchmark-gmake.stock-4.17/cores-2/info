@@ -1093,7 +1093,7 @@ p372
 S'm'
 sS'fs.inode-nr'
 p373
-S'110820\t568'
+S'110830\t583'
 p374
 sS'CONFIG_NET_SCH_FIFO'
 p375
@@ -4311,7 +4311,7 @@ p1452
 S'm'
 sS'fs.dentry-state'
 p1453
-S'142728\t106314\t45\t0\t0\t0'
+S'142736\t106315\t45\t0\t0\t0'
 p1454
 sS'CONFIG_NF_CONNTRACK_SECMARK'
 p1455
@@ -5223,7 +5223,7 @@ p1760
 S'y'
 sS'kernel.sched_domain.cpu1.domain0.max_newidle_lb_cost'
 p1761
-I6994
+I5096
 sS'fs.epoll.max_user_watches'
 p1762
 I54079569
@@ -5608,7 +5608,7 @@ p1889
 S'm'
 sS'kernel.ns_last_pid'
 p1890
-I132061
+I132025
 sS'CONFIG_SYSTEM_DATA_VERIFICATION'
 p1891
 S'y'
@@ -7351,7 +7351,7 @@ p2474
 S'm'
 sS'kernel.sched_domain.cpu0.domain0.max_newidle_lb_cost'
 p2475
-I6873
+I5291
 sS'CONFIG_USB_EMI62'
 p2476
 S'm'
@@ -11585,7 +11585,7 @@ p3896
 S'y'
 sS'fs.file-nr'
 p3897
-S'991\t0\t500000'
+S'1004\t0\t500000'
 p3898
 sS'CONFIG_SENSORS_SHT21'
 p3899
@@ -13472,7 +13472,7 @@ p4529
 I0
 sS'kernel.random.uuid'
 p4530
-S'90014477-1220-4aec-a54e-fdb5d41425e8'
+S'f51e890f-7e78-4651-870e-12d961f86592'
 p4531
 sS'CONFIG_IP_NF_TARGET_REJECT'
 p4532
@@ -14434,7 +14434,7 @@ p4853
 S'y'
 sS'fs.inode-state'
 p4854
-S'110820\t568\t0\t0\t0\t0\t0'
+S'110830\t583\t0\t0\t0\t0\t0'
 p4855
 sS'CONFIG_SENSORS_K10TEMP'
 p4856
@@ -21608,7 +21608,7 @@ p7267
 S'y'
 sS'kernel.random.entropy_avail'
 p7268
-I739
+I724
 sS'CONFIG_USB_HIDDEV'
 p7269
 S'y'
@@ -21638,7 +21638,7 @@ p7277
 S'm'
 sS'kernel.random.boot_id'
 p7278
-S'46daabc3-a9c4-4b06-b306-c83978b2f470'
+S'e5d683ed-7c6c-4559-8e11-3ff764891602'
 p7279
 sS'CONFIG_BFQ_GROUP_IOSCHED'
 p7280
@@ -25316,22 +25316,22 @@ p8518
 sa(dp8519
 S'real'
 p8520
-F408.40300000000002
+F411.298
 sS'time.iowait'
 p8521
-F0.02
+F0.059999999999999998
 sg8
 S'GmakeLoad.trial-0.host-192.168.122.33'
 p8522
 sS'time.real'
 p8523
-F408.40300000000002
+F411.298
 sS'time.idle'
 p8524
-F5.3452400000000004
+F5.7364600000000001
 sS'time.sys'
 p8525
-F79.530000000000001
+F80.629999999999995
 sg3
 (lp8526
 S'GmakeLoad'
@@ -25379,5 +25379,5 @@ S'build'
 p8542
 sS'time.user'
 p8543
-F731.92999999999995
+F736.23000000000002
 sa.
