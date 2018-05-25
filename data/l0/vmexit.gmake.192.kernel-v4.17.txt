@@ -1,0 +1,29 @@
+[sanidhya@mos003 shm]$ sudo ~/bin/perf-4.17 kvm stat report --event=vmexit                                                                        
+
+
+Analyze events for all VMs, all VCPUs:
+
+             VM-EXIT    Samples  Samples%     Time%    Min Time    Max Time         Avg time 
+
+           MSR_WRITE    3845917    21.92%     3.83%      0.66us   2269.87us    100.21us ( +-   0.10% )
+            VMRESUME    3079516    17.55%    10.69%      9.88us   9453.53us    348.94us ( +-   0.04% )
+              VMREAD    2253627    12.84%     0.03%      0.64us    558.03us      1.29us ( +-   0.11% )
+             VMWRITE    2227025    12.69%     0.02%      0.62us    547.27us      1.07us ( +-   0.14% )
+       EPT_VIOLATION    1479759     8.43%     3.03%      1.28us   2068.79us    206.10us ( +-   0.09% )
+  EXTERNAL_INTERRUPT    1297773     7.40%     2.68%      0.54us  16469.81us    207.62us ( +-   0.10% )
+                 HLT     881406     5.02%    77.33%      0.88us 3999686.88us   8821.71us ( +-   1.64% )
+    PREEMPTION_TIMER     853862     4.87%     2.14%      0.81us   1401.55us    252.57us ( +-   0.09% )
+            MSR_READ     322046     1.84%     0.00%      0.72us    555.56us      1.08us ( +-   0.34% )
+           DR_ACCESS     316414     1.80%     0.00%      0.54us    462.40us      0.93us ( +-   0.39% )
+           GDTR_IDTR     308012     1.76%     0.02%      3.94us    557.20us      8.16us ( +-   0.08% )
+             LDTR_TR     308011     1.76%     0.01%      1.85us    552.01us      4.72us ( +-   0.16% )
+               CPUID     235785     1.34%     0.16%      0.74us   2204.26us     66.70us ( +-   0.44% )
+      IO_INSTRUCTION      54803     0.31%     0.01%      1.53us  11247.76us     13.18us ( +-   1.94% )
+   PAUSE_INSTRUCTION      30103     0.17%     0.00%      1.82us    115.30us      4.64us ( +-   0.74% )
+       EPT_MISCONFIG      29549     0.17%     0.00%      0.95us     96.63us      3.31us ( +-   0.15% )
+              VMCALL      23887     0.14%     0.02%      1.26us   1414.22us    103.18us ( +-   1.13% )
+              INVEPT       1023     0.01%     0.00%      2.46us    150.31us      4.10us ( +-   4.00% )
+       EXCEPTION_NMI        121     0.00%     0.00%      0.92us     10.11us      2.76us ( +-   3.25% )
+
+Total Samples:17548639, Total events handled time:10054631349.90us.
+

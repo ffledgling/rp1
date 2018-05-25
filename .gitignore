@@ -12,3 +12,7 @@ data/l2/gmake/perf-from-l0/perf.data.*
 data/l2/gmake/perf-from-l1/perf.data.*
 data/l2/gmake/perf-from-l1/out.perf
 data/l2/gmake/perf-from-l0/out.perf
+
+# We'll never really want to commit perf data in the gigabytes to the repo.
+perf.data.*
+*.data.guest
