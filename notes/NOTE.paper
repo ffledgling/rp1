@@ -1,0 +1,87 @@
+Introduction
+------------
+
+- Nested virtualization has been around for around a decade and has seen wide adoption by popular
+  hypervisors such as KVM, Xen and Hyper-V. So far it has been used to provide addition flexibility,
+  security, and ease of use for certain nice workloads such as hypervisor development.
+
+- With the growing acceptance, adoption and utilization of cloud providers, virtualization has become
+  ubiquitous in today's software industry. Over the past few years there has been a growing demand for
+  consumers to run their own virtualization workloads in the cloud. In the past year GCP and Azure
+  have both added support for nested virtualization to their respected IaaS platforms[1][2].
+
+- With increasing adoption and consumer demand, it makes sense to investigate nested virtualization
+  performance for common workloads and identify performance bottlenecks.
+
+- With additional hardware support being added and adopted over time [5][6] and additional
+  optimization efforts being put in for single-level virtualization, the gap between guest
+  performance and nested guest performance continues to widen. This offsets most gains made by
+  advances in processor performance over the years for users running nested virtualization
+  workloads.
+
+- We also note that the gap between L1 and L2 guest performance often widens as the core count
+  increases, with L2 performance typically degrading with increasing core count after a point.
+
+# Might skip this
+- We find that nested virtualization performance has deteriorated over time and is much worse than
+  previously established by existing research [ref: NEVE paper].
+
+- In this paper, we look at past work in the field, attempt to isolate known causes of performance
+  degradation [ref: turtles, sec 5.1] and show previously unexplored regions for possible
+  improvements.
+
+
+Setup
+-----
+
+- Identical setup across all levels
+- All tests performed against stock kernel v4.17-rc6 (latest at the time of writing).
+- QEMU version 2.9.0
+- Using Ubuntu 16.04
+- 384 core machine, 192 cores to L1, 192 cores to L2 guest, NUMA assignments were done statically
+  and all vCPU cores for guest were pinned to the cores on the host at each level to prevent
+  floating.
+
+Evaluation
+----------
+
+- We base our evaluation upon looking at 4 different, yet representative
+  workloads - Web Server (apache), Messaging (exim), Kernel Compliation (gmake) and Parallel Search
+  (psearchy) and the differences in performance between L1 and L2.
+- Show Figures for performance numbers for all benchmarks.
+
+# TODO: Does this line of reasoning make sense?
+- We begin by eliminating eliminating possible common causes for these differences:
+    * Talk about NUMA effects in large virtual machines, cache-line bouncing. (CST Lock)
+    * Huge Pages/Page fragmentation across levels. (Huge pages)
+    * Mlocking memory? (Not sure what this was trying to eliminate)
+
+- Present perf numbers
+
+- We note that major bottle necks for the workloads being evaluated lie in MMU virtualization and
+  the reading of Model Specific Registers.
+
+- TODO: We really need to figure out something more meaty than what we have at the moment as a
+  cause.
+
+
+
+
+References
+----------
+
+[1] Introducing nested virtualization for Google Compute Engine
+    Thursday, September 28, 2017
+    https://cloudplatform.googleblog.com/2017/09/introducing-nested-virtualization-for.html
+
+[2] Nested Virtualization in Azure
+    Posted on 13 July, 2017
+    https://azure.microsoft.com/en-in/blog/nested-virtualization-in-azure/
+
+[3] Turtles Paper
+
+[4] HPC Virt paper
+
+[5] ARM NPT paper
+
+[6] https://www.linux-kvm.org/images/8/8c/Kvm-forum-2013-nested-ept.pdf
