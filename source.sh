@@ -255,3 +255,55 @@ benchmark-both() {
   done
   audible-alert
 }
+
+_parse-perf-live() {
+local FILE=$1
+
+(cat ${FILE} | grep 'VM-EXIT' | sort | uniq | sed 's/^\s\+//' ;
+cat ${FILE} | grep '+-' | awk '{a[$1]+=$2; b[$1]+=$3; c[$1]+=$4}END{for(i in a) print i,a[i],b[i],c[i]}' | sort -rn -k2 ) | column -t
+}
+
+perf-kvm-l2-from-l0() {
+  require-args 1 $# || return 42
+set -x
+
+  APP="$1"
+  NUM_CORES="$2" # optional
+  NUM_CORES="${NUM_CORES:-192}" # defualt to 192 cores
+  ts=$(date '+%Y%m%d%H%M%S')
+  perf_data="/dev/shm/perf.data.guest.live.${APP}.${NUM_CORES}.${ts}"
+  vmexit_data="/dev/shm/vmexits.${APP}.${NUM_CORES}.${ts}"
+
+  # We need to ensure L1 and L2 are running, the run-in command makes sure of
+  # that.
+  # We need to ensure tmpfs mount exists
+  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate"
+
+  dpid=$(get-domain-pid "${L1_NAME}")
+
+  if [[ "$dpid" == "" ]]; then error "Could not find qemu pid"; fi
+
+  # Start perf
+  nohup sudo ${L0_PERF_BIN} kvm stat live -p ${dpid} &> ${perf_data} &
+  perf_pid=$!
+
+  # run benchmark
+  run-in-l2 "cd ~/vm-scalability/bench/ ; ./config.py -d -c ${NUM_CORES} ${APP}"
+
+  ## Kill perf
+  sudo kill $perf_pid
+  sleep 10
+  sudo ps aux | grep perf
+  sudo kill -9 $perf_pid
+  wait $perf_pid
+
+  # Shutdown the vm so that the next run is clean
+  run-in-l2 "sudo poweroff"
+  run-in-l1 "sudo poweroff"
+
+  _parse-perf-live ${perf_data} > ${vmexit_data}
+
+  echo "Data written to ${perf_data}"
+
+  set +x
+}
