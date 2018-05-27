@@ -273,11 +273,12 @@ set -x
   ts=$(date '+%Y%m%d%H%M%S')
   perf_data="/dev/shm/perf.data.guest.live.${APP}.${NUM_CORES}.${ts}"
   vmexit_data="/dev/shm/vmexits.${APP}.${NUM_CORES}.${ts}"
+  results_dir="/dev/shm/results.l2.${APP}.${NUM_CORES}.${ts}"
 
   # We need to ensure L1 and L2 are running, the run-in command makes sure of
   # that.
   # We need to ensure tmpfs mount exists
-  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate"
+  run-in-l2 "cd ~/vm-scalability/bench/ ; sudo ./mkmounts tmpfs-separate; rm -rf sanity/"
 
   dpid=$(get-domain-pid "${L1_NAME}")
 
@@ -292,10 +293,16 @@ set -x
 
   ## Kill perf
   sudo kill $perf_pid
-  sleep 10
+  sleep 5
   sudo ps aux | grep perf
   sudo kill -9 $perf_pid
+  sleep 5
+  sudo pkill -9 perf
   wait $perf_pid
+
+  # extract the throughput nunmbers
+  run-in-l1 "rsync -avz sanidhya@${L2_IP}:${VBENCH_ROOT}/sanity/ ${results_dir}"
+  rsync -avz sanidhya@${L1_IP}:${results_dir}/ ${results_dir}
 
   # Shutdown the vm so that the next run is clean
   run-in-l2 "sudo poweroff"
