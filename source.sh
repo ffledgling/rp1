@@ -301,6 +301,7 @@ set -x
   wait $perf_pid
 
   # extract the throughput nunmbers
+  run-in-l2 "ls /dev/shm/"
   run-in-l1 "rsync -avz sanidhya@${L2_IP}:${VBENCH_ROOT}/sanity/ ${results_dir}"
   rsync -avz sanidhya@${L1_IP}:${results_dir}/ ${results_dir}
 
