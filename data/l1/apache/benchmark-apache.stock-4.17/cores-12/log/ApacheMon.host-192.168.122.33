@@ -1,28 +1,28 @@
 Fetching http://127.0.0.1:8000/server-status?auto...
-Total Accesses: 853445
-Total kBytes: 250032
-CPULoad: 942.6
+Total Accesses: 857781
+Total kBytes: 251303
+CPULoad: 963.6
 Uptime: 5
-ReqPerSec: 170689
-BytesPerSec: 51206600
-BytesPerReq: 299.999
-BusyWorkers: 93
-IdleWorkers: 195
-Scoreboard: ____K__K_KKKK_K_K______KK_KK___K___K_K_______K_K__K_K__K_______KKW___K__________K______KK_KKK___K_K_K_____K_K__K_____K______K_KK____KKK___KK________K_K_K_KKKK_____K__K__K_K_KK______WKK________L_____K_KK__K____K__KK__K_WK__K_K_____KK_____K___K__K____K___KW__KK_K___K___K_KKK____K____K____W
+ReqPerSec: 171556
+BytesPerSec: 51466900
+BytesPerReq: 300
+BusyWorkers: 97
+IdleWorkers: 191
+Scoreboard: __K___K__K_K______K_K____K__KKKKK_K_____KKKKK_WKK______K____K____K_______K___K__K_____K__KKK_KK__KKK_____K______K_K__K_KK___K_______KK_K_____K___K_W__K_______KKK_K_K_____K__KK_KKK_KKKKK__K_KK_K_K__KW___KK_K_K_________K_K_K_K__K__K___K___KWK_______K________K___K__KK____K___K__K___K______K
 
 Starting
 Fetching http://127.0.0.1:8000/server-status?auto...
-Total Accesses: 3360599
-Total kBytes: 984550
-CPULoad: 929.05
+Total Accesses: 3322369
+Total kBytes: 973350
+CPULoad: 935.75
 Uptime: 20
-ReqPerSec: 168030
-BytesPerSec: 50409000
+ReqPerSec: 166118
+BytesPerSec: 49835500
 BytesPerReq: 300
 BusyWorkers: 95
 IdleWorkers: 193
-Scoreboard: K__K____K__K_W_K____K_K__K_WK______K_K_KKKKKKK______K__K_K___K_______WKK__W_________K_K_KK_K___K______K_K_____K_K__KK__K_KKK_K____KK__KK___KK____K____K_K_K__KK__K_K_KK____WK_K_KK____K___K____KK__KK__KKK_KK___K___K___K___________K__K______KK__K_K__________K_K_K__KW__K__K__K_____________W_
+Scoreboard: ___K____K__K___K_K_K_____K__KK_KKK_____K______WK_W__KK__KK____K_K__K___K_______K_WKKK______KK_____KK__KK_K__K____KK__KK_KK_______K_____KK_KK___K______K_____KKK_K____KKK_K___K_K_K_____K______K________K_K__KKK____K_KW___KKW__K__K__K___K____K_K__K________KK___K_KK______K_K_____KKK_KK__W_K__
 
 Stopped
-2507154 requests, 15.014529 seconds, 166981 per second
-[TimeMonitor] real 15.0143 user 68.12 nice 0 sys 83.27 idle 2731.36 iowait 0.03 irq 0 softirq 25.51 steal 0.01
+2464588 requests, 15.015141 seconds, 164140 per second
+[TimeMonitor] real 15.0151 user 69.57 nice 0 sys 82.02 idle 2731.3 iowait 0.25 irq 0 softirq 24.57 steal 0.03
